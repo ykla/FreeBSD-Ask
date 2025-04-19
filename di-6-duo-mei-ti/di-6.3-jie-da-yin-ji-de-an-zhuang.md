@@ -22,7 +22,7 @@
 ## 添加服务
 
 ```sh
-# sysrc cupsd_enable="YES"
+# sysrc cupsd_enable = "YES"
 ```
 
 完成后启动 cups 服务，执行如下命令

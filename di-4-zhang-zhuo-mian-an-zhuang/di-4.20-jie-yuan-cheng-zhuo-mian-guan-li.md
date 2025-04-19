@@ -467,7 +467,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 rdesktop 无前端 GUI，故要在终端输入命令：
 
 ```sh
-# rdesktop ip:端口 # 比如 192.168.31.155:3389
+# rdesktop ip: 端口 # 比如 192.168.31.155:3389
 ```
 
 如果没有特意更改 Windows 配置，无须加 `:端口`。
@@ -549,7 +549,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # make install clean
 ```
 
-不可使用 `BATCH=yes`参数，因为需要接受许可协议才能使用：
+不可使用 `BATCH=yes` 参数，因为需要接受许可协议才能使用：
 
 ![anydesk](../.gitbook/assets/anydesk1.png)
 

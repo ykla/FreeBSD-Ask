@@ -162,7 +162,7 @@ Current=sddm-freebsd-black-theme
 ### SDDM 中文化
 
 ```sh
-# sysrc sddm_lang="zh_CN"
+# sysrc sddm_lang = "zh_CN"
 ```
 
 ### 系统中文化方法 ① 用户分级

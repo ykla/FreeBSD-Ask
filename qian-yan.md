@@ -7,7 +7,7 @@
 举例：
 
 ```sh
-# sysrc hald_enable="YES"
+# sysrc hald_enable = "YES"
 ```
 
 我们有以下疑问：
@@ -85,7 +85,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 ```sh
 # cd /usr/ports/xxx/yyy
-# make BATCH=yes install clean
+# make BATCH = yes install clean
 ```
 
 如果你想一次性完成所有配置：

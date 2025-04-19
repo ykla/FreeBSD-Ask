@@ -150,7 +150,7 @@
 请先安装显卡驱动和虚拟机增强工具。
 
 ```sh
-# sysrc moused_enable=YES
+# sysrc moused_enable = YES
 # Xorg -configure
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
 ```

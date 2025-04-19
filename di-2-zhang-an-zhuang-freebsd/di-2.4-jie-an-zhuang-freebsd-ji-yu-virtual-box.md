@@ -116,8 +116,8 @@ VirtualBox Guest Additions are installed.
 
 To enable and start the required services:
 
-# sysrc vboxguest_enable="YES"
-# sysrc vboxservice_enable="YES"
+# sysrc vboxguest_enable = "YES"
+# sysrc vboxservice_enable = "YES"
 # 启用所需服务，使用 sysrc 添加开机启动项。
 
 To start the services, restart the system.
@@ -160,8 +160,8 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 - 启动服务：
 
 ```sh
-# sysrc vboxguest_enable="YES"
-# sysrc vboxservice_enable="YES"
+# sysrc vboxguest_enable = "YES"
+# sysrc vboxservice_enable = "YES"
 ```
 
 - 启动服务，调整权限（以普通用户 ykla 为例）：

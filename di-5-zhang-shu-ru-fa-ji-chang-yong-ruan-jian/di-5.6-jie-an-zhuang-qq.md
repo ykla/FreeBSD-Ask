@@ -83,8 +83,8 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 ```
 
 ```sh
-# export LANG=zh_CN.UTF-8 # 此时位于 Arch 兼容层！
-# export LC_ALL=zh_CN.UTF-8 # 此时位于 Arch 兼容层！如果不添加环境变量，则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
+# export LANG = zh_CN.UTF-8 # 此时位于 Arch 兼容层！
+# export LC_ALL = zh_CN.UTF-8 # 此时位于 Arch 兼容层！如果不添加环境变量，则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
 # /opt/QQ/qq --no-sandbox --in-process-gpu  # 此时位于 Arch 兼容层！
 ```
 
@@ -113,8 +113,8 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 启动 QQ：
 
 ```sh
-# export LANG=zh_CN.UTF-8 # 此时位于 Ubuntu 兼容层
-# export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。此时位于 Ubuntu 兼容层
+# export LANG = zh_CN.UTF-8 # 此时位于 Ubuntu 兼容层
+# export LC_ALL = zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。此时位于 Ubuntu 兼容层
 # /bin/qq --no-sandbox --in-process-gpu #此时位于 Ubuntu 兼容层
 ```
 
