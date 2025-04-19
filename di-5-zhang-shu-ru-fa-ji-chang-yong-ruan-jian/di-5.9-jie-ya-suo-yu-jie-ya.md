@@ -8,7 +8,7 @@
 >
 >```powershell
 >PS C:\Users\ykla> chcp
->活动代码页: 936 # 即 GBK
+>活动代码页：936 # 即 GBK
 >```
 
 ### 安装 zip
