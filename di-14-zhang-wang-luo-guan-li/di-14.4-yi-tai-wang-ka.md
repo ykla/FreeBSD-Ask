@@ -66,14 +66,14 @@ if_re_name="/boot/modules/if_re.ko"
 默认情况下已经开启巨型帧，要关闭（影响网速，如网速过慢可关闭之）：
 
 ```sh
-# echo hw.re.max_rx_mbuf_sz="2048" >> /boot/loader.conf
+# echo hw.re.max_rx_mbuf_sz = "2048" >> /boot/loader.conf
 ```
 
 要启用 WOL 唤醒：
 
 ```sh
-# echo hw.re.s5wol="1"  >> /boot/loader.conf
-# echo hw.re.s0_magic_packet="1"  >> /boot/loader.conf
+# echo hw.re.s5wol = "1"  >> /boot/loader.conf
+# echo hw.re.s0_magic_packet = "1"  >> /boot/loader.conf
 ```
 
 以上设置完毕后均需重启。

@@ -57,7 +57,7 @@ boot # 输入 boot 后回车即可继续启动
 
 >**技巧**
 >
->不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。
+>不一定是 **(hd0, msdos1)**，以实际为准，不要一下都删掉了看不出来了。
 
 ![](../.gitbook/assets/2.png)
 
@@ -70,7 +70,7 @@ mfsBSD 和 mfsLinux 镜像的 `root` 密码默认均是 `mfsroot`
 ```sh
 # cd /tmp # 切换到临时路径
 # wget https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img # 下载 mfsbsd
-# dd if=mfsbsd-se-14.2-RELEASE-amd64.img of=/dev/vda # 你可以看下你是不是 /dev/vda
+# dd if = mfsbsd-se-14.2-RELEASE-amd64.img of =/dev/vda # 你可以看下你是不是 /dev/vda
 # reboot # 重启
 ```
 
@@ -106,7 +106,7 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
   在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
 ```sh
-# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of =/dev/vda
 ```
 
 解释：

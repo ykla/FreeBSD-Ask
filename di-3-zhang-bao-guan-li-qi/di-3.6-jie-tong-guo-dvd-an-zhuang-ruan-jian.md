@@ -48,7 +48,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 # bsdconfig
 ```
 
-`3 Packages`——>`1 CD/DVD Install from a FreeBSD CD/DVD`
+`3 Packages`——> `1 CD/DVD Install from a FreeBSD CD/DVD`
 
 有 bug，会报错 `No pkg(8) database found!`。
 
@@ -57,7 +57,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 测试安装：
 
 ```sh
-# env REPOS_DIR=/dist/packages/repos pkg install xorg
+# env REPOS_DIR =/dist/packages/repos pkg install xorg
 Updating FreeBSD_install_cdrom repository catalogue...
 FreeBSD_install_cdrom repository is up to date.
 All repositories are up to date.
@@ -75,7 +75,7 @@ Proceed with this action? [y/N]:
 要列出 DVD 中的可用软件：
 
 ```sh
-# env REPOS_DIR=/dist/packages/repos pkg rquery "%n"
+# env REPOS_DIR =/dist/packages/repos pkg rquery "%n"
 ```
 
 ## 换源为 DVD

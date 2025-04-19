@@ -30,7 +30,7 @@
 
 境内的源一般只支持 aarch64（arm64）和 amd64 两个架构。
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
 ---
 
@@ -121,7 +121,7 @@ FreeBSD: { enabled: no }
 然后：
 
 ```sh
-# git clone  --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone  --filter = tree: 0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 >**注意**
@@ -269,7 +269,7 @@ FreeBSD-kmods {
 如果 shell 不是 csh，那么：
 
 ```sh
-# export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+# export PACKAGESITE = http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
 安装示例：现在安装 `bsdinfo`。

@@ -42,7 +42,7 @@ exec icewm-session
 
 ```sh
 # service dbus enable
-# sysrc slim_enable="YES"
+# sysrc slim_enable = "YES"
 ```
 
 ## fstab

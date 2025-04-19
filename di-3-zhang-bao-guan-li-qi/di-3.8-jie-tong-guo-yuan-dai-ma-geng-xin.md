@@ -36,8 +36,8 @@
 设置：
 
 ```sh
-# git config --global http.proxy http://192.168.X.X:7890
-# git config --global https.proxy http://192.168.X.X:7890
+# git config --global http.proxy http://192.168.X.X: 7890
+# git config --global https.proxy http://192.168.X.X: 7890
 ```
 
 取消：
@@ -142,8 +142,8 @@
 >与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上没人会用，一般亦无学习的必要，故有必要换成别的文本编辑器。
 >
 >```sh
-># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
-># export  VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+># export  EDITOR =/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+># export  VISUAL =/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
 ```sh

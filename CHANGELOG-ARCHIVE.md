@@ -18,7 +18,7 @@
 - 2025.3.26
   - 重写“Pure-FTPd（基于 MySQL）”
   - 重写“ProFTPD（基于 MySQL）”
-  - "第 2.2 节 命令行基础（新手入门版本）"新增“UNIX 与 Windows 文件名规范之差异”
+  - "第 2.2 节 命令行基础（新手入门版本）" 新增“UNIX 与 Windows 文件名规范之差异”
 - 2025.3.25
   - 新增“第 15.5 节 Fail2Ban（基于 IPFW、PF、IPF）”
   - “第 12.2 节 FreeBSD EFI 引导管理”合并入“第 12.5 节 Grub & UEFI 与 efibootmgr”
@@ -112,7 +112,7 @@
 - 2025.2.21
   - 新增“第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro”
 - 2025.2.19
-  - 制作了视频教程[《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
+  - 制作了视频教程 [《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
 - 2025.2.16
   - 拆分“Git&Linux 败局与 FreeBSD 败局”到 19.5、19.6、19.7
 - 2025.2.15
@@ -153,7 +153,7 @@
   - “第 24.5 节 利用脚本自动生成 BSDlibc 库文本”：脚本更新
   - “第 8.1 节 sudo 与 doas”新增“doas”
 - 2025.1.11
-  - "第 4.13 节 安装 KDE6"新增“基于开发中的 Ports（需要长时间编译）”
+  - "第 4.13 节 安装 KDE6" 新增“基于开发中的 Ports（需要长时间编译）”
 - 2025.1.10
   - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”重写“共享文件夹”
 - 2025.1.9
@@ -165,12 +165,12 @@
   - “第 4.5 节 安装 Xfce”补图
   - “第 4.6 节 安装 Cinnamon”补图
   - “第 4.8 节 安装 LXQt”补图
-  - "第 4.4 节 安装 Mate"补图，删除冗余
+  - "第 4.4 节 安装 Mate" 补图，删除冗余
   - 新增“第 4.14 节 安装 Budgie”
-  - "第 4.7 节 安装 Lumina"补图
-  - 新增"第 4.21 节 安装 LXDE"
+  - "第 4.7 节 安装 Lumina" 补图
+  - 新增 "第 4.21 节 安装 LXDE"
   - 新增“第 4.22 节 安装 Window Maker”
-  - "第 19.2 节 Linux 败局与 FreeBSD 败局"新增“为何不能选择 Linux 桌面操作系统？”
+  - "第 19.2 节 Linux 败局与 FreeBSD 败局" 新增“为何不能选择 Linux 桌面操作系统？”
 - 2025.1.6  
   - 新增“第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”  
   - 新增“第 2.10 节 手动安装双系统（先安装 FreeBSD）”  
@@ -344,4 +344,4 @@
 
 - 2021.3.14-2024.7.31：《FreeBSD 从入门到跑路》初版
 - 2021.12.19：《FreeBSD 从入门到跑路》项目重建
-- 《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。
+- 《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master) 发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。
