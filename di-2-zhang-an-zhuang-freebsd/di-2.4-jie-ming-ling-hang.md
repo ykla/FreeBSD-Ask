@@ -230,7 +230,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >PS D:\> CD c:\ # 这里 C 盘是小写
 >PS C:\> dir # 小写 dir，列出目录，等于 ls
 >
->    目录: C:\
+>    目录：C:\
 >
 > ……省略一部分……
 >
