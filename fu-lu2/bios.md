@@ -348,7 +348,7 @@ Enable（启用）
 
 MCE，Machine Check Exception，机器检查
 
-MCE 是用来报告内部错误的一种硬件方式 。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [https://ilinuxkernel.com/?p = 303](https://ilinuxkernel.com/?p=303)
+MCE 是用来报告内部错误的一种硬件方式 。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [https://ilinuxkernel.com/?p=303](https://ilinuxkernel.com/?p=303)
 
 #### MonitorMwait（Monitor/Mwait 指令）
 
@@ -10156,5 +10156,3 @@ Disabled（禁用）
 | Restore User Defaults                         | 恢复用户默认值至所有设置项  |
 | List of EFI boot managers available           | 可用 EFI 启动管理器列表     |
 | Boot override to selected boot manager        | 启动覆盖到选定的启动管理器  |
-
-‍
