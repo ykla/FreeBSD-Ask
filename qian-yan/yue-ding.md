@@ -67,7 +67,7 @@
 
 ```sh
 # cd /usr/ports/xxx/yyy
-# make BATCH=yes install clean
+# make BATCH = yes install clean
 ```
 
 如果你想一次性完成所有配置：

@@ -9,8 +9,8 @@
 ```sh
 # cd /usr/src
 # make buildworld                      # 编译基本系统
-# make installworld DESTDIR=/usr/jail/ # 安装到 jail
-# make distribution DESTDIR=/usr/jail/ # 或者用
+# make installworld DESTDIR =/usr/jail/ # 安装到 jail
+# make distribution DESTDIR =/usr/jail/ # 或者用
 ```
 
 方案二
@@ -30,7 +30,7 @@
 ### 写入 `/etc/rc.conf`
 
 ```sh
-# sysrc jail_enable="YES"
+# sysrc jail_enable = "YES"
 ```
 
 创建 `jail.conf` 文件（可以写进 `rc.conf` 但这样便于管理）
@@ -128,8 +128,8 @@ nameserver 223.6.6.6 #不要写路由器地址
 # chflags -R noschg directory
 ```
 
-- `Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered`
+- `Certificate verification failed for /C = US/O = Let's Encrypt/CN = E6
+0020C1CD593C0000: error: 16000069: STORE routines: ossl_store_get0_loader_int: unregistered`
 
 经检查，时间正常。一般发生在 FreeBSD 14.1、14.2 RELEASE 中。
 

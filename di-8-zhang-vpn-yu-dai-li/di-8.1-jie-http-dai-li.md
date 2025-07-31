@@ -19,7 +19,7 @@ $ echo $SHELL
 - 设置：
 
 ```sh
-# export HTTP_PROXY=http://192.168.X.X:7890
+# export HTTP_PROXY = http://192.168.X.X: 7890
 ```
 
 >**警告**
@@ -38,7 +38,7 @@ $ echo $SHELL
 设置：
 
 ```sh
-# setenv http_proxy http://192.168.X.X:7890
+# setenv http_proxy http://192.168.X.X: 7890
 ```
 
 取消：

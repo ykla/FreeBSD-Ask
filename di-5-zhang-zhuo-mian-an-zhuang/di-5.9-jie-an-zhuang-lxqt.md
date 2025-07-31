@@ -60,7 +60,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ### 中文化 SDDM
 
 ```sh
-# sysrc sddm_lang="zh_CN"
+# sysrc sddm_lang = "zh_CN"
 ```
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt1.png)

@@ -26,8 +26,8 @@
 - 启动内核模块
 
 ```sh
-# echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
-# sysrc -f /etc/rc.conf kld_list+=nvidia-modeset
+# echo 'hw.nvidiadrm.modeset = "1"' >> /boot/loader.conf
+# sysrc -f /etc/rc.conf kld_list+= nvidia-modeset
 ```
 
 >**警告**

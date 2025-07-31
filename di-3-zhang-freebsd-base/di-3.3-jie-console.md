@@ -51,6 +51,7 @@ FreeBSD directory layout:      man hier
 To change this login announcement, see motd(5).
 root@ykla:~ #
 
+
 ```
 
 祝贺你！你已经成功地登录到了 FreeBSD 操作系统。

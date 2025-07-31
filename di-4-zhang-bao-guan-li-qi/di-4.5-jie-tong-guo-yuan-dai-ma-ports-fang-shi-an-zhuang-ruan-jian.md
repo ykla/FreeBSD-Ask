@@ -62,13 +62,13 @@ NetBSD 和 OpenBSD 也使用 Ports（不通用）。
 ### 拉取 Ports 存储库（USTC）浅克隆
 
 ```sh
-# git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone --filter = tree: 0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 ### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
 
 ```sh
-# git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
+# git clone --filter = tree: 0 https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
 ### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
@@ -205,7 +205,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ```sh
 # cd /usr/ports/lang/python
-# make BATCH=yes clean
+# make BATCH = yes clean
 ```
 
 其中 `BATCH=yes` 意味着使用默认参数进行编译。
@@ -257,7 +257,7 @@ Proceed with this action? [y/N]:
 ## 如何一次性下载所有需要的软件包
 
 ```sh
-# make BATCH=yes fetch-recursive
+# make BATCH = yes fetch-recursive
 ```
 
 ## ports 编译的软件也可以转换为 pkg 包
@@ -293,7 +293,7 @@ w3m-0.5.3.20230718_1               <
 # portmaster screen #升级单个软件
 ```
 
-如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-a -G --no-confirm`：
+如果不想回答问题解决依赖，可使用类似 BATCH = yes 的选项 `-a -G --no-confirm`：
 
 ```sh
 # portmaster -a -G --no-confirm
@@ -323,7 +323,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
 # portupgrade -ai #自动升级所有软件，i 会挨个确认
 # portupgrade -R screen #升级单个软件
-# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
+# portupgrade -a --batch		#不要问，只做，等同于  BATCH = yes
 ```
 
 #### 参考资料
@@ -377,7 +377,7 @@ hw.ncpu: 16
 - 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置默认即生效）
 
 ```sh
-# alias ninja='ninja -j4'
+# alias ninja ='ninja -j4'
 ```
 
 ### 参考资料

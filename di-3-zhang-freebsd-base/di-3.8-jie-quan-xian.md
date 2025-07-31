@@ -115,6 +115,6 @@ $ chmod 750 test.sh
 
 ```sh
 # chown test1 t.sh # 修改 t.sh 属主为用户 test1
-# chown test1:test t.sh # 修改 t.sh 属主为用户 test1、组 test
-# chown -R test1:test /tmp # 修改/tmp 目录下所有文件的属主为用户 test1、组 test
+# chown test1: test t.sh # 修改 t.sh 属主为用户 test1、组 test
+# chown -R test1: test /tmp # 修改/tmp 目录下所有文件的属主为用户 test1、组 test
 ```

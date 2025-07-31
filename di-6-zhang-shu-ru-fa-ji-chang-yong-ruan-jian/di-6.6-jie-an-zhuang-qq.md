@@ -176,8 +176,8 @@ $ exit # 此时位于 Arch 兼容层！退回到 root 用户
 若你自行构建兼容层，需要在启动 QQ 前，在兼容层内部，可能需要（如果你完全按照本书教程做，就不需要，因为本书中 Fcitx 指定了以下环境变量）设定以下中文环境变量：
 
 ```sh
-# export LANG=zh_CN.UTF-8 
-# export LC_ALL=zh_CN.UTF-8 
+# export LANG = zh_CN.UTF-8 
+# export LC_ALL = zh_CN.UTF-8 
 ```
 
 完毕后可以使用 `locale` 命令检查。对于兼容层的软件来说，Fcitx 输入法只有在上述 2 个变量是中文的情况下才能起作用。

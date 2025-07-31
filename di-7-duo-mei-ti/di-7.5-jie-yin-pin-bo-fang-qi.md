@@ -85,9 +85,9 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 如下设置 (可以写入 `sysctl.conf` 永久化设置):
 
 ```sh
-# sysctl dev.pcm.2.bitperfect=1
-# sysctl dev.pcm.2.play.vchanrate=352800
-# sysctl dev.pcm.2.play.vchanmode=1
+# sysctl dev.pcm.2.bitperfect = 1
+# sysctl dev.pcm.2.play.vchanrate = 352800
+# sysctl dev.pcm.2.play.vchanmode = 1
 ```
 
 - 因为使用的 oss 驱动，muscipd 只能用 dop 传输模式，dop 模式要求开启 bitperfect
@@ -136,7 +136,7 @@ musicpd 配置文件为 `/usr/local/etc/musicpd.conf` 。
 ```sh
 # mkdir -p /var/mpd/music
 # mkdir -p /var/mpd/.mpd/playlists
-# chown -R mpd:mpd /var/mpd
+# chown -R mpd: mpd /var/mpd
 # chmod 777 /var/mpd/music
 ```
 
@@ -159,7 +159,7 @@ audio_output {
 开启 musicpd 服务
 
 ```sh
-# sysrc musicpd_enable=YES
+# sysrc musicpd_enable = YES
 # service musicpd start
 ```
 

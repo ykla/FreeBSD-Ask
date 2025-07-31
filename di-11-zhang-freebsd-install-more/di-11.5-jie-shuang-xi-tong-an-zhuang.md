@@ -92,7 +92,7 @@ root  534M    130G   534M  nont
 
 ```sh
 # 强制 4K 对齐
-# sysctl vfs.zfs.vdev.min_auto_ashift=12
+# sysctl vfs.zfs.vdev.min_auto_ashift = 12
 vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
@@ -138,56 +138,56 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ### 创建 ZFS 池
 
 ```sh
-# 创建 ZFS 池，暂时挂载至 /mnt（-o altroot=/mnt），使用 lz4 压缩（-O compress=lz4。可换成 zstd 等），关闭时间标签（-O atime=off），/dev/gpt/zroot 是我们刚建立的卷标
-# zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
+# 创建 ZFS 池，暂时挂载至 /mnt（-o altroot =/mnt），使用 lz4 压缩（-O compress = lz4。可换成 zstd 等），关闭时间标签（-O atime = off），/dev/gpt/zroot 是我们刚建立的卷标
+# zpool create -f -o altroot =/mnt -O compress = lz4 -O atime = off -m none zroot /dev/gpt/zroot
 ```
 
 ### 创建 ZFS 数据集
 
 ```sh
 # 创建根数据集
-# zfs create -o mountpoint=none zroot/ROOT
+# zfs create -o mountpoint = none zroot/ROOT
 # 创建一个名为 `zroot/ROOT` 的数据集，不设置挂载点（`mountpoint=none`），通常用于作为系统底层的根数据集，可以用于创建下面的子数据集。
 
 # 创建默认根数据集
-# zfs create -o mountpoint=/ zroot/ROOT/default
+# zfs create -o mountpoint =/ zroot/ROOT/default
 # 创建一个名为 `zroot/ROOT/default` 的数据集，并将其挂载到根目录 `/`，用于系统的默认根文件系统。
 
 # 创建 /home 数据集
-# zfs create -o mountpoint=/home zroot/home
+# zfs create -o mountpoint =/home zroot/home
 # 创建一个名为 `zroot/home` 的数据集，并挂载到 `/home`，通常用于存储用户主目录。
 
 # 创建 /tmp 数据集，设置 exec 为 on，setuid 为 off
-# zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
+# zfs create -o mountpoint =/tmp -o exec = on -o setuid = off zroot/tmp
 # 创建 `zroot/tmp` 数据集并挂载到 `/tmp`，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
 
 # 创建 /usr 数据集，并设置 canmount 为 off
-# zfs create -o mountpoint=/usr -o canmount=off zroot/usr
+# zfs create -o mountpoint =/usr -o canmount = off zroot/usr
 # 创建 `zroot/usr` 数据集并挂载到 `/usr`，但由于设置 `canmount=off`，该数据集不会被自动挂载，通常用于特定的系统配置。
 
 # 创建 /usr/ports 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/usr/ports
+# zfs create -o setuid = off zroot/usr/ports
 
 # 创建 /usr/src 数据集
 # zfs create zroot/usr/src
 
 # 创建 /var 数据集，设置 canmount 为 off
-# zfs create -o mountpoint=/var -o canmount=off zroot/var
+# zfs create -o mountpoint =/var -o canmount = off zroot/var
 
 # 创建 /var/audit 数据集，设置 exec 和 setuid 为 off
-# zfs create -o exec=off -o setuid=off zroot/var/audit
+# zfs create -o exec = off -o setuid = off zroot/var/audit
 
 # 创建 /var/crash 数据集，设置 exec 和 setuid 为 off
-# zfs create -o exec=off -o setuid=off zroot/var/crash
+# zfs create -o exec = off -o setuid = off zroot/var/crash
 
 # 创建 /var/log 数据集，设置 exec 和 setuid 为 off
-# zfs create -o exec=off -o setuid=off zroot/var/log
+# zfs create -o exec = off -o setuid = off zroot/var/log
 
 # 创建 /var/tmp 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/var/tmp
+# zfs create -o setuid = off zroot/var/tmp
 
 # 创建 /var/mail 数据集，设置 atime 为 on
-# zfs create -o atime=on zroot/var/mail
+# zfs create -o atime = on zroot/var/mail
 # 创建 `zroot/var/mail` 数据集并设置 `atime=on`，意味着每次读取文件时都会更新访问时间，通常用于存放邮件数据。
 ```
 

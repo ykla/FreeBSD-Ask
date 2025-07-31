@@ -53,7 +53,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ```sh
 # cd /usr/ports/graphics/drm-61-kmod
-# make BATCH=yes install clean
+# make BATCH = yes install clean
 ```
 
 或者（如有问题请使用 Ports）
@@ -66,7 +66,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ```sh
 # cd /usr/ports/graphics/drm-66-kmod
-# make BATCH=yes install clean
+# make BATCH = yes install clean
 ```
 
 >**注意**
@@ -80,7 +80,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 ### Intel 核芯显卡
 
   ```sh
-  # sysrc -f /etc/rc.conf kld_list+=i915kms
+  # sysrc -f /etc/rc.conf kld_list+= i915kms
   ```
 
 ### AMD
@@ -88,13 +88,13 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 - 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
 
     ```sh
-    # sysrc -f /etc/rc.conf kld_list+=amdgpu
+    # sysrc -f /etc/rc.conf kld_list+= amdgpu
     ```
 
 - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
     ```sh
-    # sysrc -f /etc/rc.conf kld_list+=radeonkms
+    # sysrc -f /etc/rc.conf kld_list+= radeonkms
     ```
 
 ### 故障排除与未竟事宜
@@ -166,14 +166,14 @@ EndSection
 - 对于一般计算机：
 
 ```sh
-# sysrc -f /boot/loader.conf  acpi_video="YES"
+# sysrc -f /boot/loader.conf  acpi_video = "YES"
 ```
 
 - 对于 Thinkpad：
 
 ```sh
-# sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
-# sysrc -f /boot/loader.conf  acpi_video="YES"
+# sysrc -f /boot/loader.conf  acpi_ibm_load = "YES"
+# sysrc -f /boot/loader.conf  acpi_video = "YES"
 ```
 
 ### 英特尔/AMD

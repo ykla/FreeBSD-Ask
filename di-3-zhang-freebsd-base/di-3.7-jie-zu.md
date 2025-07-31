@@ -42,7 +42,7 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，总共 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
-`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus`自动创建的普通用户。
+`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus` 自动创建的普通用户。
 
 需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。这并不意味着账户“自动”变得更危险——用户的权限是固定的，不会因为运行进程增加而发生权限提升。相反，只有在程序存在漏洞或配置不当的情况下，攻击者才可能尝试利用这些进程实现权限提升。
 
@@ -59,7 +59,7 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 
 ```sh
 root@ykla:/ #  adduser
-Username: test # 用户名①
+Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
@@ -123,7 +123,7 @@ Removing user (test2): home passwd.
 ```sh
 # chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
 chpass: user information updated
-# export EDITOR=/usr/bin/ee 
+# export EDITOR =/usr/bin/ee 
 # chpass # 以 ee 方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
@@ -138,7 +138,7 @@ root 用户可修改所有用户的密码。
 
 ```sh
 # pw groupadd admin
-# pw usermod ykla -G admin,wheel
+# pw usermod ykla -G admin, wheel
 ```
 
 验证一下：
@@ -258,7 +258,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ```sh
 # pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 有所不同
-# pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
+# pw groupadd test5 -M test1, test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
 ### `pw groupmod` 命令

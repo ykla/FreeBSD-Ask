@@ -59,9 +59,9 @@ Second, add the following line to /etc/services:
 dtspc		6112/tcp # CDE Subprocess Control Service
 # 第二步，在 /etc/services 中注册 dtspc 服务端口。
 
-# sysrc rpcbind_enable=YES
-# sysrc dtcms_enable=YES
-# sysrc inetd_enable=YES
+# sysrc rpcbind_enable = YES
+# sysrc dtcms_enable = YES
+# sysrc inetd_enable = YES
 # service rpcbind start && service dtcms start && service inetd start
 # 启用并启动 rpcbind、dtcms 和 inetd 服务，这是 CDE 所依赖的组件。
 
@@ -70,13 +70,13 @@ Finally, make sure to add /usr/local/dt/bin to your path.
 
 To start the Common Desktop Environment:
 % env LANG=C startx /usr/local/dt/bin/Xsession
-# 使用上述命令启动 CDE 桌面环境，设置环境变量 LANG=C 以避免本地化问题。
+# 使用上述命令启动 CDE 桌面环境，设置环境变量 LANG = C 以避免本地化问题。
 
 Alternatively, if you want to use the Login Manager as well, create
 /usr/local/etc/X11/Xwrapper.config and add this line:
 
 allowed_users=anybody
-# 如果你想启用图形登录管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
+# 如果你想启用图形登录管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users = anybody。
 
 To start the Common Desktop Enviroment Login Manager:
 
@@ -100,7 +100,7 @@ To start the Common Desktop Enviroment Login Manager:
 - 配置可登录桌面的用户
 
 ```sh
-# echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
+# echo "allowed_users = anybody" > /usr/local/etc/X11/Xwrapper.config
 ```
 
 - 为了 `startx`

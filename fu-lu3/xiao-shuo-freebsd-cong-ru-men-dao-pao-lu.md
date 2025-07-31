@@ -220,13 +220,13 @@ G400 很快就重启了，自动进入了一个叫做 Unity 的桌面。
 
 张才哲觉得这个 jdk 配置属实有点麻烦，又得动环境变量。他最不想动的就是这个，上次就是因为动了这个才进不去了优麒麟。
 
-export JAVA_HOME=/usr/lib/jdk1.8.0_91
+export JAVA_HOME =/usr/lib/jdk1.8.0_91
 
-export JRE_HOME=/home/zhanghongkai/jre
+export JRE_HOME =/home/zhanghongkai/jre
 
-export CLASSPATH=/home/zhanghongkai./lib:$ /home/zhanghongkai /lib
+export CLASSPATH =/home/zhanghongkai./lib:$ /home/zhanghongkai /lib
 
-export PATH=/home/zhanghongkai /bin:$PATH
+export PATH =/home/zhanghongkai /bin:$PATH
 
 然后重新加载环境变量。张才哲运行 java –version 命令看看安装的结果输出了 java version "1.8.0_91"……
 
@@ -278,7 +278,7 @@ make 是吧？张才哲一通乱操作下去，发现 WIFI 变成了以太网。
 
 等会，该不会报错也要处理吧，原来那个羊头发的帖子他没有看完，make install 了以为搞好了，结果现在一看不行。“原来还得改动几个地方” ：
 
-/home/zhanghongkai/packages/driver/src/wl/sys/wl_cfg80211_hybrid.c:2122: error: too few arguments to function ‘cfg80211_roamed’
+/home/zhanghongkai/packages/driver/src/wl/sys/wl_cfg80211_hybrid.c: 2122: error: too few arguments to function ‘cfg80211_roamed’
 
 改完以后，make install。加载内核 modprobe cfg80211、modprobe lib80211、insmod wl.ko、modprobe wl。
 
@@ -292,7 +292,7 @@ make 是吧？张才哲一通乱操作下去，发现 WIFI 变成了以太网。
 
 “不是我说，这 CentOS 的软件包也太老了吧，这个火狐版本才 17.0.10，官方都 30 多了，安装最新的又不行，依赖都太新了，而 CentOS 的依赖又很老”
 
-“怪不得用起来这么稳定，原来是都用老版本的原因”，张才哲不知道这是什么奇奇怪怪的原因，老=稳定？
+“怪不得用起来这么稳定，原来是都用老版本的原因”，张才哲不知道这是什么奇奇怪怪的原因，老 = 稳定？
 
 ## 第六章 不如 Scientific Linux
 
@@ -322,7 +322,7 @@ make 是吧？张才哲一通乱操作下去，发现 WIFI 变成了以太网。
 
 “因为还有个 EPEL，里面就有 Nginx 啊！”，虽然不太懂为什么这么多人去编译安装 Nginx，但是看起来各种编译报错就让人头痛。
 
-Linux 安装软件=编译安装？
+Linux 安装软件 = 编译安装？
 
 还有一堆 s，B 的编译教程，在 CentOS 上各种不明所以的编译教程，有那么多需要编译的吗？编译以后他以后怎么卸载？怎么升级？又怎么维护？
 

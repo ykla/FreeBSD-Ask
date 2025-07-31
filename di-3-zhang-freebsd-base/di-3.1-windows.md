@@ -19,7 +19,7 @@
 
 ![](../.gitbook/assets/Windows2.png)
 
-更多要求，参见微软官方文档[命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
+更多要求，参见微软官方文档 [命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
 
 >**技巧**
 >

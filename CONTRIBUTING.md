@@ -44,8 +44,8 @@
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见[配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见[关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见 [配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见 [关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 
 ## 开放任务
 
@@ -71,7 +71,7 @@
 - [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
-- [ ] gbde 相关加密（已从[源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
+- [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e) 移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
 - [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
@@ -209,13 +209,13 @@
 - [X] WPS
   - [X] 解决 fcitx、fcitx5 输入法不能输入的问题
   - [ ] 更新 Port
-- [ ] HTTP代理
+- [ ] HTTP 代理
   - [ ] 测试 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) 能否在 FreeBSD 上正常运行
   - [ ] 测试 [V2raya](https://github.com/v2rayA/v2rayA) 能否在 FreeBSD 上正常运行
 - [ ] 浏览器
   - [X] Google Chrome / Chromium Google 账号同步
 - [ ] Port 移植
-  - [X] QQ（上游没人管，放在了[这里](https://github.com/FreeBSD-Ask/QQ-Port/tree/main/net-im/qq)， ）
+  - [X] QQ（上游没人管，放在了 [这里](https://github.com/FreeBSD-Ask/QQ-Port/tree/main/net-im/qq)， ）
   - [ ] 微信
   - [ ] 中文字体
 

@@ -34,8 +34,8 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 - 如果是 bash、zsh 或 sh（14 及以上 root 默认为 sh）：
 
 ```sh
-# export  EDITOR=/usr/bin/ee # 切换 vi 为 ee，vi 不会用
-# export  VISUAL=/usr/bin/ee # 切换 vi 为 ee，vi 不会用
+# export  EDITOR =/usr/bin/ee # 切换 vi 为 ee，vi 不会用
+# export  VISUAL =/usr/bin/ee # 切换 vi 为 ee，vi 不会用
 ```
 
 检查验证：
