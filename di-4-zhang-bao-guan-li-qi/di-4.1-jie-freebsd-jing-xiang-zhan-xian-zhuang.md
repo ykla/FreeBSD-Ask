@@ -100,7 +100,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Ports
     - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
-  - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
+  - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
 - 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
   - FreeBSD Pub <https://mirrors.163.com/freebsd/>
