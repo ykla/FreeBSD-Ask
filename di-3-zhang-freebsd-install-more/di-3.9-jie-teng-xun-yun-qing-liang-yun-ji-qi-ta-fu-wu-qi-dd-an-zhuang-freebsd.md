@@ -1,5 +1,6 @@
-# 3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）
+# 3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）、
 
+其实就是本地硬盘安装 FreeBSD。在不依赖额外介质的前提下借助已有的操作系统（Linux）完成 FreeBSD 的安装。
 
 ## 使用 virtio 技术半虚拟化的虚拟机
 
@@ -25,35 +26,41 @@
 >
 >请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
 
-## 方案一：使用 grub 引导 mfsBSD ISO
+## 准备工作
 
-此方案主要面向 GPT 分区表，MBR 或可参见方案二。
+- 下载安装镜像：
+
+从南京大学开源镜像站下载网络安装镜像
 
 ```sh
 # wget https://mirrors.nju.edu.cn/freebsd/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-bootonly.iso
-# mv FreeBSD-14.3-RELEASE-amd64-bootonly.iso /boot/bsd.iso
 ```
+
+将镜像重命名为 bsd.iso，并移动至 /boot/，防止使用 LVM（逻辑卷管理）技术，造成不识别文件系统的情况
+
+```sh
+# mv FreeBSD-14.3-RELEASE-amd64-bootonly.iso /boot/bsd.iso #
+```
+
+- 取消隐藏的 GRUB 菜单：
+
+现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
 
 ```sh
 # grub2-editenv - unset menu_auto_hide
 ```
 
-按 `c`进入编辑模式“
+## 方案一：UEFI + GPT 分区表
+
+此方案面向 GPT 分区表。
+
+- 在 GURB 界面，按 `c`进入编辑模式“
 
 ```sh
-linux16 /boot/memdisk
-initrd16 (hd0,gpt2)/bsd.iso
-
-
 set iso=(hd0,gpt2)/bsd.iso
 loopback loop $iso
 set root=(loop)
-
 chainloader /boot/loader.efi
-
-initrdefi /boot/loader.efi
-
-
 boot # 输入 boot 后回车即可继续启动
 ```
 
@@ -62,18 +69,11 @@ boot # 输入 boot 后回车即可继续启动
 - [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
 - [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
 
-## 方案二：使用 mfsLinux 再 dd mfsBSD
+## 方案二：MBR 分区表
 
 此方案面向 MBR 分区表，GPT 分区表下一定会报错。
 
-我们先把从 ISO 放在 `/boot/` 目录下，然后重启机器进入 GRUB 的命令行界面（可在倒计时的时候按 `c` 进入编辑模式，然后输入 `boot` 后回车即可继续启动操作系统。
-
-- 下载安装镜像：
-
-```sh
-# wget https://mirrors.nju.edu.cn/freebsd/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-bootonly.iso
-# mv FreeBSD-14.3-RELEASE-amd64-bootonly.iso /boot/bsd.iso
-```
+- 在 GURB 界面，按 `c`进入编辑模式“
 
 >**技巧**
 >
@@ -91,7 +91,6 @@ boot # 输入 boot 后回车即可继续启动
 >
 >不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。
 
-
 ## 安装 FreeBSD
 
 ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，在出现以下图片时，点 `Other` 输入图中的指定镜像版本（地址里有即可，你可以自己改哦）：
@@ -104,7 +103,6 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.png)
 
-
 - 我们还可以手动下载 FreeBSD 的安装文件，以 `MANIFEST` 文件为例：
 
 ```sh
@@ -114,12 +112,6 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
 ```
 
 ## 故障排除与未竟事宜
-
-### 为何不能直接 dd？（错误示范，仅供说明，请勿执行）
-
-直接 dd 会报错如图：
-
-![](../.gitbook/assets/1.png)
 
 ### lvm
 
