@@ -27,16 +27,16 @@
 
 - 下载安装镜像：
 
-从南京大学开源镜像站下载网络安装镜像
+下载特制的网络安装镜像
 
 ```sh
-# wget https://mirrors.nju.edu.cn/freebsd/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-bootonly.iso
+# wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.iso
 ```
 
 将镜像重命名为 bsd.iso，并移动至 /boot/，防止使用 LVM（逻辑卷管理）技术，造成不识别文件系统的情况
 
 ```sh
-# mv FreeBSD-14.3-RELEASE-amd64-bootonly.iso /boot/bsd.iso #
+# mv mfsbsd-se-14.2-RELEASE-amd64.iso /boot/bsd.iso
 ```
 
 - 取消隐藏的 GRUB 菜单：
@@ -61,10 +61,29 @@ chainloader /boot/loader.efi
 boot # 输入 boot 后回车即可继续启动
 ```
 
+## 方案二：传统引导（非 UEFI）
 
-## 方案二：MBR 分区表
+此方案面向 MBR 分区表及非 UEFI 下的 GPT 分区表，UEFI 下一定会报错。以下内容在 Rockylinux 10 下测试通过。
 
-此方案面向 MBR 分区表，GPT 分区表下一定会报错。
+### 安装 syslinux
+
+- 需要安装 syslinux 以获得 memdisk 支持。
+
+```bash
+# dnf install syslinux
+```
+
+>**警告**
+>
+>GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。你必须安装此包才有 memdisk。
+
+- 复制到 `/boot`
+
+```
+# cp /usr/share/syslinux/memdisk /boot/
+```
+
+### 编辑 grub
 
 - 在 GURB 界面，按 `c`进入编辑模式“
 
@@ -74,15 +93,12 @@ boot # 输入 boot 后回车即可继续启动
 
 ```sh
 ls # 显示磁盘
-ls (hd0,msdos1)/ # 显示磁盘 (hd0,msdos1) 下的内容
-linux16 /boot/memdisk iso
-initrd (hd0,msdos1)/boot/bsd.iso
+ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
+linux16 memdisk iso
+initrd (hd0,gpt2)/bsd.iso
 boot # 输入 boot 后回车即可继续启动
 ```
 
->**技巧**
->
->不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。
 
 ## 安装 FreeBSD
 
