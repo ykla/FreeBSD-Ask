@@ -1,4 +1,4 @@
-# 3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）
+# 3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）、
 
 其实就是本地硬盘安装 FreeBSD。在不依赖额外介质的前提下借助已有的操作系统（Linux）完成 FreeBSD 的安装。
 
@@ -16,17 +16,14 @@
 
 >**警告**
 >
->**安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。**
-
-## 概述
-
-[腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) 等机器都没有 FreeBSD 系统的支持，只能通过特殊的的方法自己暴力安装。
-
->**警告**
->
 >请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
 
 ## 准备工作
+
+>**警告**
+>
+>**安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。**
+
 
 - 下载安装镜像：
 
@@ -64,10 +61,6 @@ chainloader /boot/loader.efi
 boot # 输入 boot 后回车即可继续启动
 ```
 
-#### 参考文献
-
-- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
-- [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
 
 ## 方案二：MBR 分区表
 
@@ -117,7 +110,9 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
 
 如果服务器使用了 LVM，则需要把镜像放到 `/boot` 里面，要不然无法识别。
 
-## 参考资料
+## 参考文献
 
 - [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/)
+- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
+- [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
 
