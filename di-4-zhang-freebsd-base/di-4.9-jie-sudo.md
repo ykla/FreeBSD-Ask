@@ -237,7 +237,7 @@ default coexist
 ## 为 visudo 保留编辑器相关的环境变量。
 
 ## To preserve these for all commands, remove the "!visudo" qualifier.
-## 若希望对所有命令都保留这些变量，请移除 “!visudo” 限定。
+## 若希望对所有命令都保留这些变量，请移除“!visudo”限定。
 
 Defaults!/usr/local/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
 ## 仅对 `/usr/local/sbin/visudo` 命令保留环境变量 SUDO_EDITOR、EDITOR、VISUAL。
@@ -312,7 +312,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 
 ##
 ## Uncomment to disable "use_pty" when running commands as root.
-## 取消注释可在以 root 运行命令时禁用 “use_pty”。
+## 取消注释可在以 root 运行命令时禁用“use_pty”。
 
 ## Commands run as non-root users will run in a pseudo-terminal,
 ## not the user's own terminal, to prevent command injection.
@@ -329,7 +329,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 
 ##
 root ALL=(ALL:ALL) ALL
-## root 可在所有主机上，以任意（用户:组）身份运行任意命令（需要认证）。
+## root 可在所有主机上，以任意（用户：组）身份运行任意命令（需要认证）。
 
 ## Uncomment to allow members of group wheel to execute any command
 ## 取消注释以允许 wheel 组成员执行任意命令。
@@ -347,7 +347,7 @@ root ALL=(ALL:ALL) ALL
 ## 取消注释以允许 sudo 组成员执行任意命令。
 
 # %sudo	ALL=(ALL:ALL) ALL
-## 示例：授予 sudo 组以任意（用户:组）身份执行任意命令的权限（需密码）。
+## 示例：授予 sudo 组以任意（用户：组）身份执行任意命令的权限（需密码）。
 
 ## Uncomment to allow any user to run sudo if they know the password
 ## of the user they are running the command as (root by default).
