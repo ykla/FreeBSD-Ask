@@ -138,7 +138,7 @@ root 用户可修改所有用户的密码。
 
 ```sh
 # pw groupadd admin
-# pw usermod ykla -G admin, wheel
+# pw usermod ykla -G admin,wheel
 ```
 
 验证一下：
