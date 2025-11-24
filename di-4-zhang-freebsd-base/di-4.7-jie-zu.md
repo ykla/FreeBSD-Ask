@@ -258,7 +258,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ```sh
 # pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 有所不同
-# pw groupadd test5 -M test1, test2 # 创建组 test5。成员有 test1 和 test2
+# pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
 ### `pw groupmod` 命令
