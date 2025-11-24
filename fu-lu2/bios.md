@@ -1340,7 +1340,7 @@ Assertion Deglitch Mantissa（断言消隐指数）
 
 ###### De assertion Deglitch Mantissa（断言消隐指数）
 
-断言消隐指数 0x49 [3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。断言消隐 \= 2µs × 尾数 × 2\^(指数)。
+断言消隐指数 0x49[3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。断言消隐 \= 2µs × 尾数 × 2\^(指数)。
 
 ###### VR Power Delivery Design（电源调节器供电架构设计）
 
