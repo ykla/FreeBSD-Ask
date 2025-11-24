@@ -8308,7 +8308,7 @@ Advanced Link Config：高级链路配置
 
 1）HDA-Link（SDIO-1），DMIC [0-1]
 
-2）SSP [0-5]，DMIC [0-1]
+2）SSP[0-5]，DMIC[0-1]
 
 3）SNDW [1-4]
 
