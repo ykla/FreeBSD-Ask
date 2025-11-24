@@ -3796,7 +3796,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 #### External FAN/PWM Settings（外部风扇 ／PWM 设置）
 
-当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／ 风扇管理启用时可见。
+当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／风扇管理启用时可见。
 
 参考文献：[PWM 信号占空比，如何影响散热风扇速度？](https://post.smzdm.com/p/a5p056o3/)
 
