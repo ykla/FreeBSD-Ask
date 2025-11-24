@@ -329,7 +329,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 
 ##
 root ALL=(ALL:ALL) ALL
-## root 可在所有主机上，以任意（用户:组）身份运行任意命令（需要认证）。
+## root 可在所有主机上，以任意（用户：组）身份运行任意命令（需要认证）。
 
 ## Uncomment to allow members of group wheel to execute any command
 ## 取消注释以允许 wheel 组成员执行任意命令。
@@ -347,7 +347,7 @@ root ALL=(ALL:ALL) ALL
 ## 取消注释以允许 sudo 组成员执行任意命令。
 
 # %sudo	ALL=(ALL:ALL) ALL
-## 示例：授予 sudo 组以任意（用户:组）身份执行任意命令的权限（需密码）。
+## 示例：授予 sudo 组以任意（用户：组）身份执行任意命令的权限（需密码）。
 
 ## Uncomment to allow any user to run sudo if they know the password
 ## of the user they are running the command as (root by default).
