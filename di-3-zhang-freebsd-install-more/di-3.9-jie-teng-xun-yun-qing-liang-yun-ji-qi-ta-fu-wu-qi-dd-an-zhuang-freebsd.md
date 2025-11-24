@@ -56,7 +56,7 @@
 
 在一般的 Linux 系统中，initrd 是打包成内存盘的小而全的 Linux 根目录，里面可加载驱动，可挂载硬盘，并包含启动初始化程序的必要数据。开机时 Bootloader 加载内核与 initrd，由 initrd 中的脚本进行启动的准备工作，随后运行硬盘里的初始化程序。
 
-我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录下，然后重启机器进入 GRUB 的命令行界面（可在倒计时的时候按 `e` 进入编辑模式，删掉 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。然后输入 `boot` 后回车即可继续启动操作系统。或者按 `c`进入编辑模式“。
+我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录下，然后重启机器进入 GRUB 的命令行界面（可在倒计时的时候按 `e` 进入编辑模式，删掉 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。然后输入 `boot` 后回车即可继续启动操作系统。或者按 `c` 进入编辑模式“。
 
 ```sh
 linux (hd0,msdos1)/vmlinuz
@@ -66,7 +66,7 @@ boot # 输入 boot 后回车即可继续启动
 
 >**技巧**
 >
->不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。
+>不一定是 **(hd0, msdos1)**，以实际为准，不要一下都删掉了看不出来了。
 
 ![](../.gitbook/assets/2.png)
 
@@ -180,7 +180,7 @@ boot # 输入 boot 后回车即可继续启动
 
 ```sh
 ls # 显示磁盘
-ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
+ls (hd0,gpt2)/ # 显示磁盘 (hd0, gpt2) 下的内容，MBR 分区表可能为 (hd0, msdosx)。不一定是 (hd0, gpt2)，以实际为准
 linux16 (hd0,gpt2)/memdisk iso
 initrd (hd0,gpt2)/bsd.iso
 boot # 输入 boot 后回车即可继续启动

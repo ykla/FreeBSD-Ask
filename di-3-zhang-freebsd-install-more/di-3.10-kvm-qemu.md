@@ -119,7 +119,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 ![Grub 命令行界面](../.gitbook/assets/grub22.png)
 
 ```sh
-ls # 显示磁盘。如果你显示磁盘为 (hd0,gptxxx)，说明你的平台不支持此教程
+ls # 显示磁盘。如果你显示磁盘为 (hd0, gptxxx)，说明你的平台不支持此教程
 ls (hd0,msdos2)/
 linux16 (hd0,msdos2)/memdisk iso
 initrd (hd0,msdos2)/bsd.iso

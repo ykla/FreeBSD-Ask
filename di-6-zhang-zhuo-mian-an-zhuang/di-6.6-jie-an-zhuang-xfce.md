@@ -1,6 +1,6 @@
 # 6.6 Xfce
 
-Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只[老鼠🐀](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 bug 称因 Xfce 屏幕壁纸是只老鼠🐀导致自己的电脑屏幕被猫🐈抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 bug 称因 Xfce 屏幕壁纸是只老鼠 🐀 导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
 
 ## 安装 xfce4
 
@@ -182,7 +182,7 @@ function xterm_title_precmd () {
 }
 
 function xterm_title_preexec () {
-	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
+	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a "
 	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{2}%n\005{-}@\005{5}%m\005{-} \005{+b 4}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
 }
 
