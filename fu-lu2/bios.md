@@ -10106,7 +10106,7 @@ All GPIO（所有 GPIO）
 
 TGPIO：Time-Aware GPIO，时间感知 GPIO。
 
-Lower：TGPIO(0-19), GPIO(20-29)
+Lower：TGPIO(0-19),GPIO(20-29)
 
 Mid: TGPIO(0-9,20-29),GPIO(10-19)
 
