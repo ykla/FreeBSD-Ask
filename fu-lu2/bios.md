@@ -8306,7 +8306,7 @@ Advanced Link Config：高级链路配置
 
 选择链接模式：
 
-1）HDA-Link（SDIO-1），DMIC [0-1]
+1）HDA-Link(SDIO-1)，DMIC[0-1]
 
 2）SSP[0-5]，DMIC[0-1]
 
