@@ -257,7 +257,6 @@ FreeBSD repository is up to date.
 
 ```sh
 root@ykla:~ # cp test /root/mydir/
-root@ykla:~ #
 
 
 ```
