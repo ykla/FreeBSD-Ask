@@ -1,8 +1,8 @@
 # 参考书目
 
-部分书籍可通过[微信读书](https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
+部分书籍可通过 [微信读书](https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等软件免费阅读。
 
-部分书籍可能已经绝版，可尝试通过社交媒体联系出版社、译者或作者推动再版，或通过[多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
+部分书籍可能已经绝版，可尝试通过社交媒体联系出版社、译者或作者推动再版，或通过 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等专业二手书平台进行购买。
 
 如需无 DRM 电子书，请读者自行探索。
 
@@ -57,7 +57,7 @@
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。
 
-该书采用轻型纸印刷，且部分章节需要读者自行通过[网络](https://course.cmpreading.com/web/refbook/detail/9661/215)下载获取。
+该书采用轻型纸印刷，且部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载获取。
 
 该书阅读难度较高。据韩国 FreeBSD 社区的相关反馈，即使部分专业读者也认为其内容较为晦涩。
 
@@ -118,7 +118,7 @@
 
 ### 二十一世纪初中文社区对 FreeBSD 的探索
 
-- 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
+- 王波. FreeBSD 使用大全 [M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
 - 王波. FreeBSD 使用大全（第 2 版）[M]. 北京: 机械工业出版社, 2002. ISBN 9787111102861.
 
 该书内容与 FreeBSD 的关联度较低，实际更接近 Linux 基础入门类读物。
@@ -133,6 +133,6 @@
 
 内容已基本过时。对于当前读者而言，除非出于历史研究目的，否则没有必要阅读本书。
 
-- 冯宝坤, 陈子鸿. 《FreeBSD》完全攻略[M]. 北京: 中国物资出版社; 北京希望电子出版社, 2004. ISBN 9787504721600.
+- 冯宝坤, 陈子鸿. 《FreeBSD》完全攻略 [M]. 北京: 中国物资出版社; 北京希望电子出版社, 2004. ISBN 9787504721600.
 
 内容已基本过时。对于当前读者而言，除非出于历史研究目的，否则没有必要阅读本书。
