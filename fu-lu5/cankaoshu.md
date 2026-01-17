@@ -67,7 +67,7 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-|  《Oracle® Solaris ZFS 管理指南》  | Oracle |  文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）  | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)；注意 ZFS 存储池（ZFS pool）版本不应高于 28。（因此通常搜索引擎提供的版本是不正确的，下同），ZFS 闭源开发自 28 开始分支，Oracle 后续发布的文档不一定与当前及早期版本的 FreeBSD ZFS 兼容  |
+|  《Oracle® Solaris ZFS 管理指南》  | Oracle |  文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）  | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf) [备份](https://web.archive.org/web/20220418224518/https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)；注意 ZFS 存储池（ZFS pool）版本不应高于 28。（因此通常搜索引擎提供的版本是不正确的，下同），ZFS 闭源开发自 28 开始分支，Oracle 后续发布的文档不一定与当前及早期版本的 FreeBSD ZFS 兼容  |
 
 ### DTrace 与系统调优
 
@@ -78,7 +78,7 @@
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
 |  《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）    |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；很短的小册子。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
-|  《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
+|  《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf) [备份](https://web.archive.org/web/20260117112129/https://docs.oracle.com/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
 
 
 ## 需谨慎对待的书目
