@@ -2,19 +2,19 @@
 
 ## 什么是 Shell
 
-![](../.gitbook/assets/you-shell.png)
+![什么是 Shell](../.gitbook/assets/you-shell.png)
 
-Shell 是用户与操作系统内核进行交互的命令解释器，它接收用户输入的命令并将其传递给内核执行。我们的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
+Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 
-FreeBSD 默认的 Shell 是 sh（Bourne shell，原作者为 Stephen R. Bourne）。该实现已被重写，目前基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 Shell 的规范。
+FreeBSD 系统默认采用的 Shell 是 sh，即 Bourne shell，其原始作者为 Stephen R. Bourne。当前 FreeBSD 中的 sh 实现已经过重写，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 标准中关于 Shell 的规范要求。
 
 Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
->**注意**
+> **注意**
 >
->Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
+> Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
 >
->- Ubuntu 24.04 LTS 的默认 Shell：
+>- Ubuntu 24.04 LTS 默认的 Shell：
 >
 >```bash
 >$ ls -l /bin/sh  # 以长格式查看 /bin/sh 这个文件的详细信息
@@ -23,11 +23,9 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 
 ## 快捷键
 
->**注意**
+> **注意**
 >
->以下快捷键不一定必须在小写状态下才能执行，在大写状态下同样可以执行。
-
-### 在 TTY 界面上下翻页/翻行
+> 以下快捷键的执行不受键盘大小写状态（如 Caps Lock 开启或关闭）的影响。
 
 ### 使用 Scroll Lock 键在 TTY 界面上下翻页/翻行
 
@@ -40,12 +38,11 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 
 再次按下 **Scroll Lock** 键将退出此模式。
 
->**技巧**
+> **技巧**
 >
->SL 键在 **HOME** 键的上方，PS 截图键 **Print Screen** 的右侧，PB 键 **Pause/Break** 的左侧。
+> SL 键在 **HOME** 键的上方，PS 截图键 **Print Screen** 的右侧，PB 键 **Pause/Break** 的左侧。
 
-事实上，从历史角度来看，**Scroll Lock** 键正是为此类用途而设计的。
-
+事实上，从历史角度来看，**Scroll Lock** 键正是为此类用途而设计的，它能在文本界面中滚动而不影响光标位置。
 
 ### 使用 Shift 组合键在 TTY 界面上下翻页/翻行
 
@@ -57,7 +54,6 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 ### 补全命令或目录
 
 一般可以使用 **Tab** 键补全命令或目录；上箭头 **↑** 用于查看上一条命令，下箭头 **↓** 用于查看下一条命令。
-
 
 - 补全命令
   
@@ -99,7 +95,7 @@ PING 163.com (59.111.160.244): 56 data bytes
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
 
-### 命令后台前台
+### 让命令位于前台和后台
 
 **Ctrl**+**Z**：将当前进程挂起到后台，随后可使用 `fg` 命令将其恢复到前台：
 
@@ -125,3 +121,9 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 - **Ctrl**+**L**（字母 L）：清空屏幕
 - **Ctrl**+**A**：将光标移动到命令行首
 - **Ctrl**+**E**：将光标移动到命令行尾
+
+## 课后习题
+
+1. 在 FreeBSD 中编写一个简单的 sh 脚本，实现命令补全的最小示例脚本，测试其功能并记录结果。
+2. 查看 FreeBSD sh 源码中处理快捷键绑定的实现部分，使其更现代化。
+3. 修改 FreeBSD 中 shell 的默认提示符配置，验证其行为变化。

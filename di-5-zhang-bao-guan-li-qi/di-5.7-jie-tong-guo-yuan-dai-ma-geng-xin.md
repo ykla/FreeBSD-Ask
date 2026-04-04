@@ -1,12 +1,16 @@
 # 5.7 使用源代码更新 FreeBSD
 
+本章讲解从源代码构建和更新 FreeBSD 系统的完整流程。源代码构建作为 FreeBSD 系统定制和深度维护的高级途径，提供了最大的灵活性和控制能力。
+
 基本思路是获取 FreeBSD 的源代码，然后进行编译和安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
 编译流程参见 Handbook 即可。
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) 因此，获取源代码的方式也发生了变化，不再使用 SVN。
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.freebsd.org>
+
+这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
 ## 从 Git 获取源代码
 
@@ -27,20 +31,21 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 
 ### Git 代理设置方法
 
+在网络环境受限制的情况下，可能需要为 Git 设置代理才能正常拉取源代码。下面分别介绍设置和取消 Git 代理的方法。
+
 - 设置 Git 全局代理：
 
 ```sh
-# git config --global http.proxy http://192.168.X.X:7890    # 设置 Git 全局 HTTP 代理
-# git config --global https.proxy http://192.168.X.X:7890   # 设置 Git 全局 HTTPS 代理
+# git config --global http.proxy http://192.168.X.X:7890  # 设置 Git 全局 HTTP 代理
+# git config --global https.proxy http://192.168.X.X:7890  # 设置 Git 全局 HTTPS 代理
 ```
 
 - 取消 Git 全局代理：
 
 ```sh
-# git config --global --unset http.proxy    # 取消 Git 全局 HTTP 代理设置
-# git config --global --unset https.proxy   # 取消 Git 全局 HTTPS 代理设置
+# git config --global --unset http.proxy  # 取消 Git 全局 HTTP 代理设置
+# git config --global --unset https.proxy  # 取消 Git 全局 HTTPS 代理设置
 ```
-
 
 ### Git 拉取源代码
 
@@ -49,7 +54,12 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源码仓库到 `/usr/src`，使用浅克隆减少下载量：
 
 ```sh
-$ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
+$ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
+```
+
+```sh
+/usr/
+└── src/ # FreeBSD 源代码目录
 ```
 
 参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录
@@ -65,7 +75,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
-$ git clone --branch releng/15.0 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
+$ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
 ```
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
@@ -79,7 +89,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) 
+- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
+
 ## 从压缩包获取源代码（方便但非最新）
 
 该方法较为简单快捷。
@@ -121,11 +132,11 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 >**技巧**
 >
->与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi) [备份](https://web.archive.org/web/20260120222007/https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0) [备份](https://web.archive.org/web/20260120222012/https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
+>与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
-># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
-># export  VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+>export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+>export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
@@ -145,7 +156,6 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 # etcupdate -B 
 ```
 
-
 ## 故障排除与未竟事宜
 
 ### Git：`fatal: unable to update url base from redirection`
@@ -157,10 +167,18 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间
 
 ```sh
-# ntpdate -u pool.ntp.org # 当时间相差较大时必须使用该命令，其他命令不会生效
+# ntpdate -u pool.ntp.org  # 当时间相差较大时必须使用该命令，其他命令不会生效
 ```
 
-## 参考资料
+## 参考文献
 
-- [FreeBSD 手册](https://handbook.bsdcn.org/) [备份](https://web.archive.org/web/20260120221948/https://handbook.bsdcn.org/)。
-- [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))
+- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南
+- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?etcupdate(8)>. 系统配置文件更新工具的官方技术文档
+
+## 课后习题
+
+1. 查找 FreeBSD 从 SVN 迁移到 Git 的相关文档，构建一个最小化的源代码获取流程。
+
+2. 选取 etcupdate 的冲突解决机制，重构其最小实现。
+
+3. 修改 buildworld 的默认行为，增加一个选项让用户可以跳过某些不需要的组件，验证其对编译时间的影响。
