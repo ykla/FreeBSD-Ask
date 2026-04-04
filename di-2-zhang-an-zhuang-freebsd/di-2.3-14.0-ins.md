@@ -760,4 +760,4 @@ Add another user? (yes/no) [no]: # 是否还要再添加其他用户
 
 ## 课后习题
 
-1. 将现有业务迁移到最新版本的 -RELASE。
+1. 将现有业务迁移到最新版本的 -RELEASE。
