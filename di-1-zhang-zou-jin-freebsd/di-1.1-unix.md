@@ -63,9 +63,9 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 
 >**思考题**
 >
->> Those who do not understand UNIX are condemned to reinvent it, poorly. （那些不懂 UNIX 的人注定要再造一个四不像式 UNIX）
+>> Those who do not understand UNIX are condemned to reinvent it, poorly.（那些不懂 UNIX 的人注定要再造一个四不像式 UNIX）
 >>
->>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
+>>NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
 >
 >作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
@@ -81,32 +81,38 @@ UNIX 的诞生有其历史背景，让我们从它的前身 Multics 开始说起
 
 ### Multics
 
-Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——多路复用信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
+Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——**多路** 复用信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
 
-Multics 意图创造功能强大的新软件和比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司来帮忙。美国通用电气公司（General Electric，GE）负责设计及生产有全新硬件特性、能更好地支撑分时及多用户体系的计算机。贝尔实验室在计算机发展早期就开发了自己的操作系统，因此麻省理工学院邀请了贝尔实验室与美国通用电气公司共同开发 Multics。
+Multics 意图创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司来协助。
 
-最终 Multics 的开发陷入了困境，Multics 设计了大量的程序及功能，经常塞入很多不同的东西，导致系统过于复杂。1969 年，由于在贝尔实验室看来作为一套信息处理工具，它已经无法实现为实验室提供计算服务的目标，设计太昂贵了，于是在同年 4 月，贝尔实验室退出 Multics 项目，只剩麻省理工学院和美国通用电气公司继续开发。
+美国通用电气公司（General Electric，GE）负责设计及生产有全新硬件特性、能更好地支撑分时及多用户体系的计算机。贝尔实验室在计算机发展早期就开发了自己的操作系统。
+
+因此麻省理工学院邀请了贝尔实验室与美国通用电气公司共同开发 Multics。
+
+最终 Multics 的开发陷入了困境，Multics 设计了大量的程序及功能，经常融入许多矛盾的东西，导致系统过于复杂。1969 年，在贝尔实验室看来，作为一套信息处理工具，Multics 已无法实现为实验室提供计算服务的目标，设计太昂贵了。于是，在同年 4 月，贝尔实验室退出了 Multics 项目，只剩麻省理工学院和美国通用电气公司继续开发。
 
 ### UNICS
 
-UNICS 是 UNIX 的直接前身，它的诞生源于一个游戏项目。贝尔实验室退出 Multics 开发项目后，项目组成员肯尼斯·蓝·汤普森（Kenneth Lane Thompson）找到一台数字设备公司（Digital Equipment Corporation，DEC）PDP-7 型计算机，该计算机性能有限，只有 4 KB 内存，但图形界面较为美观。Thompson 在其上开发了游戏 Space Travel（《星际旅行》）。PDP-7 的磁盘转速远低于计算机的读写速度，为解决这一问题，Thompson 编写了磁盘调度算法以提高磁盘总吞吐量。
+UNICS 是 UNIX 的直接前身，它的诞生源于一个游戏项目。在贝尔实验室退出 Multics 开发项目后，项目组成员肯尼斯·蓝·汤普森（Kenneth Lane Thompson）找到了一台数字设备公司（Digital Equipment Corporation，DEC）PDP-7 型计算机，该计算机性能有限，只有 4 KB 内存，但图形界面较为美观。Thompson 在其上开发了游戏 Space Travel（《星际旅行》）。PDP-7 的磁盘转速远低于计算机的读写速度，为解决这一问题，Thompson 编写了磁盘调度算法以期提高磁盘总吞吐量。
 
 >**技巧**
 >
->《星际旅行》已被移植，现在可以直接在网页上进行体验，移植后的项目源代码位于 [C port of Ken Thompson's Space Travel](https://github.com/mohd-akram/st)，在线体验的网站位于 [Space Travel](https://akr.am/st/)。
+>《星际旅行》已被移植，现在可以直接在网页上进行体验（[Space Travel](https://akr.am/st/)），移植后的项目源代码位于 [C port of Ken Thompson's Space Travel](https://github.com/mohd-akram/st)。
 >
->~~虽然操作简单，但是还是看不懂怎么玩。~~
+>~~虽然操作简单，但还是看不懂怎么玩。~~
 
 如何测试这个新的算法？需要往磁盘上写入数据，Thompson 需要写一个批量写数据的程序。
 
-他需要写三个程序，每周写一个：创建代码的编辑器，将代码转换为 PDP-7 能运行的机器语言的汇编器，再加上“内核的外层——操作系统就完成了”。
+他需要写三个程序，每周写一个：创建代码的编辑器，将代码转换为 PDP-7 能运行的机器语言的汇编器，再加上“内核的外层——操作系统”就完成了。
 
-新的 PDP-7 操作系统开发不久后，Thompson 和几位同事讨论，当时系统尚未命名，最初称为“UnICS”（非复用信息和计算机服务，Uniplexed Information and Computing Service），后来改名为 UNIX，更易于记忆。
+在新的 PDP-7 操作系统开发不久后，Thompson 和几位同事进行了讨论，当时系统尚未命名，最初称为“UnICS”（**非复用** 信息和计算机服务，Uniplexed Information and Computing Service），后来改名为 UNIX，更易于记忆。
 
 ## 课后习题
 
-1. 查找 PDP-7 模拟器与早期 UNIX 源码归档，构建一个可运行的早期 UNIX 环境，在其中运行并记录 Thompson 最初的 Space Travel 游戏或 shell 命令。
+1. 查找 PDP-7 模拟器与早期 UNIX 源码存档，构建一个可运行的早期 UNIX 环境。并运行一个 C 语言的“Hello world”程序。
 
-2. 选取 Unix 哲学中的“小即美”和“一个程序只做一件事”原则，用现代编程语言重构一个类似的最小命令行工具集。
+2. 在网页端体验一下 Thompson 最初的 Space Travel，并总结其玩法。
 
-3. 查阅单一 UNIX 规范文档，选取其中一项具体标准（如文件系统接口或信号机制），尝试在 FreeBSD 上修改该标准的一个默认行为，并验证其对用户空间程序的影响。
+3. 试列举 SUS 规范与 Windows 操作系统设计与实现的差异。
+
+3. 
