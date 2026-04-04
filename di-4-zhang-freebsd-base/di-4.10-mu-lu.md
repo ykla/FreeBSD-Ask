@@ -2,10 +2,10 @@
 
 ## 目录结构概览
 
-为了方便说明，仅列出三级目录和重要文件：
+为了方便说明，仅列出三级目录和重要文件。这一目录结构遵循文件系统层次标准（Filesystem Hierarchy Standard, FHS）的基本设计理念：
 
 ```sh
-\
+/
 ├── COPYRIGHT FreeBSD 版权信息文件
 ├── boot 操作系统引导过程中使用的程序和配置文件
 │   ├── fonts 终端字体
@@ -34,7 +34,7 @@
 │   ├── db 存放系统和应用程序的数据文件，如 pkg 的数据库等
 │   ├── games 存放与游戏相关的数据文件，默认为空
 │   ├── yp NIS 的配置等文件
-│   ├── mail 存放系统邮件
+│   ├── mail 系统邮件
 │   ├── empty 默认为空，旨在提供一个始终保持空白的目录供特定程序使用①
 │   ├── preserve 用于存放编辑器（如 vi）在异常关闭后保存的文件，已不再使用，默认为空
 │   ├── heimdal Kerberos 5 用，默认为空
@@ -53,7 +53,7 @@
 │   ├── audit 存储安全审计日志文件，属于 audit 组
 │   ├── account 默认为空，系统审计用，参见 accton(8)
 │   └── tmp 通常会在系统重启后保留的临时文件
-├── rescue 静态链接的系统工具，紧急模式时用，参见 rescue(8)
+├── rescue 静态链接的系统工具，紧急模式时使用，参见 rescue(8)
 ├── dev 存放设备文件和特殊文件，参见 devfs(5)
 │   ├── reroot reboot -r 使用
 │   ├── input 存放输入设备相关的设备文件
@@ -112,7 +112,7 @@
 │   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
 │   ├── bluetooth 蓝牙相关
 │   ├── authpf 用于认证网关用户的 shell 配置文件，参见 authpf(8)，默认为空
-│   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见 https://reviews.freebsd.org/D40886
+│   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见：D40886[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D40886>
 │   ├── pkg PKG 相关配置文件，参见 pkg(7)
 │   ├── jail.conf.d 旨在实现对 jail 配置的模块化管理，默认为空。参见 jail.conf(5)
 │   ├── syslog.d syslogd 的配置文件，参见 syslog(3)
@@ -146,7 +146,7 @@
 └── sbin 基本的 BSD 系统管理工具
 ```
 
-①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志：
+①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志。
 
 ```sh
 dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
@@ -154,5 +154,10 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 
 ### 参考文献
 
-- 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
+- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构
 
+## 课后习题
+
+1. 在 FreeBSD 中遍历整个目录树结构，并与 Ubuntu 最新 LTS 版本进行比较。
+2. 分析 FreeBSD 源码中有关文件结构的设计。
+3. 修改 FreeBSD 中 `/tmp` 目录的默认权限配置，验证其行为变化。

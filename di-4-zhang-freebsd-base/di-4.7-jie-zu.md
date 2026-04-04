@@ -1,8 +1,10 @@
 # 4.7 用户和基本账户管理
 
+用户账户管理是操作系统安全模型的核心组成部分。通过为不同用户分配适当的权限和资源访问范围，系统可以实现细粒度的访问控制和安全隔离。这是多用户操作系统安全架构的基础。
+
 ## 账户类型
 
-要想访问 FreeBSD，你必须有一个账户。
+要想登录 FreeBSD，必须有一个账户。
 
 在 FreeBSD 中，所有进程都是以某个账户的名义启动的。`sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
 
@@ -35,9 +37,9 @@ $ htop
 
 FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超级用户账户。
 
-超级用户账户拥有系统中的最高权限，即 root 账户。
+超级用户账户拥有系统中的最高权限，即 root 权限。
 
-实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
+实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 定义，写作时总计 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
@@ -54,7 +56,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
+示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 为 sh：
 
 ```sh
 # adduser
@@ -92,9 +94,9 @@ Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
-- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ①：登录名命名有一些限制，参见：passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
-## `rmuser` 删除用户与 `passwd` 密码修改
+## `rmuser` 删除用户与 `passwd` 修改密码
 
 - `rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的。
 
@@ -110,9 +112,9 @@ Removing user (test2): home passwd.
 
 - `chpass` 命令以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
 
->**技巧**
+> **技巧**
 >
->`export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
+> `export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
 
 常用参数：`-s`，用于修改登录 shell
 
@@ -126,7 +128,7 @@ chpass: user information updated
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
-root 用户可修改所有用户的密码。
+root 用户可以修改所有用户的密码。
 
 ## `pw` 命令
 
@@ -218,7 +220,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 示例：
 
 ```sh
-# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 有所不同
+# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 不同
 # pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
@@ -268,4 +270,10 @@ test5:*:1202:test1
 
 ## 参考文献
 
-- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页
+- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?pw>. man 页，介绍了用户和组管理命令
+
+## 课后习题
+
+1. 修改 FreeBSD 源代码，使操作的用户名支持 UTF-8 编码。
+2. 查看 FreeBSD 中 pw 命令的源代码实现，使其更加现代化。
+
