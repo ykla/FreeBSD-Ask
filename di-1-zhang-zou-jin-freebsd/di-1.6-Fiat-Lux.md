@@ -10,7 +10,7 @@
 >
 >Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
 >
->——George Berkeley 乔治·贝克莱
+>——乔治·贝克莱
 
 本文聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”亦可意译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 
