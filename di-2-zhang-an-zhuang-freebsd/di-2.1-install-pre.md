@@ -230,6 +230,6 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 ## 课后习题
 
-1. 下载 FreeBSD 14.2-RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验值，同官方 CHECKSUM 文件进行比对验证。
+1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验值，同官方 CHECKSUM 文件进行比对验证。
 
 2. 查阅 bsd-hardware.info 网站，查找你当前设备的硬件兼容性信息，如果可以安装 FreeBSD，则使用 hw-probe 工具将你自己的硬件数据上传到该平台。

@@ -760,6 +760,4 @@ Add another user? (yes/no) [no]: # 是否还要再添加其他用户
 
 ## 课后习题
 
-1. 安装 FreeBSD 14.x-RELEASE 后，使用 gpart 命令查看磁盘分区表，分析 ZFS 根分区的结构并尝试手动挂载一个 ZFS 数据集。
-
-2. 修改 FreeBSD 14.x 系统的默认启动服务配置，禁用 ntpd 并启用 powerd，观察系统启动时间与 CPU 频率行为的变化，分析这种服务选择如何影响用户对系统的控制程度。
+1. 将现有业务迁移到最新版本的 -RELASE。
