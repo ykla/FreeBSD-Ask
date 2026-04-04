@@ -104,8 +104,6 @@ UNIX-like 即类 UNIX，指那些基本符合 UNIX 标准，或者基本遵守 P
 
 ## 课后习题
 
-1. 在现代 FreeBSD 环境中配置交叉编译工具链，尝试构建并在 QEMU 中运行 4.4BSD-Lite2 版本。
-
+1. 在现代 FreeBSD 环境中配置交叉编译工具链，尝试构建并在 QEMU 中运行 4.4BSD-Lite2。
 2. 列举若干 SUS 与 POSIX 标准的异同点。
-
 3. 为 FreeBSD 完全引入 OpenRC（目前已有一些实现），并提交到 FreeBSD 项目。
