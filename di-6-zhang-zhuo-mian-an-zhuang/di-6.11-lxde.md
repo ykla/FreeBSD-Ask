@@ -1,6 +1,10 @@
 # 6.11 LXDE
 
-## 安装
+## LXDE 桌面环境概述
+
+LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁性。作为轻量级桌面环境的代表之一，LXDE 在低配置硬件平台上表现优异。
+
+## 安装 LXDE 桌面环境
 
 - 使用 pkg 安装：
 
@@ -8,8 +12,7 @@
 # pkg install lxde-meta xorg lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
-
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/lxde-meta/ && make install clean 
@@ -20,23 +23,20 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
+### 软件包说明
 
-- 软件包说明
-
-
-| 包名                     | 作用说明                                                                 |
-|:--------------------------|:-------------------------------------------|
-| `xorg`                   |  X Window 系统                                            |
-| `lxde-meta`              | LXDE 桌面环境的元包                              |
-| `lightdm`                | 轻量级显示管理器 LightDM                                      |
-| `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM                   |
-| `wqy-fonts`              | 文泉驿中文字体                                           |
-| `xdg-user-dirs`          | 管理用户目录，如“桌面”、“下载”等                                           |
-
+| 包名 | 作用说明 |
+| ---- | -------- |
+| `xorg` | X Window 系统 |
+| `lxde-meta` | LXDE 桌面环境的元包 |
+| `lightdm` | 轻量级显示管理器 LightDM |
+| `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM |
+| `wqy-fonts` | 文泉驿中文字体 |
+| `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等 |
 
 ## `startx`
 
-编辑 `~/.xinitrc`，加入：
+编辑 `~/.xinitrc` 文件，加入：
 
 ```ini
 exec startlxde
@@ -46,14 +46,21 @@ exec startlxde
 
 ## 启动项
 
+设置 dbus 服务开机自启：
+
 ```sh
-# service dbus enable       # 设置 dbus 服务开机自启
-# service lightdm enable    # 设置 LightDM 显示管理器开机自启
+# service dbus enable
+```
+
+设置 LightDM 显示管理器开机自启:
+
+```
+# service lightdm enable
 ```
 
 ## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，加入：
+编辑 `/etc/fstab` 文件，加入下行：
 
 ```ini
 proc           /proc       procfs  rw  0   0
@@ -61,19 +68,15 @@ proc           /proc       procfs  rw  0   0
 
 ### 中文配置
 
-在 `/etc/rc.conf` 中加入：
+在 `/etc/rc.conf` 文件中加入：
 
 ```sh
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-设置 LightDM 环境变量，指定系统消息语言为中文。
+设置 LightDM 环境变量，可以指定系统消息语言为中文。
 
----
-
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
-
-根据 `/etc/login.conf` 生成能力数据库：
+此外，还需要编辑 `/etc/login.conf` 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。最后根据 `/etc/login.conf` 文件生成能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -89,4 +92,10 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 ## 参考文献
 
-- [Install & Configure a Desktop Environment: LXDE](https://wiki.freebsd.org/LXDE) 
+- FreeBSD Wiki. Install & Configure a Desktop Environment: LXDE[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/LXDE>. LXDE 桌面环境安装与配置指南。
+
+## 课后习题
+
+1. 更新 LXDE 桌面环境的相关 Port。
+2. 为 LXDE 适配更多常用主题。
+3. 修改 LXDE 桌面的默认窗口管理器行为，使其适配 Wayland。

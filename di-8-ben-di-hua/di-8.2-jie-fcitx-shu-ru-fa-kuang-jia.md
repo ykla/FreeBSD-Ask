@@ -1,17 +1,16 @@
 # 8.2 Fcitx 输入法框架
 
-输入法框架和输入法本身是不同的概念，切不可混淆。输入法依赖输入法框架。即使在 Windows 上也是如此： [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework) [备份](https://web.archive.org/web/20260117044713/https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
+首先需要明确：输入法框架与具体输入法属于两个不同的技术概念，二者不可混淆。输入法的正常运行依赖于输入法框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
 
-fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名来源，请参见 [历史](https://fcitx-im.org/wiki/History/zh-cn) [备份](https://web.archive.org/web/20260117170922/https://fcitx-im.org/wiki/History/zh-cn)。
+fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见：小企鹅输入法 5. 历史[EB/OL]. [2026-03-26]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程。
 
 >**技巧**
 >
->视频教程见 [006-FreeBSD14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)
-
+>视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
 
 > **注意**
 >
-> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 Bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
+> 在 FreeBSD-CURRENT 中可能会出现许多不可预期的问题：Fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
 
 ## 安装 Fcitx5
 
@@ -23,46 +22,49 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/textproc/fcitx5/ && make install clean # 主程序
-# cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
-# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4
-# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 QT 5 和 QT 6
+# cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 Qt 5 和 Qt 6
+# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 GTK 2、3、4
+# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 Qt 5 和 Qt 6
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
-
-经测试，在 SLiM 窗口下可能会提示找不到 IBus，这可能是一个 bug，也可能是配置问题。
+在 SLiM 窗口管理器下可能会提示找不到 IBus。
 
 ### Fcitx 5.X 开启自启
 
+安装完成后，可以设置 Fcitx5 随系统自动启动：
+
 ```sh
 $ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，需要在该用户的命令行下执行
-$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开启启动
+$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开机启动
 ```
 
 ## 配置 Fcitx 环境变量
 
+设置好自启动后，还需要配置相应的环境变量，确保输入法框架在各个应用程序中都能正常工作。
+
 ### X11
 
-根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
+在 X11 环境下，需要根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
 
-- 登录管理器配置路径
+- 显示管理器配置路径
 
-1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
-2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
+1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 文件中写入 A 组配置
+2. LightDM、GDM 可以在 `~/.profile` 文件中写入 A 组配置
 3. SDDM 可以在用户登录 shell 的配置文件中写入配置
 
 - Shell 配置路径
 
-1. sh: `~/.profile` 写入 A 组配置
-2. bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-3. zsh: `~/.zprofile` 写入 A 组配置
-4. csh: `~/.cshrc` 写入 B 组配置
+1. sh: 在 `~/.profile` 文件写入 A 组配置
+2. bash: 在 `~/.bash_profile` 文件或 `~/.profile` 文件写入 A 组配置
+3. zsh: 在 `~/.zprofile` 文件写入 A 组配置
+4. csh: 在 `~/.cshrc` 文件写入 B 组配置
 
 >**注意**
 >
->如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该用户，并在不使用 sudo 的情况下进行配置。
+>如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
 
 - A 组（sh/bash/zsh）
 
@@ -72,7 +74,7 @@ export LANGUAGE=zh_CN.UTF-8       # 设置优先语言为中文
 export LC_ALL=zh_CN.UTF-8         # 设置所有本地化环境变量为中文
 export XMODIFIERS='@im=fcitx'    # 设置 X 输入法模块为 fcitx
 export GTK_IM_MODULE=fcitx        # 设置 GTK 应用使用 fcitx 输入法
-export QT_IM_MODULE=fcitx         # 设置 QT 应用使用 fcitx 输入法
+export QT_IM_MODULE=fcitx         # 设置 Qt 应用使用 fcitx 输入法
 ```
 
 - B 组（csh）
@@ -88,7 +90,7 @@ setenv QT_IM_MODULE fcitx
 
 ### Wayland
 
-在 Wayland 下，不应设置 `GTK_IM_MODULE` 与 `QT_IM_MODULE`。Wayland 提供了输入法相关的协议（`text-input` 和 `input-method`），这些协议已得到广泛支持，因此不依赖 GTK 和 Qt 的输入法模块也能正常使用输入法。设置 `GTK_IM_MODULE` 或 `QT_IM_MODULE` 可能会产生反效果，例如输入候选框与光标位置间距离异常。
+在 Wayland 下，不应设置 `GTK_IM_MODULE` 与 `QT_IM_MODULE`。Wayland 提供了输入法相关的协议（`text-input` 和 `input-method`），因此不依赖 GTK 和 Qt 的输入法模块也能正常使用输入法。设置 `GTK_IM_MODULE` 或 `QT_IM_MODULE` 可能会产生反效果，例如输入候选框与光标位置间距离异常。
 
 运行在 XWayland 下的程序，输入法由环境变量 `XMODIFIERS='@im=fcitx'` 配置。
 
@@ -112,6 +114,8 @@ setenv XMODIFIERS @im=fcitx
 
 ## 附录：安装 RIME 中州韵输入法
 
+除了 Fcitx 自带的中文输入法插件外，还可以安装 RIME 中州韵输入法，这是一个高度可定制的输入法引擎。
+
 - 使用 pkg 安装：
 
 ```sh
@@ -127,17 +131,17 @@ setenv XMODIFIERS @im=fcitx
 
 >**注意**
 >
->`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示一团乱码。
+>`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，RIME 输入法只会显示乱码。
 
-如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
+如果 rime 未被自动添加到输入法，请手动添加完成初始化。
 
-对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置。同时，请将该用户加入 wheel 组。
+对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置，同时确保该用户已加入 wheel 组。
 
 ## 故障排除与未竟事宜
 
-遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 `bash` 的环境变量配置。也就是说，输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 shell，不适用于 `csh`。`csh` 的环境变量配置请参考上文。
+遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 bash 的环境变量配置。`csh` 的环境变量配置请参考上文。
 
-如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`。
+如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 bash。
 
 运行 Fcitx5 输入法诊断工具，检查配置和环境问题：
 
@@ -145,5 +149,9 @@ setenv XMODIFIERS @im=fcitx
 # fcitx5-diagnose
 ```
 
-对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象
+对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象。
 
+## 课后习题
+
+1. 配置 Fcitx5 在 X11 和 Wayland 两种环境下的运行，分别测试 GTK 和 Qt 应用程序的输入法兼容性。
+2. 安装并配置 RIME 中州韵输入法，自定义一个简单的输入方案并验证其功能。
