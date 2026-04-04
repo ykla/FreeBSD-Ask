@@ -4,8 +4,8 @@
 
 许多 Linux 体系的核心概念与技术实践，其最初提出者与实践者是 BSD 系统，包括：
 
-- 容器技术的原型可追溯至 FreeBSD Jail 机制（参见：什么是 Linux 容器？[EB/OL]. [2026-03-26]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container> ）；
-- 发行版概念框架（参见：《FreeBSD：原始操作系统发行版的火炬传承者》[EB/OL]. [2026-03-26]. <https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/bsd> ）；
+- 容器技术的原型可追溯至 FreeBSD Jail 机制（参见：Red Hat. 什么是 Linux 容器？[EB/OL]. [2026-04-04]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container>. ）；
+- 发行版概念框架（参见：FreeBSD Foundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>.）；
 - Gentoo 采用的 Ports 包管理方法论，其技术渊源可追溯至 BSD Ports 框架；
 - BSD 是最早的开源理念实践者之一，世界上第一款开源许可证即 BSD 许可证。
 
@@ -62,7 +62,7 @@ FreeBSD 整体系统结构符合一般 Windows、安卓或 macOS 用户的直觉
 
 FreeBSD 使用 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也有所不同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 系统控制。
 
-当以用户进程身份运行 init 时，可以模拟 AT&T System V UNIX 的行为——超级用户可在命令行中指定所需的运行级别，该 init 进程会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应操作。例如，在 FreeBSD 中执行 `init 0` 仍然表示关机。参见：init(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=init>。
+当以用户进程身份运行 init 时，可以模拟 AT&T System V UNIX 的行为——超级用户可在命令行中指定所需的运行级别，该 init 进程会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应操作。例如，在 FreeBSD 中执行 `init 0` 仍然表示关机。参见：FreeBSD Project. init(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=init>。
 
 | 运行级别 | 信号 | 操作说明 |
 | -------- | ---- | -------- |
