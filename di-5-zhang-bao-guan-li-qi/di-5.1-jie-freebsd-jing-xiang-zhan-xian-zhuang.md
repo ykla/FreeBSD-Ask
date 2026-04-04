@@ -161,12 +161,12 @@ FreeBSD 目前在大陆有若干个非官方镜像站：
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
-- 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
+- 网易 163 镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.163.com/>
   - FreeBSD Pub <https://mirrors.163.com/freebsd/>
   - FreeBSD Packages <https://mirrors.163.com/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.163.com/freebsd-ports/>
 
-- 南京大学开源镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.nju.edu.cn/>
+- 南京大学开源镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.nju.edu.cn/>
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
