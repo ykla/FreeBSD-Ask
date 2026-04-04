@@ -1,43 +1,40 @@
 # 3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）
 
-这实质上是通过本地硬盘安装 FreeBSD。即在不依赖额外介质的前提下，借助已有的操作系统（Linux）完成 FreeBSD 的安装。
+本节介绍通过本地硬盘完成 FreeBSD 的安装，即在不依赖额外安装介质的前提下，借助已有的操作系统（Linux）完成 FreeBSD 的安装与部署。
 
 ## 概述
 
-对于已停止安全支持的版本（如 9.2），请参考本文内容，并结合“手动安装 FreeBSD”章节进行操作。
+本节具体介绍在腾讯云轻量云等服务器上安装 FreeBSD 的方法，具有一定的普适性。对于已停止安全支持的版本（如 9.2），请参考本文内容并结合其他章节进行操作。
 
-安装前，请在原有的 Linux 系统中查看 IP 地址及子网掩码。
+安装前，请在原有的 Linux 系统中查看 IP 地址和子网掩码。
 
 可使用命令 `ip addr` 和 `ip route show` 查看网关信息及最大传输单元（MTU）数值；同时请注意子网和 CIDR 表示法。
-
-因为部分服务器未启用 DHCP 服务，因此也许需要手动配置 IP。
+因为部分服务器未启用 DHCP 服务，可能需要手动配置 IP。
 
 
 ## 视频教程
 
-[08-腾讯云轻量云及其他服务器安装 FreeBSD](https://www.bilibili.com/video/BV1y8411d7pp)
+FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1y8411d7pp>.
 
 视频内容与文字教程可能存在差异，任选其一操作即可。SCP 命令可以使用图形化工具 WinSCP 替代。安装完成后，建议按照其他章节设置密钥登录并禁用密码验证，以提升安全性。
 
-## 概述
+## 腾讯云轻量云及阿里云轻量应用服务器介绍
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
->**警告**
+> **警告**
 >
 >请注意数据安全。本教程操作具有一定风险，并要求你具备一定的动手能力。
 
-上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，因此无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk) [备份](https://web.archive.org/web/20260118024656/https://mfsbsd.vx.sk/)），然后格式化硬盘并安装新系统。mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
-
+上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
 
 我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；若直接在服务器上下载，可能耗时较长（约两小时）。
-
 
 ## 取消隐藏的 GRUB 菜单
 
 目前大多数 Linux 发行版的 GRUB 菜单默认处于隐藏状态，需在开机时按 Esc 键唤出，但该操作有时会直接进入 BIOS 设置界面。
 
-因此，直接取消 GRUB2 菜单自动隐藏设置更为方便：
+因此，直接取消 GRUB2 菜单自动的隐藏设置更为方便：
 
 ```bash
 # grub2-editenv - unset menu_auto_hide
@@ -47,11 +44,11 @@
 
 如前所述，由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
-在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso) [备份](https://web.archive.org/web/20251207044607/https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，这正是我们所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
+在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，这正是我们所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
 在典型的 Linux 系统中，initrd 是一个被打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，由 initrd 中的脚本执行启动准备，随后移交控制权给硬盘上的初始化程序。
 
-首先，将从该 ISO 中提取出的内核和 initrd 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定启动的内核与 initrd（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车即可继续启动。或按 `c` 键进入 GRUB 命令行模式。
+首先，将从该 ISO 中提取出的内核和 initrd 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定要启动的内核与 initrd（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车即可继续启动。或按 `c` 键进入 GRUB 命令行模式。
 
 ```sh
 linux (hd0,msdos1)/vmlinuz       # 指定内核文件路径
@@ -59,15 +56,15 @@ initrd (hd0,msdos1)/initramfs.igz  # 指定初始 RAM 磁盘映像文件路径
 boot # 输入 boot 后回车即可继续启动
 ```
 
->**技巧**
+> **技巧**
 >
 >分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
 
-![](../.gitbook/assets/2.png)
+![GRUB 命令行界面](../.gitbook/assets/2.png)
 
 这个特制的 initrd 启动后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此，我们获得了一个运行在内存中的 Linux 系统。
 
-此时应可以通过 SSH 连接到服务器，并安全地对硬盘进行格式化操作。
+此时应可通过 SSH 连接到服务器，并安全地对硬盘进行格式化操作。
 
 mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
@@ -78,7 +75,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 # reboot # 重启系统
 ```
 
->**技巧**
+> **技巧**
 >
 >建议在此处使用服务器的“快照”功能进行备份，以防后续操作失误导致重装，耽误时间。
 
@@ -86,14 +83,13 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 通过 SSH 连接服务器后，执行 `kldload zfs` 加载 ZFS 模块，然后运行 `bsdinstall`。在出现图示界面时，选择 `Other` 并输入指定的镜像地址（地址中包含相应版本即可，可自行更改）：
 
-示例：例如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.2-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/15.0-CURRENT/>
+示例：例如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/16.0-CURRENT/>
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD1.png)
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD2.png)
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.png)
-
 
 - 我们也可以手动下载 FreeBSD 的安装文件，以 `MANIFEST` 文件为例：
 
@@ -122,9 +118,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 直接执行此 `dd` 命令会报错，如图所示：
 
-
-![](../.gitbook/assets/1.png)
-
+![dd 命令报错](../.gitbook/assets/1.png)
 
 ### LVM 逻辑卷
 
@@ -134,7 +128,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 腾讯云 IPv6 地址的分配方式并非标准实现，其采用了自定义的子网方案。
 
-腾讯云 IPv6 可能由专有服务提供，此问题尚待解决与确认。
+腾讯云 IPv6 可能由专有服务提供，此问题尚待确认。
 
 ### 未成功的方案
 
@@ -154,7 +148,6 @@ boot # 输入 boot 后回车即可继续启动
 
 此外，在 UEFI 模式下，GRUB2 不提供 `linux16`、`kfreebsd` 等命令。
 
-
 #### 方案二
 
 在传统 BIOS 引导方式下。
@@ -167,7 +160,7 @@ boot # 输入 boot 后回车即可继续启动
 # dnf install syslinux
 ```
 
->**警告**
+> **警告**
 >
 >GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
 
@@ -176,6 +169,8 @@ boot # 输入 boot 后回车即可继续启动
 ```sh
 # cp /usr/share/syslinux/memdisk /boot/
 ```
+
+进入 GRUB 命令行：
 
 ```sh
 ls                                # 列出所有磁盘和分区
@@ -203,21 +198,28 @@ boot                               # 输入 boot 后回车以启动系统
 
 GRUB 不支持将 ISO 镜像挂载为内存盘，但其他引导程序或许可以实现这一功能。
 
-目前尚未找到可行方案。
+目前尚未找到可行的方案。
 
 #### 方案六
 
-对于支持在线调整的文件系统，可压缩出约 2 GB 的未分配空间，创建一个 FAT32 分区，再将 img 镜像 `dd` 写入该分区。
+对于支持在线调整的文件系统，可压缩出约 2 GB 的未分配空间，创建一个 FAT32 分区，再将 img 镜像用 `dd` 命令写入该分区。
 
-在 GRUB 中，使用 `chainloader +1` 指向 `dd` 操作后生成的 BSD EFI 系统分区。需注意，一般的云服务器默认可能使用文件作为交换空间（swapfile）？或者，也可以尝试直接将 img 镜像 `dd` 到交换分区。
+在 GRUB 中，使用 `chainloader +1` 指向 `dd` 操作后生成的 BSD EFI 系统分区。需注意，一般的云服务器默认可能使用文件作为交换空间（swapfile）。也可以尝试直接将 img 镜像 `dd` 到交换分区。
 
 对于无法压缩分区的情况，可以临时购买并挂载一块数据盘，将镜像 `dd` 到数据盘。然后通过数据盘上的安装程序进行系统安装。安装完成后卸载并删除数据盘即可。
 
 潜在的问题在于 img 镜像可能无法正确识别分区，可能需要手动指定根文件系统。
 
-部分发行版并不使用 GRUB，此时需要考虑是安装 GRUB，还是直接在 systemd-boot 等引导程序上处理，以及其可行性如何。
+部分发行版并不使用 GRUB，此时需要考虑是安装 GRUB，还是直接在 systemd-boot 等引导程序上处理，以及可行性如何。
 
 ## 参考资料
 
-- [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/) - [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html) [备份](https://web.archive.org/web/20260117183747/https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
-- [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587) 
+- FreeBSD Project. Remote Installation of the FreeBSD Operating System Without a Remote Console[EB/OL]. [2026-03-25]. <https://docs.freebsd.org/en/articles/remote-install/>. FreeBSD 官方文档，详细介绍了在无远程控制台情况下的远程安装技术。
+- 金步国. GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）[EB/OL]. [2026-03-25]. <https://www.jinbuguo.com/linux/grub.cfg.html>. 提供了 GRUB2 配置的详细参数解释与实战指南。
+- 鳥哥的 Linux 私房菜-新手討論區. 关于启动时不显示 grub 界面的问题[EB/OL]. [2026-03-25]. <https://phorum.vbird.org/viewtopic.php?f=2&t=40587>. 讨论了 GRUB 启动界面隐藏问题的解决方案。
+
+## 课后习题
+
+1. 研究 mfsBSD 的构建过程，尝试将其融入 FreeBSD 官方脚本。
+2. 对比文中列出的六种失败方案，分析每种方案失败的根本技术原因，尝试对其中一种方案进行改进并验证其可行性。
+3. 向那些不提供 FreeBSD 镜像的云服务器厂商反馈，请求支持 FreeBSD 等 BSD 系统。

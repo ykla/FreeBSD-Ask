@@ -1,18 +1,22 @@
 # 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
-QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器，支持多种处理器体系结构的模拟。
+QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器（VMM，Virtual Machine Monitor）。纯软件模拟指不依赖硬件虚拟化扩展，通过软件完全模拟处理器指令执行，支持多种处理器体系结构的模拟与跨架构执行，具有良好的兼容性与灵活性。
 
-本文环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220。
+本文实验环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220，所有操作步骤均在此环境下验证。
 
 ## QEMU
 
+首先需要下载并安装 QEMU 虚拟机软件。
+
 QEMU 下载地址：
 
-[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/) [备份](https://web.archive.org/web/20260108214840/https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`。大小为 174M。
+[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`，大小为 174 MB。
 
 下载后在 Windows 上安装 QEMU。
 
 ## RISC-V FreeBSD 磁盘镜像
+
+QEMU 安装完成后，需要下载 RISC-V 架构的 FreeBSD 磁盘镜像。
 
 RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
@@ -20,9 +24,25 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 下载后解压缩备用。
 
+## 相关文件结构
+
+```sh
+/usr/
+└── local/
+    └── share/
+        ├── opensbi/
+        │   └── lp64/
+        │       └── generic/
+        │           └── firmware/
+        │               └── fw_jump.elf # OpenSBI 固件
+        └── u-boot/
+            └── u-boot-qemu-riscv64/
+                └── u-boot.bin # U-Boot 引导加载器
+```
+
 ## OpenSBI
 
-在 FreeBSD 系统中获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
+接下来需要获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
 
 ### 安装 OpenSBI
 
@@ -51,7 +71,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## U-Boot
 
-在 FreeBSD 系统中获取 U-Boot（Universal Boot Loader），功能上类似于 GRUB 2。
+在 FreeBSD 系统中获取 U-Boot（Universal Boot Loader），其功能类似于 GRUB 2。
 
 ### 安装 U-Boot
 
@@ -79,7 +99,7 @@ root@ykla:/home/ykla # locate u-boot.bin
 
 提取 `u-boot.bin` 到 Windows 下备用。
 
-## 配置 Qemu
+## 配置 QEMU
 
 在桌面新建一个文本文件 `qemu.bat`，写入
 
@@ -116,9 +136,9 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 并回车即可登录，默认没有密码。
 
-在 PowerShell 和 CMD 中运行都会产生各种乱码（例如 `ee` 命令或按 **TAB 键**）。
+在 PowerShell 和 CMD 中运行都会产生乱码（例如 `ee` 命令或按 **TAB 键**）。
 
-但该镜像默认未配置 SSH 服务与普通用户，因此无法直接通过 SSH 连接。
+但该镜像默认没有为普通用户配置 SSH 服务，因此无法直接通过 SSH 连接 FreeBSD 设备。
 
 ## 创建普通用户（如没有）
 
@@ -169,7 +189,7 @@ Goodbye!
 # service sshd start # 启动 sshd 服务
 ```
 
-然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
+然后就可以在 Windows 上通过 ssh 连接了（IP 是 `localhost`）：
 
 ```powershell
 ssh ykla@localhost:8022
@@ -185,6 +205,11 @@ ssh ykla@localhost:8022
 
 ## 参考文献
 
-- [Create FreeBSD virtual machine using qemu. Run the VM using xhyve.](https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f) [备份](https://web.archive.org/web/20260119043934/https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f)，有一些扩容方法
-- [在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）](https://naiv.fun/Ops/83.html) [备份](https://web.archive.org/web/20260117183356/https://naiv.fun/Ops/83.html)，有一些概念解释和整体框架
-- [RISC-V Emulation Revisited](https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/) [备份](https://web.archive.org/web/20260118173136/https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/)，各种参数来自此处。
+- zg. Create FreeBSD virtual machine using qemu. Run the VM using xhyve.[EB/OL]. [2026-03-26]. <https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f>. 提供了 QEMU 下 FreeBSD 虚拟机扩容的技术方法。
+- Nativus . 在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）[EB/OL]. (2022-10-12)[2026-03-26]. <https://naiv.fun/Ops/83.html>. 提供了 RISC-V 环境搭建的概念解释与整体框架。
+- smist08. RISC-V Emulation Revisited[EB/OL]. (2023-04-28)[2026-03-26]. <https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited>. 详细介绍了 QEMU 中 RISC-V 虚拟化的各种配置参数与实现细节。
+
+## 课后习题
+
+1. 使用更简单的方法提取 OpenSBI、u-boot.bin 等文件。
+2. 分析 QEMU 中 RISC-V 图形界面支持的技术障碍并提出解决方案。
