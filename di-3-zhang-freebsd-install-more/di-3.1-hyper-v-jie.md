@@ -1,6 +1,6 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节了介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法。
+本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法。
 
 ## Hyper-V 简介
 
