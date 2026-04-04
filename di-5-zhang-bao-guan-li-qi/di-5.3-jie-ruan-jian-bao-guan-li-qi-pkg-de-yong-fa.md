@@ -1,76 +1,72 @@
 # 5.3 使用 pkg 管理二进制包
 
-FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），名称来源于英文单词“Package”，即软件包的简称。本章系统讲解其核心功能与使用方法。
+FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，意为软件包。
 
-pkg 作为 FreeBSD 现代包管理体系的核心组件，提供了高效、可靠的软件安装、更新与卸载机制。
+那些熟悉 Linux 发行版的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
 
-对于熟悉 Linux 发行版的读者而言，FreeBSD 的包管理方案可类比于两大 Linux 发行版包管理器的功能组合：
-
-- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 理念）
-- Gentoo Linux：Portage，对应 Ports（Portage 本身借鉴自 Ports）
+- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 的理念）
+- Gentoo Linux：Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
 `pkg install` 可以缩写成 `pkg ins`，其他命令亦类似。
 
 > **注意**
 >
-> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是将内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样由 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
+> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是将内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
-> FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase)，以期解决上述问题。
+>FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) ，以期解决上述问题。
 >
 > FreeBSD 使用 `freebsd-update` 来升级系统，获取安全补丁。<https://pkg-status.freebsd.org/> 可以查看当前的 pkg 编译状态。
 >
 >
 > 偏好图形化的用户可以安装并使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端，由 GhostBSD 开发。
 
-> **技巧**
+
+>**技巧**
 >
-> 如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing 搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+>如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
-## 从 Ports 构建二进制包的流程
-
-Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，这一构建过程涉及多个有序的执行步骤。下面的流程图展示了完整的构建流程，为理解这一机制提供了直观的参考。
+## 如何从 Port 构建出 pkg
 
 ![pkg 构建流程图](../.gitbook/assets/portstopkg.png)
 
-### 常见问题：在 pkg 中无法找到本书中提及的包
+### 书里明确写有某个包，但是 pkg 安装的时候却提示没有
 
-当遇到教材中明确提及的软件包在使用 pkg 安装时提示不存在的情况，一般可以归纳为以下两种原因：
+这个问题一般来说有两种情况：
 
-- 情况一：Ports 中确实不存在该 Port，可能的原因包括教材内容有误、该 Port 已从 Ports 集合中移除或已更名等
-- 情况二：Ports 中确实存在该 Port，但 FreeBSD 的 pkg 包是周期性构建的（与 Ports 自身的更新同步），因此时常会出现暂时没有对应 pkg 二进制包的情况
+- ① 在 Ports 中的确没有这个 Port：书里写错了、从 Ports 中移除了/改名了等
+- ② Ports 中的确有这个 Port：FreeBSD 的 pkg 包是周期性构建的（因为 Ports 本身在更新），因此经常会出现暂时没有对应 pkg 包的情况
 
-具体是哪些问题造成的，建议查询 <https://www.freshports.org/>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
+具体是哪个问题造成的，建议查询 <https://www.freshports.org>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
 
 本书中一般会同时列出 Ports 安装方式，比如要查 Port `x11/budgie`，你可以这么做：直接访问 <https://www.freshports.org/x11/budgie/>。
 
 一般来说，如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
-### 附录：FreeBSD 软件包原子更新的困难与现状分析
+### 附录：FreeBSD 软件包原子更新的困难与现状
 
-FreeBSD 镜像站（无论是官方的还是非官方的）的软件源存在以下典型现象，这些现象直接反映了当前软件包更新机制的技术特点：
+你会经常观察到 FreeBSD 的镜像站（无论是官方的还是非官方的）源存在这样几种情况：
 
-- 一旦某个 Port 发生更新，就会立即从软件源中撤销由该 Port 衍生的 pkg 二进制包，直到下次构建出新的 pkg 软件包，而非保留旧版本软件包；
-- 只要开始一次新的构建，旧版本软件包会立即从 pkg 软件源中删除，直到构建出新版本的 pkg 软件包。
+- 一旦 Port 发生更新，就会立刻从软件源撤销该 Port 衍生的 pkg 软件包，直到下次构建出新的 pkg 软件包，而不是保留旧的软件包；
+- 只要开始一次新的构建，旧的软件包不是被临时保留，而是被立刻从 pkg 软件包软件源中删除，直到构建出新版本的 pkg 软件包。
 
-针对上述现象，理论上的一种解决方案是：保持软件包处于某一固定版本阶段（如季度分支），暂不进行更新，直接进行版本轮替。
+理论上的解决方案是：保持软件包处于某一固定版本阶段（季度分支），不进行更新，然后直接轮替。
 
-问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有能力者可尝试提出新的看法和建议，并反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
+问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有能力者可尝试提出新的看法和建议，并反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/) [备份](https://web.archive.org/web/20260119051244/https://forums.freebsd.org/)。
 
-> **思考题**
+>**思考题**
 >
-> - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
-> - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
-> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)
+>- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/) >- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg) >- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere) [备份](https://web.archive.org/web/20260121073849/https://github.com/freebsd/poudriere)。
 >
-> 试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
+>试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
-## 安装 pkg 包管理器
 
-> **技巧**
+## 安装 pkg 包管理器本体
+
+>**技巧**
 >
-> 根据 man [pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg) 页面解释：
+>根据 man [pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg) 页面解释：
 >
->> 为了避免出现向后兼容问题，实际的 `pkg(8)` 工具不会预装在基本系统中。
+>>为了避免出现向后兼容问题，实际的 `pkg(8)` 工具不会预装在基本系统中。
 
 基本系统默认不包含 pkg，需要先下载并安装 pkg：
 
@@ -88,21 +84,22 @@ Usage: pkg [-v] [-d] [-l] [-N] [-j <jail name or id>|-c <chroot path>|-r <rootdi
 For more information on available commands and options see 'pkg help'.
 ```
 
-> **技巧**
+>**技巧**
 >
-> 如果长时间卡在 `Bootstrapping pkg from ……, please wait...`，请按 **Ctrl + C** 中断这一过程，换境内源后再进行。
+>如果长时间卡在 `Bootstrapping pkg from ……, please wait...`，请按 **Ctrl + C** 中断这一过程，换境内源后再进行。
 
-> **技巧**
+>**技巧**
 >
-> 若提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
-
-> ```sh
-> # ntpdate -u pool.ntp.org  # 使用 pool.ntp.org 同步系统时间
-> ```
+>如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 >
->> **思考题**
+>```sh
+># ntpdate -u pool.ntp.org	#  使用 pool.ntp.org 同步系统时间
+>```
+>
+>>**思考题**
 >>
->> 在 SSL 大行其道的年代里，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且大多数情况下报错也极不明确。你认为应该如何解决这个问题？
+>>在 SSL 大行其是的年代里，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且大多数情况下报错也极不明确。你认为应该如何解决这个问题？
+
 
 ## 使用 pkg 安装软件
 
@@ -113,7 +110,7 @@ $ pkg ins chromium # 在普通用户权限下安装 chromium 浏览器看看
 pkg: Insufficient privileges to install packages
 ```
 
-“Insufficient privileges to install packages”即“权限不足，无法安装软件包”。
+“Insufficient privileges to install packages”即“没有足够的权限来安装软件包”。
 
 再试一次：
 
@@ -130,7 +127,7 @@ Fetching data.pkg: 100%   31 KiB  32.3kB/s    00:01
 Processing entries: 100%
 FreeBSD-kmods repository update completed. 213 packages processed.
 All repositories are up to date.
-The following 6 package(s) will be affected (of 0 checked): # 有 6 个软件包将会受到影响
+The following 6 package(s) will be affected (of 0 checked): # 有 6 个软件包将会受影响
 
 New packages to be INSTALLED:
         chromium: 142.0.7444.162 [FreeBSD]
@@ -148,16 +145,15 @@ The process will require 463 MiB more space.
 Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 ```
 
-> **思考题**
+>**思考题**
 >
->> [Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628)
->
-> 你会发现 pkg 既不支持并行下载也不支持并行安装。阅读源代码，尝试解决这个问题并提交 PR。
+>>[Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628) >
+>你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决提交 PR 这个问题。
 
-你可能会遇到这种情况：
+你极有可能会遇到这种情况：
 
 ```sh
-# pkg ins chromium  # 安装 Chromium 浏览器
+# pkg ins chromium	# 安装 Chromium 浏览器
 Updating FreeBSD repository catalogue.
 Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
 Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04    
@@ -169,21 +165,21 @@ All repositories are up to date.
 pkg: No packages available to install matching 'chromium' have been found in the repositories
 ```
 
-“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到与 chromium 匹配的可安装软件包”。
+“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与“chromium”匹配、可供安装的软件包”。
 
 如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 
-这就是上述缺乏“原子更新”的表现。
+这就是上面所述的缺乏“原子更新”的表现。
 
 还会发现，即使系统已设置 i18n，pkg 的输出仍然是英文。
 
-> **思考题**
+>**思考题**
 >
->> [Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
->>
->> FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
+>>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421) >>
+>>FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
 >
-> 阅读 pkg 源代码，定位问题源头，尝试解决这个问题，提交 PR 让 pkg 支持 i18n。
+>阅读 pkg 源代码，定位问题所在源头，尝试解决这个问题，提交 PR 让 pkg 支持 i18n。
+
 
 ## pkg 更新软件
 
@@ -201,7 +197,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 # make install
 ```
 
-## 查看已安装的所有软件
+## 查看已经安装的所有软件
 
 ```sh
 # pkg info
@@ -210,6 +206,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 ## 卸载软件
 
 直接使用 `pkg delete` 可能破坏依赖关系，应尽量避免使用（Ports 的 `make deinstall` 亦然），建议改用 `pkg_rmleaves` 命令，该命令所属的软件需要自行安装。
+
 
 ```sh
 # pkg install pkg_rmleaves
@@ -251,24 +248,17 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 
 #### 参考文献
 
-- FreeBSD Project. pkg delete -- deletes packages from the database and the system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=pkg-delete>. 提供了 pkg 命令删除软件包的详细规范与参数说明
+- [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)
 
 ## 列出 pkg 包安装的文件
 
-> **技巧**
+>**技巧**
 >
-> pkg 的下载路径是 `/var/cache/pkg/`。
+>pkg 的下载路径是 `/var/cache/pkg/`。
 
-```sh
-/
-└── var/
-    └── cache/
-        └── pkg/ # pkg 的下载路径
-```
-
-> **注意**
+>**注意**
 >
-> 只能列出已安装的包的文件，未安装的不能用这个命令。
+>只能列出已安装的包的文件，未安装的不能用这个命令。
 
 ```sh
 # pkg info -l xrdp
@@ -284,11 +274,12 @@ xrdp-0.10.2_2,1:
 	……省略一部分……
 ```
 
-## 查找缺少的 `.so` 文件（适用于 Linux 兼容层）
 
-> **警告**
+## 查找缺少的 `.so`（适用于 Linux 兼容层）
+
+>**警告**
 >
-> 本节仅针对 Linux 兼容层缺少 `.so` 文件的问题。如果你在 FreeBSD 中遇到了此类问题，应首先更新系统，然后再更新软件源和软件。
+>本节仅针对 Linux 兼容层缺少 `.so` 文件的问题。如果你是在 FreeBSD 中遇到了此类问题，应首先更新系统。然后再更新软件源和软件。
 
 ### 安装 pkg-provides
 
@@ -333,17 +324,8 @@ To update the provides database run `pkg provides -u`.
 # 要更新 provides 数据库，运行 `pkg provides -u`。
 ```
 
-目录结构：
-
-```sh
-/usr/local/
-├── etc/
-│   └── pkg.conf # pkg 配置文件
-└── lib/
-    └── pkg/ # pkg 插件目录
-```
-
 - 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
+
 
 ```ini
 PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
@@ -386,12 +368,13 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 对于一般 RELEASE，更新系统即可。对于 CURRENT/STABLE 系统，重新编译 `pkg` 即可。
 
+
 #### RELEASE
 
 请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
 ```sh
-# pkg-static bootstrap -f  # 强制初始化 pkg 包管理器
+# pkg-static bootstrap -f	# 强制初始化 pkg 包管理器
 ```
 
 若无效，则再：
@@ -459,13 +442,15 @@ jbig2dec-0.20_1: /usr/local/bin/jbig2dec misses libmd.so.6
 jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 ```
 
-按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接用 `pkg` 更新。）。
+按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接 `pkg` 更新。）。
+
 
 #### 附录：`bsdadminscripts2` 扩展用法及参考文献
 
-- lonkamikaze. BSD Administration Scripts II[EB/OL]. [2026-03-25]. <https://github.com/lonkamikaze/bsda2>. 提供 FreeBSD 系统管理辅助工具集，含包完整性检查等功能
 
-若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的。
+- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2) [备份](https://web.archive.org/web/20260121073908/https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
+
+- 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的。
 
 验证已安装软件包的完整性和一致性：
 
@@ -507,12 +492,4 @@ Ignore the mismatch and continue? [y/N]:
 
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
-参见：pkg(8): An error occured while fetching package: No error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>.
-
-## 课后习题
-
-1. 阅读 pkg 源代码，定位其并行下载与安装的实现位置，尝试为其添加并行下载功能，并验证是否能显著提升安装速度。
-
-2. 选取 pkg 的原子更新问题，设计一个实验方案，复现该问题，并提出一个可行的解决方案。
-
-3. 为 pkg 新增 i18n 支持。
+参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/) 
