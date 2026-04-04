@@ -10,7 +10,7 @@
 >
 >Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
 >
->——乔治·贝克莱
+>BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, 1752.
 
 本文聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”亦可意译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 
@@ -57,8 +57,8 @@ Fiat Lux!
 ## 参考文献
 
 - University of California, Berkeley. Fiat Lux Scholarship[EB/OL]. [2026-03-25]. <https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/>. 为加州大学伯克利学生提供经济资助的奖学金项目。
-- 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生生平事迹与教育理念。
-- 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
+- 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
+- （日）山本四郎. 小川又次稿：《清国征讨策案》[J]. 日本史研究, 1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - 蔡元培. 蔡元培：言有物，行有伦[M]. 北京:中国文史出版社, 2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
 - PIAZZA L, LUMMEN T T A, QUIÑONEZ E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications, 2015, 6: 6407. 揭示等离子体近场的量子化与干涉现象。
 - 伊曼努尔·康德. 历史理性批判文集[M]. 何兆武, 译. 天津:天津人民出版社, 2014:22. 《答复这个问题：“什么是启蒙运动？”》. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
@@ -69,3 +69,9 @@ Fiat Lux!
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京:社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
 - 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014.
 - ABRAHAO R A, MORIN H P N, PAGÉ J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
+
+## 课后习题
+
+1. 观看纪录片了解加州大学伯克利分校（如怀斯曼 F, 导演. 在伯克利[V]. 美国: Zipporah Films, 2013.）
+2. 撰写加州大学伯克利分校校史。
+3. 撰写国立西南联合大学校史。
