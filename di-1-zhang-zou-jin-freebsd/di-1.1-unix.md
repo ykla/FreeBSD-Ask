@@ -29,19 +29,19 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 1. 技术标准要求：符合[单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)（Single UNIX Specification，SUS），该规范定义了 UNIX 系统必须实现的接口、命令、实用程序和库函数，确保了不同的 UNIX 操作系统间的兼容性。
 2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
-常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以考虑 macOS。~~
+常见经过认证的 UNIX 操作系统是 Apple 公司的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以考虑 macOS。~~
 
 >**技巧**
 >
->macOS/iOS 等与 BSD 的关系
+>macOS/iOS 与 BSD 的关系
 >
->从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可被视为一款独立的、类 BSD 的操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统类似。参见：《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》[EB/OL]. [2026-03-26]. <https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple>
+>从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确是基于 BSD 代码，并融合了其他技术。因此 macOS 系列操作系统可被视为独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许这也是大教堂与市集之争。~~
 
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
-UNIX 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造与提炼。其核心主张可归纳为以下原则：
+UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造。其核心主张可归纳为以下原则：
 
 - **小即美**：程序应设计得简洁小巧，功能单一明确，便于理解和维护。
 - **一个程序只做一件事**：每个工具专注于单一功能，通过组合多个工具的协作完成复杂任务。
@@ -51,7 +51,7 @@ UNIX 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套
 - **沉默是金**：程序在正常执行时不输出多余信息，仅在出错时提示，成功操作无输出，不显示进度等。
 - **避免仅用户界面**：应提供命令行接口，确保可通过脚本自动化操作。
 
-这些原则在软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
+这些原则在当年的软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
 
 >**思考题**
 >
