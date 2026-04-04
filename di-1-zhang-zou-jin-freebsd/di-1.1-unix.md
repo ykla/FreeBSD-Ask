@@ -2,7 +2,7 @@
 
 ## 何谓 UNIX？
 
-UNIX 的内涵历经了从技术实现到文化符号的演变。20 世纪 60 年代末至 70 年代初，UNIX 是一款操作系统，最初使用汇编语言编写，后主要由 C 语言重写，起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。20 世纪 80 年代以后，它逐渐成为一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。
+UNIX 的内涵历经了从技术实现到文化象征的演变。20 世纪 60 年代末至 70 年代初，UNIX 是一款操作系统，最初使用汇编语言编写，后主要由 C 语言重写，起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。20 世纪 80 年代以后，它逐渐成为一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。
 
 > Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标。）——[UNIX® Certification](https://www.opengroup.org/openbrand/register/)
 
