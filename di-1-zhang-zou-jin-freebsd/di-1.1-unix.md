@@ -37,7 +37,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 >
 >从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确是基于 BSD 代码，并融合了其他技术。因此 macOS 系列操作系统可被视为独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
 >
->所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许这也是大教堂与市集之争。~~
+>所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
 
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
