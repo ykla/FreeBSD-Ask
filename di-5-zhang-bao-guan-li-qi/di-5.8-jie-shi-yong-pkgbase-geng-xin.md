@@ -221,7 +221,7 @@ FreeBSD-base {
 
 >**技巧**
 >
->需要换源的用户可以将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
+>需要切换软件源的用户可以将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
 
 - 刷新软件源
 
@@ -469,7 +469,7 @@ zfs-kmod-2.3.5-1
 >
 >考虑到基本系统中的 OpenZFS 版本不一定是最新的，所以你最好对所有版本都使用 Ports 中的版本以期达到统一。换言之，建议读者也在 15.0-RELEASE 中按照相同方法替换 ZFS。
 
-## 附录：给 pkgbasify 脚本换源
+## 附录：给 pkgbasify 脚本切换软件源
 
 对于网络环境受限制的用户，可能需要为 pkgbasify 脚本配置国内镜像源以提高下载速度。下面介绍如何修改脚本中的源地址。
 
