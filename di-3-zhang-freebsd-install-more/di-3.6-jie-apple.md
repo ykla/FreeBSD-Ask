@@ -7,7 +7,7 @@
 
 >**注意**
 >
->由于补丁 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158) [备份](https://web.archive.org/web/20260117183206/https://reviews.freebsd.org/D42158) 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/) [备份](https://web.archive.org/web/20260119043851/https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/)），故只能安装 15 及以上版本。
+>由于补丁 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158) 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/) [备份](https://web.archive.org/web/20260119043851/https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/)），故只能安装 15 及以上版本。
 
 ## 安装
 
@@ -71,9 +71,7 @@ ums_load="YES"
 
 ### 参考文献
 
-[Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) [备份](https://web.archive.org/web/20260107092021/https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/)
-
-## 虚拟机工具
+[Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) ## 虚拟机工具
 
 使用 pkg 安装虚拟机工具：
 

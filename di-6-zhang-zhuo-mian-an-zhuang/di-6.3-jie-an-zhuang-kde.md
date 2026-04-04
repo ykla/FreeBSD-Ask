@@ -116,13 +116,9 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 #### 参考文献
 
-- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/) [备份](https://web.archive.org/web/20260120215906/https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
+- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/) ### 参考文献
 
-### 参考文献
-
-- [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) [备份](https://web.archive.org/web/20260120215847/https://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
-
-## 附录：最小化 KDE 桌面安装方案
+- [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) ## 附录：最小化 KDE 桌面安装方案
 
 直接安装 `x11/kde` 会作为依赖安装 `x11/plasma6-plasma` 和 `x11/kde-baseapps`，其中捆绑了大量的工具软件，在某些情况下可能不方便部署与使用。
 
@@ -251,9 +247,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 #### 参考文献
 
-- [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/) [备份](https://web.archive.org/web/20260120215910/https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
-
-### 解除自动锁屏
+- [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/) ### 解除自动锁屏
 
 单击“设置”——>“安全和隐私”——>“锁屏”——>“自动锁定屏幕”选择“不自动锁屏”，然后点击“应用”。（休眠唤醒后锁定屏幕可按需设置）
 

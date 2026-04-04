@@ -67,9 +67,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 #### 当前尚不清楚如何手动生成中文字体的 fnt 文件
 
-[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) [备份](https://web.archive.org/web/20260115023057/https://github.com/usonianhorizon/vt-fnt)  提供的方法较难理解，可生成 bdf 文件，但会出现文中相同的报错。文中提到的软件 FontForge 提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/) [备份](https://web.archive.org/web/20260110235103/https://fontforge.org/en-US/downloads/windows-dl/)
-
-
+[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) 提供的方法较难理解，可生成 bdf 文件，但会出现文中相同的报错。文中提到的软件 FontForge 提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/) 
 ### 参考文献
 
 - [rc.conf](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5) ，此页搜索“allscreens_flags”

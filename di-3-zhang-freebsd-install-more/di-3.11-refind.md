@@ -1,6 +1,6 @@
 # 3.11 rEFInd 引导管理器（多系统引导管理）
 
-在 BIOS 中来回切换确实很麻烦，我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) [备份](https://web.archive.org/web/20260107121430/https://www.rodsbooks.com/refind/) 实现类似于 Clover 的效果，在开机时选择要进入的操作系统。
+在 BIOS 中来回切换确实很麻烦，我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的效果，在开机时选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动。
 
@@ -36,13 +36,13 @@
 >}
 >```
 
-使用 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
 
 ![](../.gitbook/assets/shaung13.png)
 
 ## 添加启动项
 
-使用 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/) 添加 UEFI 引导项。
+使用 [DiskGenius](https://www.diskgenius.com/) 添加 UEFI 引导项。
 
 ![](../.gitbook/assets/shuang14.png)
 
@@ -68,9 +68,7 @@ rEFInd 支持多种图形化主题。
 
 本例以 Matrix-rEFInd（灵感来源于电影《黑客帝国》）主题为例进行说明。
 
-项目地址为：[Matrix-rEFInd](https://github.com/Yannis4444/Matrix-rEFInd/) [备份](https://web.archive.org/web/20250724091414/https://github.com/Yannis4444/Matrix-rEFInd)
-
-下载项目压缩包 `Matrix-rEFInd-master.zip` 并解压。将解压得到的文件夹 `Matrix-rEFInd-master` 重命名为 `Matrix-rEFInd`。
+项目地址为：[Matrix-rEFInd](https://github.com/Yannis4444/Matrix-rEFInd/) 下载项目压缩包 `Matrix-rEFInd-master.zip` 并解压。将解压得到的文件夹 `Matrix-rEFInd-master` 重命名为 `Matrix-rEFInd`。
 
 在本地新建一个名为 `themes` 的目录，将重命名后的 `Matrix-rEFInd` 文件夹放入其中。
 

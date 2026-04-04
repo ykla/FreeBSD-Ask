@@ -43,16 +43,14 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的是简单朴素的色
 
 ## Gnome 主题美化
 
-同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) [备份](https://web.archive.org/web/20260124164656/https://www.pling.com/p/1403328/) 主题。
+同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 2. 进入主题包目录：`cd WhiteSur-gtk-theme`
 3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
-## [图标](https://www.pling.com/p/1405756/) [备份](https://web.archive.org/web/20260120220254/https://www.pling.com/p/1405756/)
-
-1. 下载图标：`git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
+## [图标](https://www.pling.com/p/1405756/) 1. 下载图标：`git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 2. 进入软件目录：`cd WhiteSur-icon-theme`
 3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
@@ -66,9 +64,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的是简单朴素的色
 
 ## 背景图片
 
-[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper) [备份](https://web.archive.org/web/20260121071602/https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
-
-## 思考题
+[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper) ## 思考题
 
 试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/) [备份](https://web.archive.org/web/20260121102213/https://www.gnome-look.org/p/1166289/):
 

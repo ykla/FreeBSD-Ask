@@ -26,9 +26,7 @@ $ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 
 #### 参考文献
 
-- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6) [备份](https://web.archive.org/web/20260120211042/https://qiita.com/fygar256/items/35100d43b096470631d6)
-
-### Apple Magic Trackpad
+- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6) ### Apple Magic Trackpad
 
 Apple Magic Trackpad 触摸板系列因压感带来的舒适操作体验而闻名。
 
@@ -62,4 +60,4 @@ hw.usb.usbhid.enable="0"
 
 ## 附录：Fn 键设置
 
-- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) [备份](https://web.archive.org/web/20260120211035/https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)
+- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) 

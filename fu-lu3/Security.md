@@ -1,9 +1,7 @@
 # Security 安全
 
 
-参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) [备份](https://web.archive.org/web/20260119060629/https://www.asus.com.cn/support/faq/1046347/)
-
-BIOS（基本输入/输出系统，Basic Input/Output System）密码是一种安全功能，用于阻止计算机在启动过程中遭到未经授权的访问。BIOS 密码也常被称为系统设置密码、UEFI 密码、开机密码或安全密码。
+参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) BIOS（基本输入/输出系统，Basic Input/Output System）密码是一种安全功能，用于阻止计算机在启动过程中遭到未经授权的访问。BIOS 密码也常被称为系统设置密码、UEFI 密码、开机密码或安全密码。
 
 当设备启动时，系统会提示用户输入 BIOS 密码，只有在输入正确密码后，才能访问和修改 BIOS 设置，并进入操作系统。这提供了一层额外的安全性，防止未经授权的人员更改硬件配置或启动过程。
 

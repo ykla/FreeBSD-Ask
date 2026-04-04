@@ -10,7 +10,7 @@
 |freebsd-update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 16 中退役，转而使用 pkgbase|
 |pkgbase|将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统的方式，取代传统的 freebsd-update 和 distribution |从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计在 16.0 成为默认/标准方式。14.X 为实验性支持，可使用 pkgbasify 工具转换。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)[备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的|
 |kernel modules（kmods）| 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984) [备份](https://web.archive.org/web/20260120222509/https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html) [备份](https://web.archive.org/web/20251207043842/https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
-|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) [备份](https://web.archive.org/web/20260122042612/https://download.freebsd.org/ftp/) 目录结构。 |
+|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。 |
 
 ### 理解 quarterly 季度分支与滚动更新的 latest 分支
 
@@ -90,11 +90,11 @@ origin/main created around 2025-10-24 12:43:02 +0900
 
 quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。我们有必要区分“稳定”和“固定”两个词语：
 
-根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) [备份](https://web.archive.org/web/20260121073246/https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
+根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
 
 >**技巧**
 >
->Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现的 **稳定**，手段是其软件源是 **固定**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。我们可以看到常见发行版是通过 **固定** 软件来实现的 **Stable** 版本。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见 [DebianStability](https://wiki.debian.org/DebianStability) [备份](https://web.archive.org/web/20260121103142/https://wiki.debian.org/DebianStability)（看起来是稳定的意思）、[Chapter 3. Choosing a Debian distribution](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1) [备份](https://web.archive.org/web/20260121073434/https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1)（实际上是固定的意思），中文版在 [第 3 章 选择一个 Debian 发布版本](https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html) [备份](https://web.archive.org/web/20251220152433/https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html)、[2.2. Are there package upgrades in "stable"?](https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable) [备份](https://web.archive.org/web/20251210090450/https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable) 指出软件不会有功能性更新。
+>Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现的 **稳定**，手段是其软件源是 **固定**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。我们可以看到常见发行版是通过 **固定** 软件来实现的 **Stable** 版本。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见 [DebianStability](https://wiki.debian.org/DebianStability) [备份](https://web.archive.org/web/20260121103142/https://wiki.debian.org/DebianStability)（看起来是稳定的意思）、[Chapter 3. Choosing a Debian distribution](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1) [备份](https://web.archive.org/web/20260121073434/https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1)（实际上是固定的意思），中文版在 [第 3 章 选择一个 Debian 发布版本](https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html) [备份](https://web.archive.org/web/20251220152433/https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html)、[2.2. Are there package upgrades in "stable"?](https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable) 指出软件不会有功能性更新。
 
 FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测和稳定的用户体验），也是通过 **非功能性更新** 来实现的——除非涉及 Ports 框架、安全更新（故并非完全禁止版本更替）、简单错误修复（构建、编译、打包）等。任何功能性更新都不会被回溯至 quarterly 分支。可以看出 FreeBSD 的 quarterly 也同时兼有稳定和固定的双重含义。
 
@@ -104,9 +104,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 ### 参考文献
 
-- [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
-
-## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站
+- [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 
 该配置要求读者在安装过程中就使用了 pkgbase 方式。可以帮助读者配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
 
@@ -396,7 +394,7 @@ USTC-base: {
 
 > **技巧**
 >
-> 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) [备份](https://web.archive.org/web/20260212000000/https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
+> 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
 
 ## STABLE/CURRENT 快速切换 pkg 软件源到中国科学技术大学开源镜像站

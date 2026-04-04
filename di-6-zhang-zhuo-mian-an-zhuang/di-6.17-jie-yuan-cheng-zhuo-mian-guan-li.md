@@ -63,8 +63,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 ### 参考文献
 
 - [x11vnc -allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
-- [X11vnc](https://wiki.archlinux.org/title/X11vnc) [备份](https://web.archive.org/web/20260121071804/https://wiki.archlinux.org/title/X11vnc)
-  
+- [X11vnc](https://wiki.archlinux.org/title/X11vnc)  
 ## TigerVNC（FreeBSD 为被控端）
 
 启用 VNC 服务（目前 Ports 中仅剩此 [TigerVNC](https://www.freshports.org/net/tigervnc-server/)）
@@ -182,9 +181,7 @@ $ ps
 
 ### 参考文献
 
-- [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/) [备份](https://web.archive.org/web/20260121071814/https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
-
-## XRDP（FreeBSD 为被控端）
+- [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/) ## XRDP（FreeBSD 为被控端）
 
 ### 安装 XRDP（基于 KDE6）
 
@@ -698,5 +695,4 @@ $ anydesk
 ### 参考文献
 
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
-- [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812) [备份](https://web.archive.org/web/20260120220700/https://www.cnblogs.com/safe-rabbit/p/18020812)
-
+- [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812) 

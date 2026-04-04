@@ -69,7 +69,7 @@
 
 >**技巧**
 >
->你可以在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) [备份](https://web.archive.org/web/20260122123446/https://github.com/freebsd/freebsd-doc) 项目试试看能否成功。我已经报告过 Bug。
+>你可以在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目试试看能否成功。我已经报告过 Bug。
 >
 >[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
 
@@ -160,7 +160,7 @@ root@ykla:/home/ykla# locale charmap
 UTF-8
 ```
 
-其中，FreeBSD 的编码是在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) [备份](https://web.archive.org/web/20260115042059/https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 这个源文件中设置的，编译出来路径即 `/etc/login.conf`。
+其中，FreeBSD 的编码是在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 这个源文件中设置的，编译出来路径即 `/etc/login.conf`。
 
 当然，也可以将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。但这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 

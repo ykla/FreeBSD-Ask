@@ -17,7 +17,7 @@
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若是物理机，请考虑使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 搭配 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260116195032/https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) 镜像制作启动盘。
+>若是物理机，请考虑使用 [Rufus](https://rufus.ie/zh/) 搭配 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) 镜像制作启动盘。
 
 
 > **警告**
@@ -168,7 +168,7 @@
 
 ## 分配磁盘空间
 
-FreeBSD 14.3-RELEASE 的根分区（`/`）支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) [备份](https://web.archive.org/web/20260115144422/https://svnweb.freebsd.org/base?view=revision&revision=256361) 支持 zfs，手动安装的话至迟 8.0 就 [可以](https://blog.delphij.net/posts/2008/11/zfs-1/) [备份](https://web.archive.org/web/20260115144031/https://blog.delphij.net/posts/2008/11/zfs-1/) 用 zfs 作为根分区了。
+FreeBSD 14.3-RELEASE 的根分区（`/`）支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) 支持 zfs，手动安装的话至迟 8.0 就 [可以](https://blog.delphij.net/posts/2008/11/zfs-1/) 用 zfs 作为根分区了。
 
 ![](../.gitbook/assets/ins7.png)
 
@@ -514,12 +514,9 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 
 ### 参考文献
 
-- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
-- [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
+- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
-- [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)
-
-
+- [阿里公共 DNS](https://www.alidns.com/) 
 ## 时区设置
 
 ![](../.gitbook/assets/ins22.png)

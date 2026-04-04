@@ -24,7 +24,7 @@
 | 无线网卡      | Intel AX 系列  | AX200                                        | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
 | 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
-| 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬 ® Xe 显卡、Intel HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls) |
+| 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬 ® Xe 显卡、Intel HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) |
 | NVIDIA 显卡 | 近十多年的显卡   | GTX 850M  | 受 NVIDIA 官方显卡驱动支持     |
 
 >**注意**
@@ -63,7 +63,7 @@
 
 >**警告**
 >
->使用非 RELEASE 版本的用户应有意愿和时间关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) 等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
+>使用非 RELEASE 版本的用户应有意愿和时间关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) 等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
 
 |Installer|VM|SD Card|Documentation|
 |:---:|:---:|:---:|:---:|
@@ -121,7 +121,7 @@ FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不
 
 >**技巧**
 >
->网络传输可能产生错误，导致下载的文件与原始镜像不一致。~~网盘就经常这样~~。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带了命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。你还可以参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) [备份](https://web.archive.org/web/20260115143827/https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
+>网络传输可能产生错误，导致下载的文件与原始镜像不一致。~~网盘就经常这样~~。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带了命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。你还可以参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
 
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
@@ -163,7 +163,7 @@ Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) [备份](https:
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因为有时会出现校验错误（尽管实际文件校验值是正确的）。类似地，**同样不建议** 使用 [Ventoy](https://www.ventoy.net/) [备份](https://web.archive.org/web/20260115143659/https://www.ventoy.net/en/index.html) 直接加载 ISO 或 IMG 镜像文件。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因为有时会出现校验错误（尽管实际文件校验值是正确的）。类似地，**同样不建议** 使用 [Ventoy](https://www.ventoy.net/) 直接加载 ISO 或 IMG 镜像文件。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 

@@ -46,7 +46,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 贝克莱大主教的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见 1734，《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
-贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε‑δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来尝试解决[芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/) [备份](https://web.archive.org/web/20260115134315/https://plato.stanford.edu/entries/paradox-zeno/) ，进而否定其哲学价值。
+贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε‑δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来尝试解决[芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/) ，进而否定其哲学价值。
 
 更多相关资源可参阅关于非标准分析、超实数及数学哲学等方面的书籍。
 
@@ -134,5 +134,5 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 - George Berkeley. *The Querist, containing several queries proposed to the consideration of the public* [M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/) [备份](https://web.archive.org/web/20260114073713/https://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
-- [George Berkeley](https://www.britannica.com/biography/George-Berkeley) [备份](https://web.archive.org/web/20260115022234/https://www.britannica.com/biography/George-Berkeley) ，大英百科全书贝克莱条目
+- [George Berkeley](https://www.britannica.com/biography/George-Berkeley) ，大英百科全书贝克莱条目
 - 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南： 山东教育出版社， 2009.（已绝版，ISBN 7532853861）。其中整本下册均涉及对爱因斯坦的批判。

@@ -6,9 +6,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) [备份](https://web.archive.org/web/20260120222010/https://git.freebsd.org/)
-
-因此，获取源代码的方式也发生了变化，不再使用 SVN。
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) 因此，获取源代码的方式也发生了变化，不再使用 SVN。
 
 ## 从 Git 获取源代码
 
@@ -81,9 +79,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) [备份](https://web.archive.org/web/20260115021904/https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
-
-
+- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) 
 ## 从压缩包获取源代码（方便但非最新）
 
 该方法较为简单快捷。
