@@ -1,15 +1,16 @@
 # 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
+本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
 
-本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境。
+在 Parallels Desktop 20 中，FreeBSD 15.0-CURRENT 的图形界面（不支持自动缩放）、键盘和鼠标均可正常工作，系统整体运行情况良好。
 
-在 Parallels Desktop 20 中，FreeBSD 15.0-CURRENT 的图形界面（不支持自动缩放）、键盘和鼠标均可正常工作。
-
->**注意**
+> **注意**
 >
->由于补丁 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158) 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/) [备份](https://web.archive.org/web/20260119043851/https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/)），故只能安装 15 及以上版本。
+>由于补丁 FreeBSD Foundation. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>. ），故只能安装 15 及以上版本。
 
 ## 安装
+
+环境准备完成后，按照以下步骤安装 FreeBSD。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd1.png)
 
@@ -27,9 +28,9 @@
 
 选中 FreeBSD 镜像。
 
->**警告**
+> **警告**
 >
->本文基于 Apple M1，故你选择的 FreeBSD 架构应该是 aarch64！
+>本文基于 Apple M1，故你选择的 FreeBSD 架构应为 aarch64。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 
@@ -41,7 +42,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd7.png)
 
->**技巧**
+> **技巧**
 >
 >Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，一般无需调整硬件配置。
 
@@ -55,23 +56,23 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd10.png)
 
-手动安装桌面环境后，桌面显示正常运行。
+手动安装桌面环境后，桌面正常运行。
 
 ## 故障排除与未竟事项
 
-### 鼠标不能移动的问题
+### 鼠标无法移动的问题
 
-若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf` 中添加如下配置：
-
+若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf.local`（推荐使用本地配置扩展文件，避免直接修改系统默认配置 `/boot/loader.conf`）中添加如下配置：
 
 ```sh
 ums_load="YES"
 ```
 
-
 ### 参考文献
 
-[Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) ## 虚拟机工具
+- FreeBSD Forums. Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon[EB/OL]. (2021-01-30)[2026-03-26]. <https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/>. 提供了 Apple Silicon 上 Parallels Desktop 中 FreeBSD 启动问题的讨论与解决方案。
+
+## 虚拟机工具
 
 使用 pkg 安装虚拟机工具：
 
@@ -86,10 +87,9 @@ ums_load="YES"
 # make install clean
 ```
 
->**注意**
+> **注意**
 >
 >若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
-
 
 ### 故障排除与未竟事宜
 
@@ -97,4 +97,12 @@ ums_load="YES"
 
 ### 参考文献
 
-- [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)
+- FreshPorts. parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. [2026-03-26]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD Port 信息与安装说明。
+
+## 课后习题
+
+1. 查找 FreeBSD 15 源代码中关于 `acpi_ged` 的提交记录，理解该补丁解决的具体问题，尝试在 FreeBSD 14 上手动应用该补丁并验证系统能否正常启动。
+
+2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
+
+3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，并在不同虚拟机环境中测试两种驱动的兼容性。
