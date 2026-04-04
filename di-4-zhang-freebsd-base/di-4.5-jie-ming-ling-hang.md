@@ -415,7 +415,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 ……省略一部分……
 ```
 
-在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/)  自行查看一下。
+在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看一下。
 
 选项 `-a` 可用于显示隐藏的目录和文件：
 
@@ -755,7 +755,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 ## BSD 风格的 make/grep/sed/awk
 
-FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1) /[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)  与 GNU 那套有所不同。详见 man 手册。
+FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1) /[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
 
 示例：
 

@@ -23,7 +23,7 @@
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
 │   └── defaults 存放默认内核的默认引导配置文件
-│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)  
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5) 
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件

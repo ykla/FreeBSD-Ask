@@ -57,13 +57,13 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/)  将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
 ![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
 
 ## 添加启动项
 
-使用 [DiskGenius](https://www.diskgenius.com/)  添加 UEFI 引导项。
+使用 [DiskGenius](https://www.diskgenius.com/) 添加 UEFI 引导项。
 
 ![添加 UEFI 引导项](../.gitbook/assets/shuang14.png)
 
