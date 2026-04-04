@@ -1,17 +1,16 @@
 # 6.3 KDE 6 桌面环境（X11 会话）
 
-KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 Windows，那么从时间线上看可以说是“Windows 很像 KDE”。
+KDE 项目致力于开发一套现代化的桌面环境。若觉得 KDE 界面与 Windows 相似，从时间发展的角度来看，可以说是“Windows 的设计借鉴了 KDE”。
 
->**技巧**
+> **技巧**
 >
->视频教程参见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
+> 视频教程可参见：FreeBSD 中文社区. 003-FreeBSD14.2 安装 KDE6[EB/OL]. [2026-03-26]. <https://www.bilibili.com/video/BV12zAYeKEej>.
 
+## 安装完整的 KDE 桌面环境
 
-## 安装完整的 KDE 桌面体验
-
->**技巧**
+> **技巧**
 >
->**那些不希望捆绑安装大量附加工具和软件的用户可以使用下方附录的最小化安装方案**，不需要自定义的用户可继续使用上述完整安装方案。
+>不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，不需要自定义的用户可继续使用本方案。
 
 - 使用 pkg 安装：
 
@@ -23,7 +22,6 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 >
 > 如果有时提示 `pkg` 找不到或未提供 kde，请访问 [x11/kde](https://www.freshports.org/x11/kde) 查看是否二进制包尚未构建出来。有时需要切换到 quarterly 或 latest 软件源，待上游构建完成后再运行 `pkg upgrade` 更新。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
 
-
 - 或者使用 Ports 安装：
 
 ```sh
@@ -33,21 +31,29 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 # cd /usr/ports/x11-fonts/wqy/ && make install clean 
 ```
 
-- 软件包说明
+### 软件包说明
 
-| 包名                   | 作用                     |
-|:----------------------:|:------------------------:|
-| `xorg`               | 图形界面基础，提供 X Window 系统              |
-| `sddm`               | 登录管理器                |
-| `kde`    | KDE 桌面环境              |
-| `wqy-fonts`          |  文泉驿中文字体              |
-
+| 包名 | 作用 |
+| ---- | ---- |
+| `xorg` | 图形界面基础，提供 X Window 系统 |
+| `sddm` | 显示管理器 |
+| `kde` | KDE 桌面环境 |
+| `wqy-fonts` | 文泉驿中文字体 |
 
 ## 启动项设置
 
+D-Bus 用于桌面环境的进程间通信，是作为依赖项自动安装的。
+
+启用 D-Bus：
+
 ```sh
-# service dbus enable # 用于桌面环境的进程间通信，D-Bus 是作为依赖自动安装的
-# service sddm enable # SDDM 登录管理器
+# service dbus enable
+```
+
+启用 SDDM 显示管理器：
+
+```
+# service sddm enable
 ```
 
 ![KDE 6 界面](../.gitbook/assets/kde6-1.png)
@@ -55,31 +61,35 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 ## startx
 
 ```sh
-# echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
+$ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
 > **注意**
 >
->如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
+>若在 root 下已执行过上述命令，新用户仍需再执行一次才能正常使用 startx（无需 root 权限或 sudo 等）。
 
 ## 权限设置
 
-普通用户还需将用户加入 `wheel` 组和 `video` 组，否则某些设置无法显示，图形界面功能可能受限：
+普通用户还需加入 `wheel` 组和 `video` 组，否则某些设置无法显示，图形界面功能可能受限：
 
 ```sh
 # pw groupmod wheel -m 用户名
 # pw groupmod video -m 用户名
 ```
 
-## 中文化
+请将“用户名”替换为实际用户名。
+
+## 配置中文环境
 
 ### 设置 SDDM 登录管理器的语言为简体中文
+
+执行命令：
 
 ```sh
 # sysrc sddm_lang="zh_CN"
 ```
 
-### 系统中文化方法 ① 用户分级
+### 系统中文环境配置方法 ① 用户分级
 
 编辑 `/etc/login.conf` 文件：找到 `default:\` 这一部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
@@ -106,7 +116,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ![KDE 6](../.gitbook/assets/kde6-2.png)
 
-### 系统中文化方法 ② 系统设置
+### 系统中文环境配置方法 ② 系统设置
 
 点击开始 -> System Settings -> Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择“简体中文”。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
 
@@ -114,54 +124,53 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ![KDE 6](../.gitbook/assets/kde6-5.png)
 
-#### 参考文献
+### 参考文献
 
-- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/) ### 参考文献
+- FreeBSD Forums. SDDM login screen with KDE: change language?[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/>.
+- silversack. デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)[EB/OL]. [2026-03-25]. <http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm>.
 
-- [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) ## 附录：最小化 KDE 桌面安装方案
+## 附录：最小化 KDE 桌面安装方案
 
 直接安装 `x11/kde` 会作为依赖安装 `x11/plasma6-plasma` 和 `x11/kde-baseapps`，其中捆绑了大量的工具软件，在某些情况下可能不方便部署与使用。
 
 ### 使用 pkg 安装
 
-基础桌面
+基础桌面安装方案。
 
 ```sh
-# pkg ins xorg sddm plasma6-plasma-desktop wqy-fonts plasma6-kactivitymanagerd plasma6-kscreen plasma6-systemsettings
+# pkg install xorg sddm plasma6-plasma-desktop wqy-fonts plasma6-kactivitymanagerd plasma6-kscreen plasma6-systemsettings
 ```
 
-| 软件包                           |作用 |
-| :---------------------------------------: | :-------: |
-| **plasma6-kactivitymanagerd**   |用于管理用户活动、跟踪使用模式等的系统服务。**没有该软件 KDE 将会黑屏且只有一个鼠标** |
-| **plasma6-kscreen**                             | KDE 屏幕管理器。**没有该软件将无法调整分辨率**   |
-|**plasma6-systemsettings**|系统设置|
-
+| 软件包 | 作用 |
+| ------ | ---- |
+| **plasma6-kactivitymanagerd** | 用于管理用户活动、跟踪使用模式等的系统服务。缺少该服务可能导致 KDE 桌面无法正常显示 |
+| **plasma6-kscreen** | KDE 屏幕管理器。**没有该软件将无法调整分辨率** |
+| **plasma6-systemsettings** | 系统设置 |
 
 与上文重复的软件包在此不再列出。
 
 可选软件包：
 
 ```sh
-# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark
+# pkg install konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark
 ```
 
-| 软件包                           |作用 |
-| :---------------------------------------: | :-------: |
-| **konsole**                             | 终端命令行工具 |
-| **dolphin**                             | 文件管理器   |
-| **kate**                                | 文本编辑器 |
-| **plasma6-plasma-systemmonitor**        | 系统监视器  |
-| **plasma6-plasma-pa**                   | 音频管理 |
-| **plasma6-discover**                    | 软件管理  |
-| **kdeconnect-kde**                      | 手机电脑互联  |
-| **plasma6-plasma-workspace-wallpapers** | 桌面壁纸  |
-| **plasma6-plasma-disks**                | 磁盘健康（S.M.A.R.T.）监测  |
-|**ark**|解压缩软件|
-
+| 软件包 | 作用 |
+| ------ | ---- |
+| **konsole** | 终端命令行工具 |
+| **dolphin** | 文件管理器 |
+| **kate** | 文本编辑器 |
+| **plasma6-plasma-systemmonitor** | 系统监视器 |
+| **plasma6-plasma-pa** | 音频管理 |
+| **plasma6-discover** | 软件管理 |
+| **kdeconnect-kde** | 手机电脑互联 |
+| **plasma6-plasma-workspace-wallpapers** | 桌面壁纸 |
+| **plasma6-plasma-disks** | 磁盘健康（S.M.A.R.T.）监测 |
+| **ark** | 解压缩软件 |
 
 ### 使用 Ports 安装
 
-基础桌面：
+基础桌面安装方案。
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean 
@@ -191,15 +200,15 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ### xinitrc
 
->**注意**
+> **注意**
 >
->若采用最小化安装 KDE 方案，必须配置 `.xinitrc`。
+> 若采用最小化安装 KDE 方案，必须配置 `.xinitrc`。
 
 ### 最小化安装 KDE 图示
 
->**技巧**
+> **技巧**
 >
->使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）进行功能补全。
+> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）进行功能补全。
 
 未安装可选包：
 
@@ -207,39 +216,39 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ## 附录：展开任务栏图标
 
-右键单击桌面空白部分，点击“进入编辑模式”。
+右键单击桌面空白处，点击“进入编辑模式”。
 
-![](../.gitbook/assets/kde-win1.png)
+![进入编辑模式](../.gitbook/assets/kde-win1.png)
 
-点击任务栏中间的空白部分，然后点击“显示替代部件”。
+点击任务栏中间的空白处，然后点击“显示替代部件”。
 
-![](../.gitbook/assets/kde-win2.png)
+![显示替代部件](../.gitbook/assets/kde-win2.png)
 
 在弹出窗口中选择“图标和文本任务管理器”。
 
-![](../.gitbook/assets/kde-win3.png)
+![图标和文本任务管理器](../.gitbook/assets/kde-win3.png)
 
-## 附录：解决开机时总是自动打开特定程序
+## 附录：解决开机时自动打开特定程序
 
-打开设置，选择“会话”——>“桌面会话”，在右侧的“会话恢复”，修改为“启动为空会话”。最后点击右下角的“应用”保存即可。
+打开设置，选择“会话”→“桌面会话”，在右侧的“会话恢复”中，修改为“启动为空会话”。最后点击右下角的“应用”保存即可。
 
-![](../.gitbook/assets/kde-no-auto.png)
+![启动为空会话](../.gitbook/assets/kde-no-auto.png)
 
 ## 故障排除与未竟事宜
 
-### sddm 登录闪退
+### SDDM 登录闪退
 
 如果在 VMware 虚拟机中看不到 SDDM 底部选项，请按照虚拟机配置章节的教程设置屏幕自动缩放。
 
-### 启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
+### 启动 SDDM 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
 
 你需要在 `/etc/rc.conf` 中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
 
-![](../.gitbook/assets/errornohostname.png)
+![检查是否设置了主机名](../.gitbook/assets/errornohostname.png)
 
 按需设置 `hostname` 即可。
 
-### 菜单缺失关机、重启等四个选项
+### 菜单缺少关机、重启等选项
 
 如果无效，请检查是否在 SDDM 界面选择了“用户会话”（读取 `.xinitrc`），应选择 `plasma-x11`。
 
@@ -247,14 +256,22 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 #### 参考文献
 
-- [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/) ### 解除自动锁屏
+- FreeBSD Forums. Missing power buttons when logged in from SDDM[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/>. FreeBSD 官方论坛讨论，解决 SDDM 登录后电源按钮缺失的技术问题。
 
-单击“设置”——>“安全和隐私”——>“锁屏”——>“自动锁定屏幕”选择“不自动锁屏”，然后点击“应用”。（休眠唤醒后锁定屏幕可按需设置）
+### 解除自动锁屏
+
+单击“设置”→“安全和隐私”→“锁屏”→“自动锁定屏幕”选择“不自动锁屏”，然后点击“应用”。（休眠唤醒后锁定屏幕可按需设置）
 
 注销后重新登录即可。
 
 ![关闭 KDE 6 锁屏](../.gitbook/assets/suoping.png)
 
-### 状态栏不显示时钟和时间
+### 状态栏不显示时间和日期
 
 打开时区设置，选择“Asia/Shanghai”时区即可。如果仍无效，请先更新相关软件包。
+
+## 课后习题
+
+1. 查找最小化 KDE 6 安装的依赖关系，构建不含捆绑软件的纯桌面环境，在 QEMU 中验证其功能完整性，尝试进一步精简相关 Ports。
+2. 为 SDDM 移植更多主题到 FreeBSD Ports。
+3. 修改 KDE 6 的默认权限模型（如 security.bsd.see_other_uid），验证其菜单功能变化。

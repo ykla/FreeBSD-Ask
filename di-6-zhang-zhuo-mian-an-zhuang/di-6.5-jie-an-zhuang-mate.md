@@ -1,10 +1,12 @@
 # 6.5 MATE
 
-MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
+## MATE 桌面环境概述
 
-你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
+MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境，其设计理念保持了 GNOME 2 的传统交互风格。
 
-## 安装
+mate 指巴拉圭冬青（Ilex paraguariensis），其制成的茶饮“马黛茶”在南美地区广受欢迎，许多南美球员（如梅西）亦热衷于此。
+
+## 安装 MATE 桌面环境
 
 - 使用 pkg 安装：
 
@@ -12,7 +14,7 @@ MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 # pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/mate/ && make install clean
@@ -23,32 +25,38 @@ MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 软件包说明
+### 软件包说明
 
-
-| 包名               | 功能说明                          |
-|:--------------------|:--------------------------------------|
-| `mate`             | MATE 桌面环境|
-| `xorg`             | X Window 系统        |
-| `wqy-fonts`        | 文泉驿中文字体             |
-| `lightdm`          | 显示管理器，提供图形登录界面               |
-| `slick-greeter`    |LightDM 的美观登录界面插件，若未安装将无法正常启动 LightDM|
-| `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
+| 包名 | 功能说明 |
+| ---- | -------- |
+| `mate` | MATE 桌面环境 |
+| `xorg` | X Window 系统 |
+| `wqy-fonts` | 文泉驿中文字体 |
+| `lightdm` | 显示管理器，提供图形登录界面 |
+| `slick-greeter` | LightDM 的美观登录界面插件，若未安装将无法正常启动 LightDM |
+| `xdg-user-dirs` | 可自动管理家目录子目录（可选安装） |
 
 ## 安装后启用服务
 
+设置 D-Bus 服务开机自启：
+
 ```sh
-# service dbus enable     # 设置 D-Bus 服务开机自启
-# service lightdm enable  # 设置 LightDM 显示管理器开机自启
+# service dbus enable
+```
+
+设置 LightDM 显示管理器开机自启：
+
+```sh
+# service lightdm enable
 ```
 
 ## 配置 LightDM
 
-编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greeter` 改成 `greeter-session=slick-greeter`。
+编辑 `/usr/local/etc/lightdm/lightdm.conf` 文件，找到 `greeter-session=lightdm-gtk-greeter` 一行，修改成 `greeter-session=slick-greeter`。
 
 ## `startx` 配置文件
 
-在 `~/.xinitrc` 文件内加入下面一行，方便 `startx` 启动 MATE 桌面会话：
+在 `~/.xinitrc` 文件内加入下面一行，便于使用命令 `startx` 启动 MATE 桌面会话：
 
 ```sh
 exec mate-session
@@ -56,10 +64,9 @@ exec mate-session
 
 ## 配置中文桌面环境
 
+编辑 `/etc/login.conf` 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
-
-根据 `/etc/login.conf` 更新系统能力数据库：
+还需要根据 `/etc/login.conf` 文件更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -69,7 +76,7 @@ exec mate-session
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate4.png)
 
-ibus 测试成功，请参见输入法相关章节。
+IBus 输入法框架测试可用，请参见输入法相关章节进行具体配置。
 
 ## 桌面欣赏
 
@@ -83,7 +90,7 @@ ibus 测试成功，请参见输入法相关章节。
 
 ### 配置 slick-greeter
 
-创建 `/usr/local/etc/lightdm/slick-greeter.conf`，写入以下配置。
+创建 `/usr/local/etc/lightdm/slick-greeter.conf` 文件，写入以下配置。
 
 ```ini
 [Greeter]
@@ -122,4 +129,10 @@ show-quit=true
 
 #### 参考文献
 
-- [lightdm not reading slick-greeter.conf](https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/) 
+- FreeBSD Forums. lightdm not reading slick-greeter.conf[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/>. 解决了 LightDM 无法正确读取 slick-greeter 配置文件的技术问题。
+
+## 课后习题
+
+1. 测试 Wayland 环境。
+2. 测试更多的显示管理器。
+3. 修改 MATE 桌面的默认文件管理器权限设置，验证其文件操作行为变化。
