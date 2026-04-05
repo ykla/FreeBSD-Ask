@@ -181,10 +181,10 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)
 
 - 华纳兄弟. 黑客帝国[EB/OL]. [2026-03-26]. <https://movie.douban.com/subject/1291843/>. 黑客帝国的特效就是在一组 FreeBSD 集群上制作的。另见 Michael Urban, Brian Tiemann. FreeBSD 技术内幕[M]. 北京:机械工业出版社, 2002:2. ISBN: 978-7-111-10201-0、FreeBSD Project. FreeBSD Press Release: April 22, 1999[EB/OL]. (1999-04-22)[2026-03-26]. <https://www.freebsd.org/press/press-rel-1/>.
-- The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. 苹果（Apple）的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。
+- The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。
 - Sony. FreeBSD Kernel[EB/OL]. [2026-03-26]. <https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/>. 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）和 PlayStation 5（PS5）使用的操作系统。
 - FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）都使用 FreeBSD 设备进行。
-- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机， 安卓是运行在 QNX 之上的操作系统，与车机系统分离 ）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。
+- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机， Android 是运行在 QNX 之上的操作系统，与车机系统分离）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。
 - Dell. PowerScale OneFS：了解基于源的路由[EB/OL]. (2024-05-28)[2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh>. Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。
 - Beckhoff. TwinCAT/BSD: operating system for Industrial PCs[EB/OL]. [2026-03-26]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD。
 - OpenHarmony. kernel_liteos_a[EB/OL]. [2026-03-26]. <https://gitee.com/openharmony/kernel_liteos_a/tree/master>. OpenHarmony LiteOS 内核引入了一些 FreeBSD 代码用作驱动等。

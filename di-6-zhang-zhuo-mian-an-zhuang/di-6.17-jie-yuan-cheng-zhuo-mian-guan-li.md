@@ -622,7 +622,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 提示需要挂载 proc 文件系统，经测试，若未挂载该文件系统，程序将无法正常启动。
 
 ```sh
-# mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
+# mount -t procfs proc /proc # 临时使用。可以参照上面的说明持久化
 ```
 
 root 用户无法运行 AnyDesk。需要普通用户：

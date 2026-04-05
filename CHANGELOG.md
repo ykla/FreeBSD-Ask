@@ -1161,7 +1161,7 @@
 - 2023.1.24
   - 实质性填充“第 22.3 节 如何参与 FreeBSD 协作”  
 - 2023.1.13
-  - OpenBSD“第 26.2 节 配置”新增“挂载安卓设备”  
+  - OpenBSD“第 26.2 节 配置”新增“挂载 Android 设备”  
   - 在合适的位置引入“xdg-user-dirs”以自动创建家目录相关路径
 - 2023.1.11
   - 新增视频：[安装 DragonFly BSD 6.4](https://www.bilibili.com/video/BV1BM41187pD/)

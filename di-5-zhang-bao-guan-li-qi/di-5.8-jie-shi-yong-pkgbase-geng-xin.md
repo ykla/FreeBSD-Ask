@@ -217,7 +217,7 @@ FreeBSD-base {
 
 >**警告**
 >
->请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在里面手动硬编码写入指定任何具体的版本（如 `base_release_3`）。
+>请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在其中手动硬编码写入指定任何具体的版本（如 `base_release_3`）。
 
 >**技巧**
 >
@@ -523,7 +523,7 @@ end
 
 >**警告**
 >
->请删除 `return "pkg+https://"` 这行里面的 `pkg+`，否则会报错。
+>请删除 `return "pkg+https://"` 这行中的 `pkg+`，否则会报错。
 
 再找到下面的函数 `create_base_repo_conf`
 

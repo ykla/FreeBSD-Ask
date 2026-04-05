@@ -2,15 +2,17 @@
 
 ## TwinCAT/BSD 简介
 
-TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。在不使用商业功能时，个人用户完全可以免费使用。倍福支持第三方硬件安装，但许可证费用按顶配 PLC 收取：倍福的许可证费用根据硬件性能而定，一般 PLC 标准为 P40/P50。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 收费，同样功能约为 6000 元。
+TwinCAT/BSD 是一款专门针对工业控制领域优化的操作系统，它基于 FreeBSD 开发。
+
+TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。PLC 是一种专门用于工业自动化控制的计算机，用于监控和控制生产设备。从许可模式来看，在不使用商业功能时，个人用户完全可以免费使用。关于硬件兼容性与授权策略，倍福支持第三方硬件安装，但许可证费用按硬件性能分级收取。一般 PLC 标准为 P40/P50 级别。P40/P50 是倍福定义的硬件性能等级，P 后面的数字越大表示硬件性能越好。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 级别收费，同样功能约为 6000 元。
 
 更多内容请参考：
 
-- [GPU 直通](https://github.com/FreeBSD-Ask/freebsd-journal-cn/blob/main/2023-0304/GPU%20Passthrough.md)
-- [TwinCAT/BSD for Industrial PCs](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/)
-
+- TwinCAT/BSD for Industrial PCs[EB/OL]. [2026-03-25]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. 倍福官方 TwinCAT/BSD 产品说明，涵盖技术规格与授权信息。
 
 ## 下载 TwinCAT/BSD
+
+了解 TwinCAT/BSD 的基本信息后，我们可以开始准备安装。首先需要获取系统安装镜像。TwinCAT/BSD 的下载地址如下：
 
 <https://www.beckhoff.com/en-us/search-results/?q=bsd>
 
@@ -18,18 +20,17 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 点击 `↓ ZIP` 即可下载。**注意：需要注册才能下载。**
 
-首先解压 ZIP，得到“TCBSD-x64-13-92446.iso”文件。
+首先解压 ZIP，得到 `TCBSD-x64-13-92446.iso` 文件
 
 ## 创建虚拟硬盘并写入镜像
 
-TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
+下载完成后，我们需要对镜像进行特殊处理才能用于虚拟机安装。TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。dd 是一个用于复制和转换文件的命令行工具，常用于制作磁盘镜像。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。VHD 是虚拟硬盘格式，用于在虚拟机中模拟物理硬盘。
 
-
-首先右键单击“这台电脑”，选择管理--磁盘管理--操作--创建 VHD。
+首先右键单击“这台电脑”，依次选择“管理”→“磁盘管理”→“操作”→“创建 VHD”。
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
-硬盘大小设置为 1GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
+硬盘大小设置为 1 GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可参考示例设置。
 
 ![TCBSD](../.gitbook/assets/t2.png)
 
@@ -37,7 +38,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t3.png)
 
-选择默认参数即可。用 GPT 分区表格式化磁盘 2。
+选择默认参数即可。用 GPT 分区表格式化磁盘 2。GPT 是 GUID 分区表，是一种现代的磁盘分区标准。
 
 ![TCBSD](../.gitbook/assets/t4.png)
 
@@ -55,17 +56,17 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t8.png)
 
-返回磁盘管理，选择“操作”--重新扫描磁盘。**否则下面虚拟机无法加载出磁盘 2。**
+返回磁盘管理，选择“操作”→“重新扫描磁盘”。**否则下面虚拟机无法加载磁盘 2。**
 
 ![TCBSD](../.gitbook/assets/t9.png)
 
-可以看到磁盘 2 已经被写入镜像了：
+可以看到磁盘 2 已被写入镜像：
 
 ![TCBSD](../.gitbook/assets/t10.png)
 
 ## 通过 VMware Workstation 安装 TwinCAT/BSD
 
-我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”--“添加”--“硬盘”。点击下一步：
+虚拟硬盘准备完成后，我们可以开始通过 VMware Workstation 进行系统安装。下面介绍通过 VMware Workstation 安装 TwinCAT/BSD 的步骤。我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”→“添加”→“硬盘”。点击下一步：
 
 ![TCBSD](../.gitbook/assets/t11.png)
 
@@ -85,7 +86,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t15.png)
 
-检查磁盘的大小、名称是否符合，选错了就无法启动。
+检查磁盘的大小和名称是否正确，选错了就无法启动。
 
 ![TCBSD](../.gitbook/assets/t16.png)
 
@@ -117,7 +118,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t23.png)
 
-开始安装了：
+开始安装：
 
 ![TCBSD](../.gitbook/assets/t24.png)
 
@@ -129,18 +130,17 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t26.png)
 
-
 ## 用户账户
 
-默认用户名是 `Administrator`，他的密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
+系统安装完成后，我们需要了解系统的用户账户配置。默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码通常是 `1`，但 TwinCAT/BSD 的密码由用户自定义。
 
-首先使用 doas 提升权限修改 root 用户密码
+首先使用 doas 提升权限修改 root 用户密码：
 
 ```sh
 $ doas passwd root
 ```
 
-然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell
+然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell：
 
 ```sh
 $ doas su
@@ -148,9 +148,9 @@ $ doas su
 
 ## Web 界面登录
 
-网络连接方式使用 NAT，经测试桥接模式无法访问。
+TwinCAT/BSD 提供了 Web 管理界面，方便用户进行系统配置和管理。网络连接方式使用 NAT，经测试桥接模式无法访问。NAT 是网络地址转换，是一种将私有 IP 地址转换为公网 IP 地址的技术。
 
-使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 内容！
+使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器，输入 `ifconfig` 命令输出的 IP 地址。
 
 示例中，`ifconfig` 显示的 IP 为 `192.168.245.138`，则访问地址为 `https://192.168.245.138`。（注意使用 **https**，而非 *http*，后者无法访问）
 
@@ -160,13 +160,13 @@ $ doas su
 
 ![TCBSD](../.gitbook/assets/tcbsd2.png)
 
-
 ## 故障排除与未竟事宜
+
+在使用 TwinCAT/BSD 的过程中，可能会遇到一些问题。以下是一些常见问题的解决方法。
 
 ### 设置静态 IP 后，网卡存在两个 IP
 
-为网卡设置静态 IP 后，该网卡可能会出现两个 IP：一个为静态 IP，另一个由 DHCP 服务分配。这是由于倍福系统开机自动启动的 dhcpcd 服务导致的，可以通过修改 `/etc/rc.conf` 文件来解决：
-
+为网卡设置静态 IP 后，该网卡可能会出现两个 IP：一个为静态 IP，另一个由 DHCP 服务分配。这是由于倍福系统开机自动启动的 dhcpcd 服务导致的。dhcpcd 是一个 DHCP 客户端守护进程，用于自动获取 IP 地址。可以通过修改 `/etc/rc.conf` 文件来解决：
 
 修改或加入：
 
@@ -176,10 +176,23 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0`（配置 dhcpcd，禁止在指定网卡 `igb0` 上自动获取 DHCP 地址）。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
 
+## 修改软件源
 
-## 换源
+软件源结构：
 
-使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
+```sh
+/usr/local/
+├── share/
+│   └── examples/
+│       └── bhf/
+│           └── pkgrepo-set.sh  # pkg 仓库设置脚本
+└── etc/
+    └── pkg/
+        └── repos/
+            └── FreeBSD.conf  # FreeBSD pkg 仓库配置文件
+```
+
+为了提高软件安装和更新的速度，我们可以将 pkg 仓库切换为中国镜像。下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
 $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
@@ -191,10 +204,9 @@ $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
 $ doas pkg update && doas pkg upgrade
 ```
 
-## 安装 Beckhoff 提供开发工具包
+## 安装 Beckhoff 开发工具包
 
-
-使用 doas 安装操作系统通用用户空间开发工具包：
+如果需要进行开发工作，我们可以安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
 
 ```sh
 $ doas pkg install os-generic-userland-devtools
@@ -204,13 +216,26 @@ $ doas pkg install os-generic-userland-devtools
 
 ## 启用 FreeBSD 源
 
-默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
+TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，我们可以手动启用相关源。
 
-使用 doas 提升权限，用 ee 编辑器修改 FreeBSD pkg 仓库配置文件：
 
 ```sh
-$ doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
+/usr/local/
+├── share/
+│   └── examples/
+│       └── bhf/
+│           └── pkgrepo-set.sh  # pkg 仓库设置脚本
+└── etc/
+    └── pkg/
+        └── repos/
+            └── FreeBSD.conf  # FreeBSD pkg 仓库配置文件
 ```
 
-将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
 
+编辑 `/usr/local/etc/pkg/repos/FreeBSD.conf` 文件，将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
+
+## 课后习题
+
+1. 查找 TwinCAT/BSD 中 dhcpcd 服务的实现，分析其为何在设置静态 IP 后仍会分配 DHCP 地址，重构最小化的网络配置方案并验证。
+
+2. 在 TwinCAT/BSD 系统中同时启用 Beckhoff 源和 FreeBSD 官方源，尝试安装一个来自 FreeBSD 源的软件包（如 nginx）。
