@@ -4,7 +4,7 @@ KDE 项目致力于开发一套现代化的桌面环境。KDE 桌面环境的设
 
 > **技巧**
 >
-> 视频教程可参见：FreeBSD 中文社区. 003-FreeBSD14.2 安装 KDE6[EB/OL]. [2026-03-26]. <https://www.bilibili.com/video/BV12zAYeKEej>.
+> 视频教程可参见：FreeBSD 中文社区。003-FreeBSD14.2 安装 KDE6[EB/OL]. [2026-03-26]. <https://www.bilibili.com/video/BV12zAYeKEej>.
 
 ## 安装完整的 KDE 桌面环境
 

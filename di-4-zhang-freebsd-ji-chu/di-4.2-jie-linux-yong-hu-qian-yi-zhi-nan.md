@@ -11,7 +11,7 @@
 
 > **思考题**
 >
->>“一切真历史都是当代史”（克罗齐. 历史学的理论和历史[M]. 田时纲,译. 北京:中国社会科学出版社,2018）
+>>“一切真历史都是当代史”（克罗齐。历史学的理论和历史[M]. 田时纲，译。北京：中国社会科学出版社，2018）
 >
 > 读者如何理解这句话？如何定义“真”与“非真”？
 
@@ -231,7 +231,7 @@ CentOS 已从原先基于 RHEL 源代码重建的稳定发行版，转变为 RHE
 
 ![Debian Logo，图片来自 https://www.debian.org/](../.gitbook/assets/debian.png)
 
-Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃“大便”（谐音 “/ˈde.bi.ən/”）。
+Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃“大便”（谐音“/ˈde.bi.ən/”）。
 
 一个值得注意的现象是，如果在 Debian 安装过程中设置了 root 密码，系统默认可能不会安装 sudo 工具。这一设计通常被认为是出于安全性方面的考虑。但这可能与 GNOME 等桌面环境及大多数登录管理器默认禁止 root 账户直接登录的惯例存在张力。
 
@@ -408,19 +408,19 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 
 - ykla. Set root password will not install sudo[EB/OL]. (2020-02-05)[2026-04-04]. <https://lists.debian.org/debian-cd/2020/02/msg00000.html>.
 - Debian. About Debian[EB/OL]. [2026-04-04]. <https://www.debian.org/intro/about>. Debian 发音。
-- Fedora娘[EB/OL]. 萌娘百科. (2025-05-03)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98>. Fedora 外号“地沟油”。
-- Arch Linux 娘[EB/OL]. (2023-08-24)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98>. Arch Linux “邪教”说法的来历。
-- Arch Linux 中文论坛. 回归洗发水[EB/OL]. [2026-04-04]. <https://bbs.archlinuxcn.org/viewtopic.php?id=694>. Arch Linux “洗发水”的用法例子。
+- Fedora 娘[EB/OL]. 萌娘百科。(2025-05-03)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98>. Fedora 外号“地沟油”。
+- Arch Linux 娘[EB/OL]. (2023-08-24)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98>. Arch Linux“邪教”说法的来历。
+- Arch Linux 中文论坛。回归洗发水[EB/OL]. [2026-04-04]. <https://bbs.archlinuxcn.org/viewtopic.php?id=694>. Arch Linux“洗发水”的用法例子。
 - Gentoo Foundation. About Gentoo[EB/OL]. [2026-04-04]. <https://www.gentoo.org/get-started/about/>. Gentoo Linux 元发行版的说法来自此处。
-- Arch Linux Wiki. Arch User Repository[EB/OL]. [2026-04-04]. <https://wiki.archlinux.org/title/Arch_User_Repository>. Wiki 指出 “Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.”，译文：“警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。”`
+- Arch Linux Wiki. Arch User Repository[EB/OL]. [2026-04-04]. <https://wiki.archlinux.org/title/Arch_User_Repository>. Wiki 指出“Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.”，译文：“警告：AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。”`
 - Linux Uprising. Malware Found On The Arch User Repository (AUR)[EB/OL]. (2018-07-09)[2026-04-04]. <https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1>. AUR 中确实曾存在恶意软件包。
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>.
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>.
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>.
-- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕, 译. 北京:人民邮电出版社, 2020. ISBN: 978-7-115-49711-6.
-- 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告（UTSA-2024-003941）[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>.
+- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕，译。北京：人民邮电出版社，2020. ISBN: 978-7-115-49711-6.
+- 统信安全应急响应中心。deepin-devicemanager 命令注入漏洞安全公告（UTSA-2024-003941）[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>.
 - Fedora Project. Fedora Council Charter[EB/OL]. [2026-04-04]. <https://docs.fedoraproject.org/en-US/council/>. Fedora 项目完全由红帽控制。
-- mdd3135. deepin的开发人员都不测试的吗[EB/OL]. 深度科技论坛. (2021-04-03)[2026-04-04]. <https://bbs.deepin.org/post/218041>.
+- mdd3135. deepin 的开发人员都不测试的吗[EB/OL]. 深度科技论坛。(2021-04-03)[2026-04-04]. <https://bbs.deepin.org/post/218041>.
 - Gentoo Foundation. Gentoo offers a full range of binary packages[EB/OL]. (2023-12-29)[2026-04-04]. <https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html>. Gentoo 二进制包。
 
 ## 课后习题

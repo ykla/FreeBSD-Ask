@@ -6,7 +6,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 >**技巧**
 >
->视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
+>视频教程见 FreeBSD 中文社区。006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
 
 > **注意**
 >

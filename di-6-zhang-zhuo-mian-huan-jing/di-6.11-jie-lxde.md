@@ -52,7 +52,7 @@ exec startlxde
 # service dbus enable
 ```
 
-设置 LightDM 显示管理器开机自启:
+设置 LightDM 显示管理器开机自启：
 
 ```sh
 # service lightdm enable
