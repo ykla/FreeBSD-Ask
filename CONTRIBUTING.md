@@ -372,7 +372,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
 - [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
-- [ ] 20.10.文件系统快照（UFS）（UFS 快照？？？）
+- [ ] 20.10.文件系统快照（UFS）（UFS 快照？）
 - [ ] 21.8.通过 GEOM 实现 UFS 日志（无意义）
 
 **Just for fun**（可有可无）
