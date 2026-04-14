@@ -544,7 +544,7 @@ Enable（启用）
 
 Monitor 指令用于监控某个内存区域的写入操作，而 MWait 指令则让 CPU 停止运行，直到该监控区域开始被写入。
 
-这个是配合上面的 AP threads Idle Manner（AP 线程空闲模式）一起使用的。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
+该选项配合上述 AP threads Idle Manner（AP 线程空闲模式）一起使用。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
 
 ### Intel® Trusted Execution Technology（英特尔可信执行技术/TXT）
 
@@ -854,7 +854,7 @@ Enable（启用）
 
 HDC，Hardware Duty Cycling，英特尔硬件占空比调节技术。
 
-开启可通过硬件自动调节占空比以节能，关闭功耗增加但也许性能更稳定。
+开启可通过硬件自动调节占空比以节能，关闭功耗增加但性能可能更稳定。
 
 开启：需要操作系统本身支持才生效。
 
