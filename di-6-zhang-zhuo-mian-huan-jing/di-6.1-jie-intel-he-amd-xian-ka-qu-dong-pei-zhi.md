@@ -1,4 +1,4 @@
-# 6.1 Intel 和 AMD 显卡驱动配置
+﻿# 6.1 Intel 和 AMD 显卡驱动配置
 
 > **警告**
 >
@@ -20,7 +20,7 @@
 
 FreeBSD 的 i915 和 AMD 显卡驱动与基本系统分离，以移植的长期支持（Long Term Support，LTS）版本 Linux 内核 DRM（Direct Rendering Manager，直接渲染管理器）驱动形式作为 Port 提供。不同系统版本对应的 Linux 内核版本亦不相同。
 
-DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI，Linux Kernel Programming Interface），并移植了 Linux DRM，类似的还有一些无线网卡驱动也采用了这种移植方式。
+DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI，Linux Kernel Programming Interface），并移植了 Linux DRM，类似地，还有一些无线网卡驱动也采用了这种移植方式。
 
 > **技巧**
 >
