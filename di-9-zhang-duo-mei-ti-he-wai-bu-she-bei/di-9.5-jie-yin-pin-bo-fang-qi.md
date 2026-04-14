@@ -186,7 +186,7 @@ audio_output {
 >
 > 可以指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
 
-开启 musicpd 服务
+开启 musicpd 服务：
 
 ```sh
 # service musicpd enable  # 设置 MPD 服务开机自启动
