@@ -39,7 +39,7 @@
 
 Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
->**技巧**
+> **技巧**
 >
 >有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
@@ -102,7 +102,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/)
 
->**注意**
+> **注意**
 >
 >登录控制台时使用的谷歌账户必须与之前加入邮件列表的账户一致。
 
@@ -191,7 +191,7 @@ export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.ap
 export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M  # 这里填客户端密钥
 ```
 
->**注意**
+> **注意**
 >
 >本节仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
 

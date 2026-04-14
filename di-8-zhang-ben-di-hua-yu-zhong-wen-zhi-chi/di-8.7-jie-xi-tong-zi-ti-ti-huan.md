@@ -66,7 +66,7 @@ fetch https://people.freebsd.org/~emaste/newcons/b16.fnt
 vidcontrol -f b16.fnt
 ```
 
->**技巧**
+> **技巧**
 >
 >若上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
 
