@@ -48,7 +48,7 @@
 | ----------------- | ------ | ---- |
 | `1. Back to main menu [Backspace]` | On（开） | 按 **Backspace** 键可返回上级菜单 |
 | `2. Load System Defaults` | off（关） | 恢复默认配置 |
-| `3. ACPI` | off（关） | Advanced Configuration and Power Management Interface（高级配置与电源接口） |
+| `3. ACPI` | off（关） | Advanced Configuration and Power Interface（高级配置与电源接口） |
 | `4. Safe Mode` | off（关） | 安全模式 |
 | `5. Single user` | off（关） | 单用户模式 |
 | `6. Verbose` | off（关） | 详细模式，增加更多调试信息输出 |
