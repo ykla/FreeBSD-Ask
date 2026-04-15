@@ -2,7 +2,7 @@
 
 ## 何谓 Linux？
 
-Linux 是当今世界上最流行的开源操作系统之一。Linux 在不同语境下具有不同含义：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。参见 Linux Kernel Organization. What is Linux?[EB/OL]. [2026-04-04]. <https://www.kernel.org/doc/html/latest/admin-guide/README.html>，该组织对这一问题的回答如下：
+Linux 是当今世界上广泛使用的开源操作系统之一。Linux 在不同语境下具有不同含义：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。参见 Linux Kernel Organization. What is Linux?[EB/OL]. [2026-04-04]. <https://www.kernel.org/doc/html/latest/admin-guide/README.html>，该组织对这一问题的回答如下：
 
 > What is Linux?（什么是 Linux？）
 >
