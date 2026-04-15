@@ -105,9 +105,9 @@ $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 
 > **技巧**
 >
->`--no-sandbox` 选项是关闭沙盒。否则无法运行 QQ。
+> `--no-sandbox` 选项是关闭沙盒。否则无法运行 QQ。
 >
->`--in-process-gpu` 选项也是必要的，否则退出后无法重新打开 QQ，需要重启系统才能使用。
+> `--in-process-gpu` 选项也是必要的，否则退出后无法重新打开 QQ，需要重启系统才能使用。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
@@ -144,7 +144,7 @@ $ exit # 切换回 root
 
 > **注意**
 >
->此处必须以 root 权限运行 QQ，否则报错找不到 X11。
+> 此处必须以 root 权限运行 QQ，否则报错找不到 X11。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq3.png)
 
@@ -175,7 +175,7 @@ $ exit # 切换回 root
 
 > **注意**
 >
->此处必须以 root 用户运行 QQ，并确保按照 Ubuntu 兼容层构建教程设置中文字符集（使用脚本时，该过程会自动完成，无需手动操作）。
+> 此处必须以 root 用户运行 QQ，并确保按照 Ubuntu 兼容层构建教程设置中文字符集（使用脚本时，该过程会自动完成，无需手动操作）。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq5.png)
 
