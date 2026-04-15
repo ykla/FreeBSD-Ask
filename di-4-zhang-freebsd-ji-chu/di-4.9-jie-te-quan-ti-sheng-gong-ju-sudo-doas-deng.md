@@ -187,7 +187,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 - 使用 pkg 安装：
 
 ```sh
-# pkg ins sudo-rs-coexist
+# pkg install sudo-rs-coexist
 ```
 
 - 还可以通过 Ports 来安装：
