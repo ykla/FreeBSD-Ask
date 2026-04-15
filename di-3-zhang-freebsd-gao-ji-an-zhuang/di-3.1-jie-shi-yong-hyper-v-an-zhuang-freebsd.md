@@ -51,9 +51,9 @@ Gen 1 与 Gen 2 的区别如下表所示：
 右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机管理程序、管理工具等核心模块。输入以下命令：
 
 ```powershell
-PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
+PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 是否立即重启计算机以完成此操作?
-[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”): 
+[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”):
 # 此处按回车键确认重启以完成 Hyper-V 的安装
 ```
 
