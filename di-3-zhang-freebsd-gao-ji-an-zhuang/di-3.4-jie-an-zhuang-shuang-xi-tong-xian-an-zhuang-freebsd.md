@@ -8,7 +8,7 @@
 
 ## 安装 FreeBSD 14.2-RELEASE
 
-首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
+首先按照以下步骤安装 FreeBSD 14.2-RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
 ![FreeBSD 安装界面](../.gitbook/assets/shuang1.png)
 
