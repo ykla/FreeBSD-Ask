@@ -73,7 +73,7 @@ EFI/
 
 在新窗口中点击“添加”，然后浏览并选中 `refind` 文件夹内的 `refind_x64.efi` 文件。
 
-![选择 rEFInd 启动文件](../.gitbook/assets/shaung16.png)
+![选择 rEFInd 启动文件](../.gitbook/assets/shuang16.png)
 
 将该启动项移动至列表顶部，设为第一启动项。保存设置并重启电脑以测试效果。
 
