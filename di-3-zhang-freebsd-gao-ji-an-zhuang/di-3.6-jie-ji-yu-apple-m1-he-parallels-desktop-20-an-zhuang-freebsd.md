@@ -89,7 +89,6 @@ ums_load="YES"
 >
 >若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
 
-
 ### 参考文献
 
 - FreshPorts. parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. [2026-03-26]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD Port 信息与安装说明。
