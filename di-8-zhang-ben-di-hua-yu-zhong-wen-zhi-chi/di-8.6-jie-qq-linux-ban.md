@@ -101,7 +101,7 @@ $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 
 > **注意**
 >
->此处请务必以普通用户权限运行 QQ，否则无法使用输入法。
+> 此处请务必以普通用户权限运行 QQ，否则无法使用输入法。
 
 > **技巧**
 >
