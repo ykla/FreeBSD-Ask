@@ -41,6 +41,8 @@
 
 ### 启动 NVIDIA 相关内核模块
 
+执行以下命令加载 NVIDIA 相关内核模块：
+
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf  # 启用 NVIDIA DRM 模式设置
 # sysrc -f /etc/rc.conf kld_list+=nvidia-modeset       # 添加 nvidia-modeset 内核模块以便启动时加载
