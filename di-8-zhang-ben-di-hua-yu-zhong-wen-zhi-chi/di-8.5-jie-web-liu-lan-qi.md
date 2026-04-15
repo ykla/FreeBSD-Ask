@@ -124,7 +124,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![启用 API 和服务](../.gitbook/assets/chromium-use-google-api-guide-04-1.png)
 
-搜索 “chrome-sync” 找到下列内容。
+搜索“chrome-sync”找到下列内容。
 
 ![搜索 Chrome Sync](../.gitbook/assets/chromium-use-google-api-guide-06.png)
 
