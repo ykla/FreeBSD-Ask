@@ -1,4 +1,4 @@
-﻿# 3.2 使用 VMware Workstation Pro 安装 FreeBSD
+# 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
 本节介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 

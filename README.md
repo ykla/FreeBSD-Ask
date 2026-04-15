@@ -1,4 +1,4 @@
-﻿# FreeBSD 从入门到跑路
+# FreeBSD 从入门到跑路
 
 ![🎉 欢迎来到 BSD 的世界！](.gitbook/assets/web-logo.png)
 
