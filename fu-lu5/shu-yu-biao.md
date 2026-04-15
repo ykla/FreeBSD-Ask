@@ -14,6 +14,8 @@
 | 自由软件 | / | 赋予用户运行、复制、分发、研究、修改和改进软件自由的软件 |
 | copyleft | 著佐权 | 通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开 |
 | 开源软件 | / | 源代码公开、允许用户自由使用、修改和分发的软件 |
+| 专有软件 | / | Proprietary Software，非自由软件，用户无权自由使用、修改和分发的软件，大部分商业软件属此类型 |
+| 许可证 | / | License，授权他人使用、修改或分发软件的法律协议 |
 | GNU | / | GNU's Not Unix，自由软件基金会发起的操作系统项目 |
 | GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证 |
 | BSD 许可证 | / | 一种宽松的开源许可证，允许商业使用和闭源衍生 |
@@ -53,6 +55,10 @@
 | CDDL | 通用开发及发行许可 | Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改 |
 | TCP/IP | 传输控制协议/网际协议 | Transmission Control Protocol/Internet Protocol，互联网的基础协议族 |
 | 校验和 | / | Checksum，通过对数据序列进行特定算法运算得到的固定长度值，用于检测数据在传输或存储过程中是否发生错误 |
+| 散列函数 | / | Hash Function，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
+| 内核恐慌 | / | Kernel Panic，操作系统内核遇到无法恢复的致命错误时采取的自我保护机制，系统将停止运行并显示错误信息 |
+| 分发文件 | / | Distribution Set，FreeBSD 安装介质中按功能划分的压缩包集合，如 base、kernel、src、lib32 等 |
+| 无线管制域 | / | Regulatory Domain，各国或地区对无线设备使用的频率、功率等参数的法律规定区域 |
 | UEFI | 统一可扩展固件接口 | Unified Extensible Firmware Interface，现代计算机的固件接口标准 |
 | BIOS | 基本输入输出系统 | Basic Input/Output System，传统计算机的固件接口标准 |
 | GPT | 全局唯一标识分区表 | GUID Partition Table，一种磁盘分区表标准 |
@@ -72,6 +78,8 @@
 | TTY | / | Teletypewriter，电传打字机，引申为文本终端设备 |
 | 虚拟控制台 | / | Virtual Console，在物理终端上模拟的多个独立逻辑终端 |
 | Shell | / | 操作系统中提供用户界面的程序，是用户与内核交互的接口，负责解释和执行用户输入的命令 |
+| 命令解释器 | / | Command Interpreter，接收用户输入的命令并将其翻译为操作系统可执行指令的程序 |
+| 环境变量 | / | Environment Variable，操作系统中用于存储系统运行环境和用户配置信息的命名值对，可被进程读取和使用 |
 | POSIX | / | Portable Operating System Interface，可移植操作系统接口，IEEE 和 The Open Group 制定的操作系统标准 |
 | 进程 | / | Process，程序在计算机上的一次执行活动，是操作系统进行资源分配和调度的基本单位 |
 | 守护进程 | / | Daemon，在后台运行的系统进程，不与任何控制终端关联，通常负责监听网络请求或执行系统维护任务 |
@@ -99,6 +107,8 @@
 | IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中曾作为可选防火墙组件 |
 | ALTQ | 交错队列 | Alternate Queuing，PF 防火墙的流量整形和队列管理功能 |
 | 二进制包 | / | Binary Package，预编译的软件包，可直接安装而无需从源代码构建 |
+| 镜像站 | / | Mirror Site，同步复制官方软件仓库或发行版文件的服务器，提供更快的本地下载速度 |
+| 源代码 | / | Source Code，程序员编写的计算机程序原始文本，需经编译或解释后方可执行 |
 | 依赖 | / | Dependency，软件之间存在的引用关系，一个软件的正常运行需要另一个软件的存在 |
 | 启动环境 | / | Boot Environment，ZFS 上的可引导文件系统快照，支持系统版本回退 |
 | 数据集 | / | Dataset，ZFS 中的管理单元，类似于传统文件系统中的独立分区 |
@@ -123,6 +133,8 @@
 | CHERI | / | Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展 |
 | Container | 容器 | 一种轻量级的操作系统级虚拟化技术，通过命名空间隔离和控制组等机制实现进程的隔离与资源限制 |
 | NAT | 网络地址转换 | Network Address Translation，将 IP 数据包头部中的地址转换为另一个地址的技术 |
+| 代理服务器 | / | Proxy Server，充当客户端与服务器之间中介的服务器，转发请求和响应 |
+| 防火墙 | / | Firewall，在网络之间执行访问控制策略的系统，通过允许或拒绝数据包的传输来保护网络安全 |
 | ICMP | 互联网控制报文协议 | Internet Control Message Protocol，用于在 IP 网络中发送控制消息和错误报告的协议 |
 | UDP | 用户数据报协议 | User Datagram Protocol，一种无连接的传输层协议 |
 | TCP | 传输控制协议 | Transmission Control Protocol，一种面向连接的、可靠的传输层协议 |
@@ -130,12 +142,18 @@
 | HTTPS | 超文本传输安全协议 | HyperText Transfer Protocol Secure，在 HTTP 基础上通过 TLS 加密的协议 |
 | 拥塞控制 | / | Congestion Control，网络中防止过多数据注入导致网络拥塞的机制 |
 | Wayland | / | 一种显示服务器协议，旨在替代 X11 |
+| 显示服务器 | / | Display Server，图形系统中负责管理屏幕输出和输入设备的核心服务程序 |
+| 显示管理器 | / | Display Manager，图形系统中提供用户登录界面并管理会话启动的程序，如 GDM、SDDM、LightDM 等 |
+| 合成器 | / | Compositor，图形系统中负责将多个窗口的渲染结果合成为最终屏幕画面的组件 |
 | X11 | X 窗口系统 | X Window System，一种图形用户界面的窗口系统 |
 | CDE | 通用桌面环境 | Common Desktop Environment，一款经典的 UNIX 桌面环境 |
+| 驱动程序 | / | Driver，操作系统与硬件设备之间的接口软件，负责将操作系统的请求转换为硬件可执行的操作 |
+| 人工智能 | / | Artificial Intelligence，研究如何使计算机模拟人类智能行为的学科与技术领域 |
 | OpenBSD | / | 一款注重安全的 BSD 操作系统 |
 | NetBSD | / | 一款注重可移植性的 BSD 操作系统 |
 | DragonFly BSD | / | 一款从 FreeBSD 分叉出来的 BSD 操作系统 |
 | LLVM | / | Low Level Virtual Machine，一组模块化和可重用的编译器和工具链技术 |
+| 编译器 | / | Compiler，将高级编程语言源代码翻译为机器码或中间代码的程序 |
 | Clang | / | LLVM 项目的 C/C++ 语言前端和工具基础设施 |
 | NFS | 网络文件系统 | Network File System，一种分布式文件系统协议 |
 | SMB | 服务器消息块 | Server Message Block，一种用于文件共享的协议 |
@@ -175,3 +193,27 @@
 | authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 Shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
 | Kyua | / | FreeBSD 的自动化测试框架 |
+| 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的 技术，数据存储在内存中，断电后丢失 |
+| GRUB | / | Grand Unified Bootloader，一种通用的多操作系统引导加载程序 |
+| init | / | UNIX 系统中进程号为 1 的初始化进程，负责系统启动后的初始化工作 |
+| 调试器 | / | Debugger，用于检测和定位程序错误的工具 |
+| 版本控制 | / | Version Control，对文件或代码的变更历史进行管理的系统和方法 |
+| 补丁 | / | Patch，针对软件中已发现的问题或功能缺陷所提供的修复代码 |
+| 网络协议 | / | Network Protocol，计算机网络中进行数据交换而建立的规则、标准或约定的集合 |
+| 端口 | / | Port，网络通信中用于区分不同应用程序或服务的逻辑标识，取值范围为 0—65535 |
+| 套接字 | / | Socket，网络通信的端点，由 IP 地址和端口号组成，是应用程序与网络之间的接口 |
+| 管道 | / | Pipe，一种进程间通信机制，将一个进程的输出直接连接到另一个进程的输入 |
+| 中断 | / | Interrupt，CPU 对系统中发生的某个事件作出反应的过程，暂停当前程序转而执行中断处理程序 |
+| 线程 | / | Thread，进程内的执行单元，共享进程的资源但拥有独立的执行流 |
+| 虚拟内存 | / | Virtual Memory，操作系统提供的一种内存管理技术，将物理内存与磁盘空间结合，为进程提供连续的地址空间 |
+| 高速缓存 | / | Cache，位于 CPU 与主存之间的高速存储器，用于减少内存访问延迟 |
+| 固态硬盘 | / | Solid State Drive，使用闪存芯片存储数据的存储设备，无机械运动部件 |
+| 图形处理器 | / | Graphics Processing Unit，专门用于图形渲染和并行计算的处理器 |
+| 路由器 | / | Router，在网络间转发数据包的设备，根据路由表选择最佳传输路径 |
+| 虚拟专用网络 | / | Virtual Private Network，在公共网络上建立加密通道的技术，实现安全的远程网络访问 |
+| 带宽 | / | Bandwidth，通信信道在单位时间内可传输数据的最大量 |
+| 吞吐量 | / | Throughput，系统在单位时间内实际处理或传输的数据量 |
+| 数字签名 | / | Digital Signature，使用私钥对消息摘要进行加密生成的签名，用于验证消息的完整性和发送者身份 |
+| 数字证书 | / | Digital Certificate，由证书颁发机构签发的电子文档，用于证明公钥与实体之间的绑定关系 |
+| 对称加密 | / | Symmetric Encryption，加密和解密使用同一密钥的加密方法 |
+| 非对称加密 | / | Asymmetric Encryption，使用公钥和私钥对进行加密和解密的加密方法 |
