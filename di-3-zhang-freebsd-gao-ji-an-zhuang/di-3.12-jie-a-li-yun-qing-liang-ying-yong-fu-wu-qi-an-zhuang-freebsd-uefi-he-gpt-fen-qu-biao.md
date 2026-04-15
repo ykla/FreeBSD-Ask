@@ -217,7 +217,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-1-2.png)
 
-待 FreeBSD 系统完全启动后：在引导加载程序配置文件中永久性设置最大 I/O 缓冲区大小：
+待 FreeBSD 系统完全启动后，在引导加载程序配置文件中永久性设置最大 I/O 缓冲区大小：
 
 ```sh
 # echo "kern.maxphys=65536" >> /boot/loader.conf
