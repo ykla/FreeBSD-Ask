@@ -1,4 +1,4 @@
-﻿# 我与 FreeBSD 的故事
+# 我与 FreeBSD 的故事
 
 ## 我与 FreeBSD 的故事之一
 
