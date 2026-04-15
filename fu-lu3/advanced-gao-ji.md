@@ -82,7 +82,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔公司. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸除技术的省电效果。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见微软公司. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔公司. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP）（MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸除技术的省电效果。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见微软公司. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
@@ -1301,7 +1301,7 @@ RFI Current Frequency（当前 RFI 频率）：139.200 MHz
 - 调节单位：以 100 千赫兹（100 kHz）为步进
 - 频率范围：130 MHz 至 160 MHz
 - 默认硬件频率：139.6 MHz
-- 输入值 = 目标频率（MHz） × 10（例如：需设置 139.6 MHz 时 → 输入 1396）
+- 输入值 = 目标频率（MHz）× 10（例如：需设置 139.6 MHz 时 → 输入 1396）
 
 - RIVR Spread Spectrum（Fully Integrated Voltage Regulator，全集成电压调节器）：启用/禁用。全集成电压调节器展频。可降低峰值辐射强度，减少对特定频率的干扰。
 
@@ -1520,7 +1520,7 @@ Enable（启用）
 
 选项：
 
-C0 / C1 / C2 / C3 / C6 / C7 / C7S / C8 / C9 / C10 / Cpu Default（处理器默认） / Auto（自动）
+C0 / C1 / C2 / C3 / C6 / C7 / C7S / C8 / C9 / C10 / Cpu Default（处理器默认）/ Auto（自动）
 
 说明：
 
