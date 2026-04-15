@@ -71,7 +71,7 @@
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能深入理解。
 
-主要作者 MCKUSICK M K 在其网站上提供多款 BSD 相关的录制课程[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>。目前正在撰写推出第三版，相关信息可参见 2025 年 6 月 BSDCan 大会 A History of the BSD Daemon by MCKUSICK M K[EB/OL]. [2026-03-26]. <https://www.youtube.com/watch?v=SGC0191nDp0>，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
+主要作者 MCKUSICK M K 在其网站上提供多款 BSD 相关的录制课程，参见 MCKUSICK M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>。目前正在撰写推出第三版，相关信息可参见 MCKUSICK M K. A History of the BSD Daemon[EB/OL]. [2026-03-26]. <https://www.youtube.com/watch?v=SGC0191nDp0>，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
 
 ### IPv6 网络堆栈
 

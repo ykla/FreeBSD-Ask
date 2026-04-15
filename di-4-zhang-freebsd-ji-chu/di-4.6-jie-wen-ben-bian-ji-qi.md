@@ -273,5 +273,5 @@ $ msedit abc.txt
 ## 课后习题
 
 1. 使 vi 支持 UTF-8 编码与中文字体。
-2. 查看 FreeBSD 中 Nvi 编辑器的源码，比较其与早期 UNIX vi 的差异。
+2. 查看 FreeBSD 中 Nvi 编辑器的源代码，比较其与早期 UNIX vi 的差异。
 3. 修改 FreeBSD 中 vi 编辑器的默认配置为 ee。

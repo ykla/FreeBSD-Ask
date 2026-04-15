@@ -1,4 +1,4 @@
-# 9.7 多媒体处理工具
+﻿# 9.7 多媒体处理工具
 
 FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪辑、视频剪辑、字幕压制以及图形图像处理等相关工具的基本使用方法。
 
@@ -14,7 +14,7 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 # pkg install audacity
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/audio/audacity/
@@ -33,7 +33,7 @@ Olive 视频编辑器（Olive Video Editor）安装方法：
 # pkg install olive-video-editor
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/olive/
@@ -52,7 +52,7 @@ FFmpeg 安装方法：
 # pkg install ffmpeg
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/ffmpeg/
@@ -79,7 +79,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 # pkg install inkscape
 ```
 
-- 或者使用 Ports 源码编译安装：
+- 或者使用 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/graphics/inkscape/

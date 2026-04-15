@@ -1,4 +1,4 @@
-# 5.7 使用源代码更新 FreeBSD
+﻿# 5.7 使用源代码更新 FreeBSD
 
 本节讲解从源代码构建和更新 FreeBSD 系统的完整流程。
 
@@ -51,7 +51,7 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.free
 
 #### 拉取 CURRENT
 
-通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源码仓库到 `/usr/src`，使用浅克隆减少下载量：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源代码仓库到 `/usr/src`，使用浅克隆减少下载量：
 
 ```sh
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
@@ -72,7 +72,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 
 #### 拉取某 RELEASE
 
-通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源代码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
@@ -81,7 +81,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.o
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
 
-或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
+或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源代码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -98,8 +98,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 以 FreeBSD 15.0-RELEASE 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源码压缩包
-# tar xvf src.txz -C /                                                    # 将源码解压到根目录
+# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源代码压缩包
+# tar xvf src.txz -C /                                                    # 将源代码解压到根目录
 ```
 
 > **为何要解压到 `/`？**

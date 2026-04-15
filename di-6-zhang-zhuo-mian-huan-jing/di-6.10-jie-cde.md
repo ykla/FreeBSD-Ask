@@ -1,4 +1,4 @@
-# 6.10 CDE
+﻿# 6.10 CDE
 
 ## CDE 桌面环境概述
 
@@ -148,7 +148,7 @@ dtspc		6112/tcp
 
 日历是中文。
 
-根据源码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，不存在简体中文支持。但是根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，其明显存在简体中文支持，疑似在开源过程中丢失，或 Solaris 为未合并的分支。已经反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
+根据源代码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，不存在简体中文支持。但是根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，其明显存在简体中文支持，疑似在开源过程中丢失，或 Solaris 为未合并的分支。已经反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
 
 ## 参考文献
 
@@ -158,5 +158,5 @@ dtspc		6112/tcp
 
 ## 课后习题
 
-1. 查找 CDE 桌面环境的源码仓库，分析其与 20 世纪 90 年代商业 UNIX 系统的历史关联。
+1. 查找 CDE 桌面环境的源代码仓库，分析其与 20 世纪 90 年代商业 UNIX 系统的历史关联。
 2. 为 CDE 补充 i18n 支持。

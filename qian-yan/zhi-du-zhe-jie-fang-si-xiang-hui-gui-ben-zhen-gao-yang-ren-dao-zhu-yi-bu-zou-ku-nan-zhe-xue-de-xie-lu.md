@@ -172,7 +172,7 @@
 
 在一款开源红白机游戏模拟器的项目中，存在以下场景：
 
->I am using ubuntu 14.04 and even though I install the `liballegro5.0`, It seems no header files are downloaded with it (I search it and look up in usr/include). So do I have to download source and make it as tutorial said? Thanks.（我正在使用 Ubuntu 14.04，即使我安装了 `liballegro5.0`，似乎也没有随之下载任何头文件（我搜索过，而且也在 usr/include 里找过）。那么我是否必须下载源码并像教程中说的那样自行编译？谢谢。）
+>I am using ubuntu 14.04 and even though I install the `liballegro5.0`, It seems no header files are downloaded with it (I search it and look up in usr/include). So do I have to download source and make it as tutorial said? Thanks.（我正在使用 Ubuntu 14.04，即使我安装了 `liballegro5.0`，似乎也没有随之下载任何头文件（我搜索过，而且也在 usr/include 里找过）。那么我是否必须下载源代码并像教程中说的那样自行编译？谢谢。）
 >
 >Try install liballegro5-dev as pointed in the tutorial, and the problem should be fixed.（尝试按照教程中的说明安装 liballegro5-dev，应该就能解决问题。）
 >
@@ -190,7 +190,7 @@
 
 - 启用了开发功能的二进制包
 
-- 纯源码包，带或不带头文件
+- 纯源代码包，带或不带头文件
 
 可以看到，关于 xxx and xxx-dev 的命名是缺乏规范的，还有许多项目，其正式版也是 dev。认为世界是有秩序的，是被预定好的，是有规律的，本身无可厚非，但是忽略了一点：在由人类构建的世界中，一切都需要人类自行维护、构建秩序，而不是指望有神预定好了一切法则，一劳永逸。
 

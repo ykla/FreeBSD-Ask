@@ -269,7 +269,7 @@ DragonFly BSD 对 Intel 显卡有特定支持要求。[根据硬件说明](https
 ## 参考文献
 
 - Michael Larabel. DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind[EB/OL]. (2024-06-11)[2026-03-25]. <https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17>. 2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步。
-- Booting, UEFI, and text consoles[EB/OL]. (2017-09-14)[2026-03-25]. <https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/>. 详述了 DragonFly BSD 的 UEFI 启动机制与文本控制台配置方法。
+- DragonFly BSD Digest. Booting, UEFI, and text consoles[EB/OL]. (2017-09-14)[2026-03-25]. <https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/>. 详述了 DragonFly BSD 的 UEFI 启动机制与文本控制台配置方法。
 
 ## 课后习题
 

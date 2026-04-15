@@ -88,5 +88,5 @@ login:
 ## 课后习题
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0-ttyv3），分别在不同控制台登录不同用户，使用 w 命令验证并记录结果。
-2. 查找 FreeBSD 内核中 TTY 子系统的核心源码，使其具有现代操作系统应有的功能。
+2. 查找 FreeBSD 内核中 TTY 子系统的核心源代码，使其具有现代操作系统应有的功能。
 3. 修改 FreeBSD 中 motd（Message of the Day）的默认显示行为，验证其变化。

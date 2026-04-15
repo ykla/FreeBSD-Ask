@@ -1,4 +1,4 @@
-# 4.10 系统目录结构
+﻿# 4.10 系统目录结构
 
 ## 目录结构概览
 
@@ -137,7 +137,7 @@
 │   ├── libdata 杂项实用数据文件
 │   ├── src FreeBSD 源代码，参见 ports(7)
 │   ├── ports FreeBSD Ports
-│   │    └── distfiles 下载的源码包存放的地方
+│   │    └── distfiles 下载的源代码包存放的地方
 │   ├── lib 用户库文件
 │   └── sbin 用户系统管理实用程序
 ├── lib /bin、/sbin 的库文件
@@ -159,5 +159,5 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ## 课后习题
 
 1. 在 FreeBSD 中遍历整个目录树结构，并与 Ubuntu 最新 LTS 版本进行比较。
-2. 分析 FreeBSD 源码中有关文件结构的设计。
+2. 分析 FreeBSD 源代码中有关文件结构的设计。
 3. 修改 FreeBSD 中 `/tmp` 目录的默认权限配置，验证其行为变化。

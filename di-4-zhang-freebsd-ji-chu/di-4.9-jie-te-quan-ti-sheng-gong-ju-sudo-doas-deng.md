@@ -390,5 +390,5 @@ $ sudo su
 ## 课后习题
 
 1. 撰写关于通过 mac_do 提权的具体实现原理与操作手册，并向本书提交 PR。
-2. 查看 FreeBSD Ports 中 doas 工具的源码实现，分析其设计如何在简单性与安全性之间做权衡。
+2. 查看 FreeBSD Ports 中 doas 工具的源代码实现，分析其设计如何在简单性与安全性之间做权衡。
 3. 修改 FreeBSD 中 doas 配置的 keepenv 选项，验证其行为变化。

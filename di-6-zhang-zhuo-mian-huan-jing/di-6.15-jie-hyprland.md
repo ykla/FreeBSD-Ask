@@ -1,4 +1,4 @@
-# 6.15 Hyprland
+﻿# 6.15 Hyprland
 
 > **警告**
 >
@@ -841,5 +841,5 @@ text-caps-lock-color=000000FF
 
 ## 课后习题
 
-1. 查找 Hyprland 合成器的 Port 源码，分析其与 wlroots 的技术关联。
+1. 查找 Hyprland 合成器的 Port 源代码，分析其与 wlroots 的技术关联。
 2. 重构本节，进行全面增补和重写。
