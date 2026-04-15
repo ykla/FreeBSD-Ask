@@ -448,7 +448,7 @@ Number of packages to be installed: 2
 
 94 KiB to be downloaded.
 
-Proceed with this action? [y/N]: 
+Proceed with this action? [y/N]:
 ```
 
 ## 如何删除当前 port 及其依赖的配置文件
@@ -589,7 +589,7 @@ kern.smp.cpus: 16
 或者查看系统可用的 CPU 核心数：
 
 ```sh
-# sysctl hw.ncpu 
+# sysctl hw.ncpu
 hw.ncpu: 16
 ```
 
@@ -811,7 +811,7 @@ Local storage:
 显示 ccache 的当前配置参数：
 
 ```sh
-# ccache -p 
+# ccache -p
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
 (default) cache_dir = /root/.cache/ccache
@@ -835,7 +835,7 @@ axel 是一个轻量级的多线程下载工具，可以显著提高下载速度
 
 使用 pkg 安装：
 
-```sh  
+```sh
 # pkg install axel
 ```
 

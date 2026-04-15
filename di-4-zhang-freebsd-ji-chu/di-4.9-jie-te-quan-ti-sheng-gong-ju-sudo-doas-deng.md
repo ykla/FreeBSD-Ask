@@ -123,7 +123,7 @@ permit :wheel
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/security/sudo/ 
+# cd /usr/ports/security/sudo/
 # make install clean
 ```
 
@@ -174,7 +174,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/security/sudo-rs/ 
+# cd /usr/ports/security/sudo-rs/
 # make install clean
 ```
 
@@ -193,7 +193,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 - 还可以通过 Ports 来安装：
 
 ```sh
-# cd /usr/ports/security/sudo-rs/ 
+# cd /usr/ports/security/sudo-rs/
 # make -V FLAVORS # 查看有哪些 FLAVORS
 default coexist
 # make FLAVOR=coexist install clean # 指定安装共存版本的 sudo-rs
@@ -363,7 +363,7 @@ root ALL=(ALL:ALL) ALL
 ```sh
 $ sudo su
 [sudo: authenticate] Password: # 此处同样不会显示任何输入内容，*** 这种掩码也没有
-# 
+#
 ```
 
 ## 附录：通过 mac_do 提权

@@ -122,11 +122,11 @@ $ su # 提升权限到 root，要求此普通用户在 wheel 组中
 Password: # 这里输入的是 root 账户密码！
 # pkg ins chromium # 再次安装 chromium
 Updating FreeBSD repository catalogue...
-Fetching data.pkg: 100%   10 MiB 768.6kB/s    00:14    
+Fetching data.pkg: 100%   10 MiB 768.6kB/s    00:14
 Processing entries: 100%
 FreeBSD repository update completed. 36822 packages processed.
 Updating FreeBSD-kmods repository catalogue...
-Fetching data.pkg: 100%   31 KiB  32.3kB/s    00:01    
+Fetching data.pkg: 100%   31 KiB  32.3kB/s    00:01
 Processing entries: 100%
 FreeBSD-kmods repository update completed. 213 packages processed.
 All repositories are up to date.
@@ -159,8 +159,8 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 ```sh
 # pkg ins chromium  # 安装 Chromium 浏览器
 Updating FreeBSD repository catalogue.
-Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
-Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04    
+Fetching meta.conf: 100%    179 B   0.2kB/s    00:01
+Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04
 Processing entries: 100%
 FreeBSD repository update completed. 36804 packages processed.
 Updating FreeBSD-kmods repository catalogue...
@@ -299,7 +299,7 @@ xrdp-0.10.2_2,1:
 或者：
 
 ```sh
-# cd /usr/ports/ports-mgmt/pkg-provides/ 
+# cd /usr/ports/ports-mgmt/pkg-provides/
 # make install clean
 ```
 
@@ -355,15 +355,15 @@ PLUGINS [ provides ];
 
 ```sh
 # pkg plugins
-NAME       DESC                                          VERSION   
-provides   A plugin for querying which package provides a particular file 0.7.4     
+NAME       DESC                                          VERSION
+provides   A plugin for querying which package provides a particular file 0.7.4
 ```
 
 - 刷新数据库：
 
 ```sh
 # pkg provides -u
-Fetching provides database: 100%   19 MiB   6.6MB/s    00:03    
+Fetching provides database: 100%   19 MiB   6.6MB/s    00:03
 Extracting database....success
 ```
 
@@ -446,7 +446,7 @@ pkg: PRE-INSTALL script failed
 或者使用 ports 安装 `bsdadminscripts2`：
 
 ```sh
-# cd /usr/ports/ports-mgmt/bsdadminscripts2/ 
+# cd /usr/ports/ports-mgmt/bsdadminscripts2/
 # make install clean
 ```
 

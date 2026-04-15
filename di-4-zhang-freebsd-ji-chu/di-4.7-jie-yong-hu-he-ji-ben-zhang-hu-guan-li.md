@@ -201,7 +201,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 示例：删除用户 test2 及其主目录。
 
 ```sh
-# pw userdel -r test2 
+# pw userdel -r test2
 ```
 
 ### `pw usershow` 命令

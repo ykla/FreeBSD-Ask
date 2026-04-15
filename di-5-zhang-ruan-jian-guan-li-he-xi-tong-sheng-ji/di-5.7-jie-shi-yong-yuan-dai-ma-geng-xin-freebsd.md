@@ -118,8 +118,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # make -j4 kernel      # 编译并安装内核
 # reboot               # 重启以使用新内核
 # cd /usr/src          # 切回工作目录
-# etcupdate -p         # 进行必要的配置文件合并  
-# make installworld    # 安装世界 
+# etcupdate -p         # 进行必要的配置文件合并
+# make installworld    # 安装世界
 # etcupdate -B         # 合并更新
 # reboot               # 重启以完成更新流程
 ```
@@ -142,7 +142,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
 
 ```sh
-# etcupdate -B     
+# etcupdate -B
 Conflicts remain from previous update, aborting.
 ```
 
@@ -153,7 +153,7 @@ Conflicts remain from previous update, aborting.
 Resolving conflict in '/etc/group':
 Select: (p) postpone, (df) diff-full, (e) edit,
         (h) help for more options: e # 输入 e 解决冲突
-# etcupdate -B 
+# etcupdate -B
 ```
 
 ## 故障排除与未竟事宜

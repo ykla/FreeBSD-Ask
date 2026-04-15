@@ -239,8 +239,8 @@ pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1
 pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
 Updating FreeBSD-base repository catalogue...
 pkg-static: Repository FreeBSD-base has a wrong packagesite, need to re-create database
-Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
-Fetching data.pkg: 100%   80 KiB  81.6kB/s    00:01    
+Fetching meta.conf: 100%    179 B   0.2kB/s    00:01
+Fetching data.pkg: 100%   80 KiB  81.6kB/s    00:01
 Processing entries:   0%
 Newer FreeBSD version for package FreeBSD-zlib-dbg:
 To ignore this error set IGNORE_OSVERSION=yes
