@@ -351,7 +351,7 @@ PKG_ENABLE_PLUGINS = true;
 PLUGINS [ provides ];
 ```
 
-- 运行：`pkg plugins`：
+- 运行 `pkg plugins`：
 
 ```sh
 # pkg plugins
