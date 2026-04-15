@@ -528,9 +528,9 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 > (unknown regdomain Expected eval: Use: not found)
 > ```
 
-![更改无线管制区域](../.gitbook/assets/ins-w2.png)
+![更改无线管制域](../.gitbook/assets/ins-w2.png)
 
-`更改无线管制区域/国家（当前为 FCC/US）？`
+`更改无线管制域/国家（当前为 FCC/US）？`
 
 修改无线管制域，按回车键确认。
 

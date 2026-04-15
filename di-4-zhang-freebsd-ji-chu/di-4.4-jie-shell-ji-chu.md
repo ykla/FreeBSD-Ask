@@ -1,4 +1,4 @@
-# 4.4 Shell 基础
+﻿# 4.4 Shell 基础
 
 ## 什么是 Shell
 
@@ -17,8 +17,8 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 >- Ubuntu 24.04 LTS 默认的 Shell：
 >
 >```bash
->lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
->$ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
+> lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
+> $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 >```
 
 ## 快捷键

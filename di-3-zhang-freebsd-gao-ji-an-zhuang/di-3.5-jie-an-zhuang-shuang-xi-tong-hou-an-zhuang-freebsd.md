@@ -1,4 +1,4 @@
-# 3.5 安装双系统（后安装 FreeBSD）
+﻿# 3.5 安装双系统（后安装 FreeBSD）
 
 本节研究在已预装 Windows 等操作系统的 UEFI 环境下，部署 FreeBSD 作为第二操作系统的技术方案。
 
@@ -33,7 +33,7 @@
   419426304       4063        - free -  (100G)
 ```
 
-应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的启动加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
+应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
 ![分区选择界面](../.gitbook/assets/shuangxitong1.png)
 
@@ -61,7 +61,7 @@
 
 > **注意**
 >
->请将 Windows 创建的 300 M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
+> 请将 Windows 创建的 300 M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
@@ -118,7 +118,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **思考题**
 >
->若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+> 若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
@@ -302,7 +302,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
->上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
+> 上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 相关文件结构：
 
@@ -347,10 +347,10 @@ zroot/
 >`\t` 是制表符（Tab）的转义字符（意味着按一下 **Tab** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >
 >```sh
->/dev/nda0p5  none  swap  sw  0  0
+> /dev/nda0p5  none  swap  sw  0  0
 >```
 >
->下同。
+> 下同。
 
 ### 设置启动项与 UEFI
 
@@ -409,7 +409,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 ```sh
 /
 ├── boot/
-│   └── loader.efi          # FreeBSD EFI 启动加载器
+│   └── loader.efi          # FreeBSD EFI 引导加载程序
 ├── tmp/
 │   └── bsdinstall_etc/
 │       ├── fstab           # 临时 fstab 配置
@@ -417,7 +417,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 └── media/
     └── efi/
         └── freebsd/
-            └── loader.efi  # 复制到 EFI 分区的启动加载器
+            └── loader.efi  # 复制到 EFI 分区的引导加载程序
 ```
 
 - 退出 Shell

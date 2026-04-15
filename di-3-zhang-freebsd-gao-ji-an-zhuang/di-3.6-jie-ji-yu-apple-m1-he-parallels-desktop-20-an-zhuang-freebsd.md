@@ -1,4 +1,4 @@
-# 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
+﻿# 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
 本节基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
 
@@ -87,7 +87,7 @@ ums_load="YES"
 
 > **注意**
 >
->若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
+> 若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
 
 ### 参考文献
 

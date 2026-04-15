@@ -1,4 +1,4 @@
-# 4.5 命令行基础
+﻿# 4.5 命令行基础
 
 命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
 
@@ -170,23 +170,23 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 > Windows 不仅对文件名大小写不敏感，对命令名称的大小写也不敏感。
 >
 >```powershell
->PS C:\Users\ykla> cd C:\ # 这里 cd 是小写
->PS C:\> CD D:\ # 这里 CD 是大写
->PS D:\> CD c:\ # 这里 C 盘是小写
->PS C:\> dir # 小写 dir，列出目录，等于 ls
+> PS C:\Users\ykla> cd C:\ # 这里 cd 是小写
+> PS C:\> CD D:\ # 这里 CD 是大写
+> PS D:\> CD c:\ # 这里 C 盘是小写
+> PS C:\> dir # 小写 dir，列出目录，等于 ls
 >
 >     目录：C:\
 >
 > ……省略一部分……
 >
->PS C:\Users\ykla> TREE # 大写 tree，显示路径关系
->文件夹 PATH 列表
->卷序列号为 2A90-E989
->C:.
->├─.android
->├─.cache
->│ ├─selenium
->……省略一部分……
+> PS C:\Users\ykla> TREE # 大写 tree，显示路径关系
+> 文件夹 PATH 列表
+> 卷序列号为 2A90-E989
+> C:.
+> ├─.android
+> ├─.cache
+> │ ├─selenium
+> ……省略一部分……
 >```
 
 > **技巧**
@@ -244,13 +244,13 @@ No fucks given
 > 根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换为 `abc`。
 >
 >```sh
-># abc
->Nothing found
-># plg install gimp
+> # abc
+> Nothing found
+> # plg install gimp
 >-sh: plg: not found
-># abc
->pkg install gimp [enter/↑/↓/ctrl+c]
->……省略一部分……
+> # abc
+> pkg install gimp [enter/↑/↓/ctrl+c]
+> ……省略一部分……
 >```
 
 #### 使用示例
@@ -457,8 +457,8 @@ $ touch test
 > 即使去掉相应的后缀名，在类 UNIX 系统中也可以识别文件的类型，这是根据文件幻数（magic numbers）确定的：
 >
 >```sh
->$ file book
->book: PDF document, version 1.7
+> $ file book
+> book: PDF document, version 1.7
 >```
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
@@ -570,9 +570,9 @@ $ rm -rf /home/ykla/test/
 > 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 `/home/ykla/test/` 打错成 `/home/ykla /test/`，会导致删除路径错误：
 >
 >```sh
-># rm -rf /home/ykla /test
-># ls /home/ykla
->ls: /home/ykla: No such file or directory # 发现已经不存在 ykla 这个目录了
+> # rm -rf /home/ykla /test
+> # ls /home/ykla
+> ls: /home/ykla: No such file or directory # 发现已经不存在 ykla 这个目录了
 >```
 
 > **警告**
@@ -580,14 +580,14 @@ $ rm -rf /home/ykla/test/
 > 网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
-># rm -rf /*
->rm: /boot/efi: Device busy
->rm: /boot: Directory not empty
->rm: /dev/reroot: Operation not supported
->rm: /dev/input: Operation not supported
->rm: /dev/fd: Operation not supported
->……省略一部分……
->#
+> # rm -rf /*
+> rm: /boot/efi: Device busy
+> rm: /boot: Directory not empty
+> rm: /dev/reroot: Operation not supported
+> rm: /dev/input: Operation not supported
+> rm: /dev/fd: Operation not supported
+> ……省略一部分……
+> #
 >```
 >
 > ![引导错误](../.gitbook/assets/noefi.png)
@@ -783,7 +783,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 >**技巧**
 >
->当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
+> 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
 > **注意**
 >

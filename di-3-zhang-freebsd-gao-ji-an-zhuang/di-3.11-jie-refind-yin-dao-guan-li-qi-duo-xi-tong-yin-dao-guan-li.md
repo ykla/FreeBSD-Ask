@@ -1,4 +1,4 @@
-# 3.11 rEFInd 引导管理器（多系统引导管理）
+﻿# 3.11 rEFInd 引导管理器（多系统引导管理）
 
 在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。
 
@@ -51,7 +51,7 @@ EFI/
 │       └── Matrix-rEFInd/
 │           └── theme.conf  # Matrix 主题配置
 ├── freebsd/
-│   └── loader.efi        # FreeBSD 启动加载器
+│   └── loader.efi        # FreeBSD 引导加载程序
 └── Microsoft/
     └── Boot/
         └── bootmgfw.efi   # Windows 启动管理器
@@ -111,7 +111,7 @@ include themes/Matrix-rEFInd/theme.conf
 
 > **技巧**
 >
->如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
+> 如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
 
 ## 课后习题
 

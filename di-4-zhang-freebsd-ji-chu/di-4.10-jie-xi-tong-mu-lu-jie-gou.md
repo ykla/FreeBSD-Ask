@@ -14,7 +14,7 @@
 │   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
 │   ├── loader.conf loader 配置文件
 │   ├── loader.conf.d loader 配置文件的子项
-│   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8)
+│   ├── lua 引导加载程序的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8)
 │   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件
 │   │    └── zpool.cache，硬编码的磁盘驱动器路径，参见 zpool(8)
 │   ├── kernel 内核及内核模块
