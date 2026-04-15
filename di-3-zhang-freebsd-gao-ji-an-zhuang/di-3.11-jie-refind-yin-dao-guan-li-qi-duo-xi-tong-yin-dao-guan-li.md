@@ -43,7 +43,7 @@ EFI/
 ├── refind/
 │   ├── refind.conf        # rEFInd 主配置文件
 │   ├── refind.conf-sample # rEFInd 示例配置文件
-│   ├── refind_x64.efi     # rEFInd 64位启动文件
+│   ├── refind_x64.efi     # rEFInd 64 位启动文件
 │   ├── icons/
 │   │   ├── os_freebsd.png # FreeBSD 图标
 │   │   └── os_win.png    # Windows 图标
