@@ -18,7 +18,7 @@
 | GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证 |
 | BSD 许可证 | / | 一种宽松的开源许可证，允许商业使用和闭源衍生 |
 | BSD | 伯克利软件发行版 | Berkeley Software Distribution，加利福尼亚大学伯克利分校计算机系统研究小组（CSRG）对 UNIX v7 进行改进和修改的成果命名，是 UNIX 技术演化史上的重要分支 |
-| 类 Unix | / | Unix-like，行为类似 UNIX 但不一定通过 SUS 认证的操作系统 |
+| 类 UNIX | / | Unix-like，行为类似 UNIX 但不一定通过 SUS 认证的操作系统 |
 | 发行版 | / | Distribution，基于内核及配套软件集合打包发布的完整操作系统 |
 | 内核模块 | / | 可在运行时动态加载到内核中或从中卸载的代码段，无需重新编译内核即可扩展内核功能 |
 | Base System | 基本系统 | 内核与用户空间（在 FreeBSD 中称为 world）的组合，即所有来自 src 源代码树的组件 |
@@ -46,7 +46,7 @@
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
 | Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
-| Linuxism | / | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象 |
+| Linuxism | / | 指软件过分依赖 Linux 特有特性而难以移植到其他类 UNIX 操作系统的现象 |
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力 |
 | Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
