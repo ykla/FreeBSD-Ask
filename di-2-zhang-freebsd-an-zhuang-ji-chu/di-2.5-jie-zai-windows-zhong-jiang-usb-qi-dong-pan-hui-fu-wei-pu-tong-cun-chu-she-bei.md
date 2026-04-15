@@ -245,7 +245,7 @@ DISKPART> sel disk 1 # 选中磁盘 1 （根据上下文）在命令输出中，
 
 DISKPART> clean # 清除磁盘 1 所有分区
 
-DiskPart 成功地清除了磁盘。 
+DiskPart 成功地清除了磁盘。
 
 DISKPART> cre part pri # 在磁盘 1 创建主分区
 
@@ -310,7 +310,7 @@ DISKPART> clean # 清空磁盘
 DiskPart 成功地清除了磁盘。
 
 DISKPART> convert gpt # 将所选磁盘转换为 GPT 分区表格式
- 
+
 DiskPart 已将所选磁盘成功地转更换为 GPT 格式。
 
 DISKPART> list disk # 列出所有磁盘
