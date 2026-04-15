@@ -340,7 +340,7 @@ FreeBSD-ports-kmods: { enabled: no }
 
 > **注意**
 >
-> 最好保持 ports 源和 kmods 源（若开启 pkgbase，则还须纳入 pkgbase 源）为同一镜像站，以避免发生潜在的依赖等问题。
+> 建议保持 ports 源和 kmods 源（若开启 pkgbase，则还须纳入 pkgbase 源）为同一镜像站，以避免发生潜在的依赖等问题。
 
 ## 面向基本系统的 pkgbase 源（适用 FreeBSD 14.3-RELEASE 及以上）
 
