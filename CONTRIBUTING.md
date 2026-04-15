@@ -1,4 +1,4 @@
-# 贡献指南与开放任务
+﻿# 贡献指南与开放任务
 
 ## 为什么不去建设《FreeBSD 手册》
 
@@ -94,7 +94,7 @@ and retry with 'git restore --source=HEAD :/'
 
 >**技巧**
 >
->您完全可以通过 GitHub 在线完成所有提交。
+> 您完全可以通过 GitHub 在线完成所有提交。
 
 ![项目体积](https://img.shields.io/github/repo-size/FreeBSD-Ask/FreeBSD-Ask?style=for-the-badge&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%E5%AD%98%E5%82%A8%E5%BA%93%E4%BD%93%E7%A7%AF&color=EB0028)
 
@@ -183,12 +183,12 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 >**技巧**
 >
->若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
+> 若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
 
 ### 项目结构概览
 
 ```sh
->FreeBSD-Ask-main
+> FreeBSD-Ask-main
 │  .gitattributes  # 用于让 GitHub 正确识别 markdown，用于在 GitHub 正确高亮，正确显示编程语言（Languages）的统计信息
 │  .gitignore # 一些规则，用于阻止 git 上传特定类型的文件或目录，如 node_modules
 │  CHANGELOG-ARCHIVE.md # 普通文件，记录既往所有重要变动
