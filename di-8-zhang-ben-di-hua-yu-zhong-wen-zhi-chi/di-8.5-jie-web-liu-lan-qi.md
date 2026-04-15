@@ -77,7 +77,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ## 附录：让 Chromium 使用 Google 账号同步
 
-由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. 此网页[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档比较了 Chromium 与 Google Chrome 在功能和授权上的差异。
+由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. Chromium Browser vs Google Chrome[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档比较了 Chromium 与 Google Chrome 在功能和授权上的差异。
 
 `Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。该许可证允许自由使用、修改与再分发。
 
@@ -98,7 +98,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 加入 Google browser sign-in test account 群组后，会看到：“您无权访问此内容”之类的提示，这很正常，无需担心。
 
-![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
+![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium-mail-list-2error.png)
 
 用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/)
 
