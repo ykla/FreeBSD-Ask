@@ -81,7 +81,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 配置中文环境
 
-### 设置 SDDM 登录管理器的语言为简体中文
+### 设置 SDDM 显示管理器的语言为简体中文
 
 执行命令：
 
