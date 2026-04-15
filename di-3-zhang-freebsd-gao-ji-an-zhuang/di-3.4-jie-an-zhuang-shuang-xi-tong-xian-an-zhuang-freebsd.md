@@ -94,7 +94,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 ![格式化交换分区](../.gitbook/assets/shuang10.png)
 
-![保存分区更改](../.gitbook/assets/shaung11.png)
+![保存分区更改](../.gitbook/assets/shuang11.png)
 
 回到 FreeBSD，查看磁盘分区情况：
 
