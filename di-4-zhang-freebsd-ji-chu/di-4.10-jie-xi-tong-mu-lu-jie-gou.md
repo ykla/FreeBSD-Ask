@@ -14,7 +14,7 @@
 │   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
 │   ├── loader.conf loader 配置文件
 │   ├── loader.conf.d loader 配置文件的子项
-│   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8) 
+│   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8)
 │   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件
 │   │    └── zpool.cache，硬编码的磁盘驱动器路径，参见 zpool(8)
 │   ├── kernel 内核及内核模块
@@ -23,7 +23,7 @@
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
 │   └── defaults 存放默认内核的默认引导配置文件
-│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5) 
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件
@@ -46,7 +46,7 @@
 │   ├── backups 用于存放系统的备份文件，如用户名和密钥、pkg 数据库。由 /etc/periodic/daily 下的 200、210 等文件生成
 │   ├── spool 存放等待处理的任务文件，如待打印机打印的文件
 │   ├── cron 存放 cron 定时任务相关文件，参见 cron(8)
-│   ├── crash 存放崩溃转储文件 
+│   ├── crash 存放崩溃转储文件
 │   ├── rwho 存储由 rwhod 收集的网络中其他计算机的用户登录信息，参见 rwhod(8)。默认为空
 │   ├── log 各种系统日志文件
 │   ├── unbound Unbound 服务器的相关文件
@@ -108,7 +108,7 @@
 │   │    └── mailer.conf mailwrapper(8) 配置文件
 │   ├── kyua Kyua 测试框架的全局配置文件。参见 kyua(1)、kyua.conf(5)
 │   ├── unbound Unbound 配置文件
-│   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8) 
+│   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8)
 │   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
 │   ├── bluetooth 蓝牙相关
 │   ├── authpf 用于认证网关用户的 shell 配置文件，参见 authpf(8)，默认为空
