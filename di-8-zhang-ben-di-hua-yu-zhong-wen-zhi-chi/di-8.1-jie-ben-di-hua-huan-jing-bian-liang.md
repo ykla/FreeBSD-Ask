@@ -2,7 +2,7 @@
 
 ## 本地化环境变量配置文件路径
 
-在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的登录管理器（Display Manager）和用户 Shell 环境。
+在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的显示管理器（Display Manager）和用户 Shell 环境。
 
 ### 显示管理器配置路径
 
