@@ -88,7 +88,7 @@
 列出所有 NVIDIA GPU 及其详细信息：
 
 ```sh
-$ nvidia-smi 
+$ nvidia-smi
 ```
 
 `nvidia-smi` 命令示例输出：

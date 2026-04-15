@@ -33,7 +33,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 - 或通过 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/seatd/ 
+# cd /usr/ports/sysutils/seatd/
 # make install clean
 ```
 

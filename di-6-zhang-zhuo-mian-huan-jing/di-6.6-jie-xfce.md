@@ -24,7 +24,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 ### 软件包说明
@@ -123,9 +123,9 @@ FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 软件，可搭配
 编辑 `~/.shrc` 文件，写入：
 
 ```sh
-if [ -t 1 ]; then       
+if [ -t 1 ]; then
   while :; do
-    printf '\033]0;%s\007' "$PWD"   
+    printf '\033]0;%s\007' "$PWD"
     printf '\n$ '
     if ! IFS= read -r cmd; then
       break
@@ -143,7 +143,7 @@ fi
 
 ```sh
 if ( $?TERM && $TERM =~ xterm* ) then
-    set host = `hostname`      
+    set host = `hostname`
     alias postcmd 'rehash; printf -- "\033]2;%s\007" "${user}@${host}: ${cwd}"
 endif
 ```
@@ -160,7 +160,7 @@ case xterm*:
 default:
     set prompt="%# "
     breaksw
-endsw 
+endsw
 ```
 
 ### bash

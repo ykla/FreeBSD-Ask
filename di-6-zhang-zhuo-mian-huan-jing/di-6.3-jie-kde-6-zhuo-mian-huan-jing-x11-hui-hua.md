@@ -25,10 +25,10 @@ KDE 项目致力于开发一套现代化的桌面环境。KDE 桌面环境的设
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean 
-# cd /usr/ports/x11/kde/ && make install clean 
-# cd /usr/ports/x11/sddm/ && make install clean 
-# cd /usr/ports/x11-fonts/wqy/ && make install clean 
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/kde/ && make install clean
+# cd /usr/ports/x11/sddm/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
 ```
 
 ### 软件包说明
@@ -173,9 +173,9 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 基础桌面安装方案。
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean 
+# cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/plasma6-plasma-desktop/ && make install clean
-# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
+# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean
 # cd /usr/ports/x11/sddm/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/plasma6-kscreen/ && make install clean
@@ -186,7 +186,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 可选 Ports：
 
 ```sh
-# cd /usr/ports/x11/konsole/ && make install clean # 终端 
+# cd /usr/ports/x11/konsole/ && make install clean # 终端
 # cd /usr/ports/x11-fm/dolphin/ && make install clean # 文件管理器
 # cd /usr/ports/editors/kate/ && make install clean # 文本编辑器
 # cd /usr/ports/sysutils/plasma6-plasma-systemmonitor/ && make install clean # 系统监视器
@@ -194,7 +194,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 # cd /usr/ports/sysutils/plasma6-discover/ && make install clean # 软件管理器
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
-# cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
+# cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测
 # cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件
 ```
 

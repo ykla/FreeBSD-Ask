@@ -110,7 +110,7 @@ freebsd-update-notify 的配置文件位于 `/usr/local/etc/freebsd-update-notif
 默认配置的更新间隔较长，可以改为：
 
 ```ini
-max-days-between-updates    1   # 更新检测间隔（日）      
+max-days-between-updates    1   # 更新检测间隔（日）
 hours-between-reminders     8   # 提醒间隔（小时）
 ```
 
