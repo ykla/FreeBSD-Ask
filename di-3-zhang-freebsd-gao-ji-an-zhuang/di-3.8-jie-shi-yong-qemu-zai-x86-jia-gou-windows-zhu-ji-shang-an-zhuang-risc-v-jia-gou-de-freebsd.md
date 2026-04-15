@@ -37,7 +37,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
         │               └── fw_jump.elf # OpenSBI 固件
         └── u-boot/
             └── u-boot-qemu-riscv64/
-                └── u-boot.bin # U-Boot 引导加载器
+                └── u-boot.bin # U-Boot 引导加载程序
 ```
 
 ## OpenSBI
@@ -55,7 +55,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/opensbi/ 
+# cd /usr/ports/sysutils/opensbi/
 # make install clean
 ```
 
@@ -84,7 +84,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/u-boot-qemu-riscv64/ 
+# cd /usr/ports/sysutils/u-boot-qemu-riscv64/
 # make install clean
 ```
 
@@ -145,7 +145,7 @@ cd /d "C:\Program Files\qemu"
 先创建一个普通用户（注意加入 wheel 组）：
 
 ```sh
-# adduser 
+# adduser
 Username: ykla
 Full name:
 Uid (Leave empty for default):
