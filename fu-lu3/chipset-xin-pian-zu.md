@@ -150,7 +150,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见：戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM 刷新与机会性自刷新的最佳实践。
+参见：戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM 刷新与机会性自刷新的推荐实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
