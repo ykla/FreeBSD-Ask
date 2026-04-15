@@ -44,7 +44,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 ### 内存 ≤ 512 MB
 
-下载 mfsBSD Mini 14.1 RELEASE ISO 镜像：
+下载 mfsBSD Mini 14.1-RELEASE ISO 镜像：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
@@ -62,7 +62,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 ### 内存 > 512 MB
 
-下载 mfsBSD 14.2 RELEASE AMD64 ISO 镜像：
+下载 mfsBSD 14.2-RELEASE AMD64 ISO 镜像：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
