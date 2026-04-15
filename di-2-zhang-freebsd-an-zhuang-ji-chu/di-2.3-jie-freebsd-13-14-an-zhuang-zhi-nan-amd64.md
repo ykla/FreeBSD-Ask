@@ -700,7 +700,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 yk
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`，其中 `&` 会自动展开为首字母大写的用户名（如用户 `ykla` 的全名将显示为 `User Ykla`）。这是早期 Unix 的 GECOS 字段行为。相关源代码见 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c>，该文件包含用户管理工具 pw 的源代码，其中 `static struct passwd fakeuser` 部分实现了该行为。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`，其中 `&` 会自动展开为首字母大写的用户名（如用户 `ykla` 的全名将显示为 `User Ykla`）。这是早期 UNIX 的 GECOS 字段行为。相关源代码见 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c>，该文件包含用户管理工具 pw 的源代码，其中 `static struct passwd fakeuser` 部分实现了该行为。
 
 - ② 如果设置使用随机密码，在最后的部分会输出：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`（adduser：信息：用户 (ykla) 的密码是：D1MnujkWMv/m）。
 
