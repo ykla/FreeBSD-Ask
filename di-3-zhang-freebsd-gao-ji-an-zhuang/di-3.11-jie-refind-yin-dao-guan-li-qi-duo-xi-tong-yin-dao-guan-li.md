@@ -59,7 +59,7 @@ EFI/
 
 使用 [DiskGenius](https://www.diskgenius.com/) 将处理后的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
-![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
+![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shuang13.png)
 
 ## 添加启动项
 
