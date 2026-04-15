@@ -18,7 +18,7 @@ QEMU 下载地址：
 
 QEMU 安装完成后，需要下载 RISC-V 架构的 FreeBSD 磁盘镜像。
 
-RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
+RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 
 <https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/riscv64/Latest/FreeBSD-14.2-RELEASE-riscv-riscv64-zfs.raw.xz>
 
