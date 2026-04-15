@@ -135,7 +135,7 @@ select * from table_name;
 多行注释：
 
 ```sql
-/* 
+/*
    这里是多行注释
    可以跨越多行，用于描述复杂的业务逻辑或临时禁用代码块
 */
@@ -296,8 +296,8 @@ CREATE TABLE orders (
    customer_id：外键列，用于关联客户。
    amount：订单金额。
 3. 设置外键：
-   `FOREIGN KEY (customer_id) REFERENCES customers(id)` 表示子表的 customer_id 列引用父表的 id 列。  
-   `ON DELETE CASCADE` 删除父表记录时，子表中引用该记录的行也会被删除。  
+   `FOREIGN KEY (customer_id) REFERENCES customers(id)` 表示子表的 customer_id 列引用父表的 id 列。
+   `ON DELETE CASCADE` 删除父表记录时，子表中引用该记录的行也会被删除。
    `ON UPDATE CASCADE` 更新父表主键时，子表外键列会自动更新。
 
 ## 修改列的数据类型

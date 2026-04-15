@@ -45,7 +45,7 @@ Set it up? [yes]:
 - 使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/comms/iwmbt-firmware/ 
+# cd /usr/ports/comms/iwmbt-firmware/
 # make install clean
 ```
 

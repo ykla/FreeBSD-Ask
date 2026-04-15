@@ -237,7 +237,7 @@ Append Key：追加密钥
  b）EFI_CERT_X509（DER 编码）
  c）EFI_CERT_RSA2048（二进制）
  d）EFI_CERT_SHAxxx
- 
+
 2. 经过认证的 UEFI 变量
 
 3. EFI PE/COFF 镜像（SHA256），密钥来源：出厂、外部、混合

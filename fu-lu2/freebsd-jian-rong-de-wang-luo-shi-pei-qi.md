@@ -55,7 +55,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 - 使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/net/realtek-re-kmod/ 
+# cd /usr/ports/net/realtek-re-kmod/
 # make install clean
 ```
 
