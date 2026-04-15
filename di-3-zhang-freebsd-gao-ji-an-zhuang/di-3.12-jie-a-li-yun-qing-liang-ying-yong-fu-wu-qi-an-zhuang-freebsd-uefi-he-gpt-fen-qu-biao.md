@@ -20,7 +20,7 @@
 
 ![Rocky Linux 9](../.gitbook/assets/fb-rock4.png)
 
-为方便使用，读者可将救援登录临时设置为默认登录方式。
+为便于使用，读者可将救援登录临时设置为默认登录方式。
 
 ![Rocky Linux 9](../.gitbook/assets/fb-rock2.png)
 
