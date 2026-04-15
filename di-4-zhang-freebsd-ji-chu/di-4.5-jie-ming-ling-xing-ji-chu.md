@@ -119,7 +119,7 @@ ykla@ykla:/ $ pwd
 total 317
   ……有所省略……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 
+drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45
 桌面
 
 /tmp:
@@ -227,7 +227,7 @@ More details - https://github.com/nvbn/thefuck#manual-installation
 FreeBSD 默认使用的是 sh，因此将下行：
 
 ```sh
-eval $(thefuck --alias) 
+eval $(thefuck --alias)
 ```
 
 
@@ -308,7 +308,7 @@ cp: test9: No such file or directory
 在 Linux 中，大多数常用命令来自 GNU 等用户空间软件包，Linux 内核本身并不提供用户级命令。来验证这一点：
 
 ```bash
-$ dpkg -S /bin/mv 
+$ dpkg -S /bin/mv
 coreutils: /bin/mv
 $ dpkg -S /bin/cp
 coreutils: /bin/cp
@@ -534,14 +534,14 @@ rm: test: No such file or directory # 报错指定的文件或目录不存在
 
 ```sh
 $ rm /home/ykla/test
-$ 
+$
 ```
 
 还可以用命令 `rmdir`（remove directory，即删除目录，且只能删除空目录）：
 
 ```sh
 $  rmdir /home/ykla/test
-$ 
+$
 ```
 
 - 若目录不为空
@@ -627,7 +627,7 @@ test5.pdf -> test5.txt
 将 `test2` 重命名为 `test2.pdf`
 
 ```sh
-$ mv -v test2 test2.pdf 
+$ mv -v test2 test2.pdf
 test2 -> test2.pdf
 ```
 
