@@ -95,20 +95,20 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 ![FreeBSD 镜像](../.gitbook/assets/do3.png)
 
 ```sh
-File Name                                          File Size      Date                 
-Parent directory/                                  -              -                     
-CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64         1171           2024-Nov-29 14:11     
-CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64         1811           2024-Nov-29 14:09     
-FreeBSD-14.2-RELEASE-amd64-bootonly.iso            459491328      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz         100595956      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-disc1.iso               1310040064     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz            855850608      2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso                4826406912     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz             3812250832     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-memstick.img            1559351808     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-memstick.img.xz         867177260      2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-mini-memstick.img       564220416      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13:04     
+File Name                                          File Size      Date
+Parent directory/                                  -              -
+CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64         1171           2024-Nov-29 14:11
+CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64         1811           2024-Nov-29 14:09
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso            459491328      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz         100595956      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-disc1.iso               1310040064     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz            855850608      2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso                4826406912     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz             3812250832     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img            1559351808     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img.xz         867177260      2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img       564220416      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13:04
 ```
 
 上述列表中，第一列为文件名，第二列为文件大小，第三列为发布日期。
@@ -116,8 +116,8 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | 首列 | 说明 |
 | :--- | :--- |
 | Parent directory/	-	- | 指向上级目录 |
-| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验值 |
-| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验值 |
+| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验和 |
+| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验和 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso | 网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz | 压缩的网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-disc1.iso | CD 镜像 |
@@ -129,7 +129,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img | U 盘用的网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz | 压缩的 U 盘用的网络安装镜像，安装时需要联网 |
 
-.xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
+.xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验和（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
 需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>. 该脚本定义 DVD 镜像包含的预安装软件包清单。
 
@@ -137,7 +137,7 @@ FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不
 
 > **技巧**
 >
-> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验和**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验和，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
 
@@ -179,7 +179,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验和正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
@@ -232,6 +232,6 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 ## 课后习题
 
-1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验值，同官方 CHECKSUM 文件进行比对验证。
+1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验和，同官方 CHECKSUM 文件进行比对验证。
 
 2. 查阅 bsd-hardware.info 网站，查找当前设备的硬件兼容性信息，如果可以安装 FreeBSD，则使用 hw-probe 工具将自己的硬件数据上传到该平台。
