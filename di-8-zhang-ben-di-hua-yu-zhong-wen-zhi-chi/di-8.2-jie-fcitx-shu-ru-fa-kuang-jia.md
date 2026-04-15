@@ -1,4 +1,4 @@
-# 8.2 Fcitx 输入法框架
+﻿# 8.2 Fcitx 输入法框架
 
 输入法框架与具体输入法是两个不同的技术层次，输入法的运行依赖于框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
 
@@ -6,7 +6,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 >**技巧**
 >
->视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
+> 视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
 
 > **注意**
 >
@@ -64,7 +64,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 > **注意**
 >
->如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
+> 如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
 
 - A 组（sh/bash/zsh）
 

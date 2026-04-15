@@ -1,4 +1,4 @@
-# 8.7 系统字体替换
+﻿# 8.7 系统字体替换
 
 
 良好的字体配置对于多语言环境（特别是中文）的正确显示至关重要。本节将介绍如何在 FreeBSD 系统中配置系统字体，包括图形界面字体和控制台字体的配置方法。
@@ -68,7 +68,7 @@ vidcontrol -f b16.fnt
 
 > **技巧**
 >
->若上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
+> 若上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
 
 ![设置完成后的 tty](../.gitbook/assets/tty1.png)
 

@@ -1,4 +1,4 @@
-# 8.10 微信（Linux 版）
+﻿# 8.10 微信（Linux 版）
 
 微信是一款在中国大陆广泛使用的即时通讯软件。与 QQ 类似，需要通过 Linux 兼容层来实现安装与运行。
 
@@ -101,7 +101,7 @@ root@ykla:/compat/linux # rpm2cpio < libxkbcommon-x11-1.0.3-4.el9.x86_64.rpm  | 
 
 > **技巧**
 >
->当找不到 Rocky Linux 的某个库时，可以到 <https://rockylinux.pkgs.org/> 搜索。FreeBSD Ports 已经打包了一部分，可以参照 pkg 章节使用 `pkg-provides` 搜索一下。
+> 当找不到 Rocky Linux 的某个库时，可以到 <https://rockylinux.pkgs.org/> 搜索。FreeBSD Ports 已经打包了一部分，可以参照 pkg 章节使用 `pkg-provides` 搜索一下。
 
 - 解决依赖库 `libxcb-icccm.so.4`：
 
