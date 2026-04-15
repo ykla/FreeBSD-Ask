@@ -81,7 +81,7 @@ ums_load="YES"
 若提示找不到软件包，可通过 Ports 编译安装虚拟机工具：
 
 ```sh
-# cd /usr/ports/emulators/parallels-tools/ 
+# cd /usr/ports/emulators/parallels-tools/
 # make install clean
 ```
 
