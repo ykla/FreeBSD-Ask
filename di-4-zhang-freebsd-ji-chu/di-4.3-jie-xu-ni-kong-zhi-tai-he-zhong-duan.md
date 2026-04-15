@@ -71,7 +71,7 @@ To change this login announcement, see motd(5).
 login: root
 Password:
 Login: incorrect # 表示登录信息不正确
-login: 
+login:
 ```
 
 - 若用户名和密码都不正确：
@@ -80,7 +80,7 @@ login:
 login: test # 当前系统中不存在该用户
 Password:
 Login: incorrect
-login: 
+login:
 ```
 
 如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统会更方便。
