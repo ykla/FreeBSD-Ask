@@ -24,15 +24,15 @@
 
 ```ini
 menuentry "FreeBSD" {
-	icon \EFI\refind\icons\os_freebsd.png 
+	icon \EFI\refind\icons\os_freebsd.png
 	volume "FreeBSD"
-	loader \EFI\freebsd\loader.efi 
+	loader \EFI\freebsd\loader.efi
 }
 
-menuentry "Windows 10" { 
+menuentry "Windows 10" {
 	icon \EFI\refind\icons\os_win.png
-	volume "Windows 10"  
-	loader \EFI\Microsoft\Boot\bootmgfw.efi 
+	volume "Windows 10"
+	loader \EFI\Microsoft\Boot\bootmgfw.efi
 }
 ```
 
