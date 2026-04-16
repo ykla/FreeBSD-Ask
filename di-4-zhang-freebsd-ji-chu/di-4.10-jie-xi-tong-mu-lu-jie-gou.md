@@ -149,12 +149,17 @@
 ①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志。
 
 ```sh
-dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
+# ls -lod /var/empty
+dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 ```
+
+参数解释：在长格式（`-l`）输出中包含文件标志（`-o`），并且将目前视为普通文件列出而不递归（`-d`）。
 
 ### 参考文献
 
-- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构
+- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
+- FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.
+- FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls>.
 
 ## 课后习题
 
