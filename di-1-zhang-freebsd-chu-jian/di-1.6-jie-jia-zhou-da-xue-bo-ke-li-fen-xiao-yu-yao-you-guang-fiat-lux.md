@@ -69,6 +69,7 @@ Fiat Lux!
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京:社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
 - 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014.
 - ABRAHAO R A, MORIN H P N, PAGÉ J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
+- University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
 
 ## 课后习题
 
