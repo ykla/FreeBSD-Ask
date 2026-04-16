@@ -130,7 +130,7 @@
 | ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术，通过随机化进程的内存布局增加攻击难度 |
 | DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型，资源属主可自主决定访问权限 |
 | ACL | 访问控制列表 | Access Control List，一种以对象为中心的访问控制机制，提供比传统 Unix 权限更细粒度的控制 |
-| CHERI | / | Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展 |
+| CHERI | / | Capability Hardware Enhanced RISC Instructions，由剑桥大学和 SRI International 开发的 CPU 架构扩展，与 Capsicum 同为 Robert N.M. Watson 主导的项目，但两者为平行研究，非衍生关系 |
 | Container | 容器 | 一种轻量级的操作系统级虚拟化技术，通过命名空间隔离和控制组等机制实现进程的隔离与资源限制 |
 | NAT | 网络地址转换 | Network Address Translation，将 IP 数据包头部中的地址转换为另一个地址的技术 |
 | 代理服务器 | / | Proxy Server，充当客户端与服务器之间中介的服务器，转发请求和响应 |
