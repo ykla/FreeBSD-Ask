@@ -51,7 +51,7 @@ $ vidcontrol -f test.fnt
 FreeBSD 基本系统提供了一款工具，可将 bdf 或 hex 格式转换为 fnt 文件：
 
 ```sh
-$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度] [字体路径]
+$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度] 字体路径
 ```
 
 - 示例：
