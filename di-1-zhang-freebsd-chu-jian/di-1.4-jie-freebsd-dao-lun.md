@@ -14,7 +14,7 @@ FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经
 >
 > 参考文献：FreeBSD Wiki. FreeBSD Glossary STABLE[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Glossary#STABLE>.
 
-ALPHA 是 CURRENT 进入 RELEASE 的第一步。具体流程是：CURRENT -> ALPHA（进入 STABLE 分支）-> BETA -> RC -> RELEASE。
+ALPHA 是 CURRENT 进入 RELEASE 的第一步。具体流程是：CURRENT → ALPHA（进入 STABLE 分支）→ BETA → RC → RELEASE。
 
 CURRENT 分支中的代码在经过充分测试后（需满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE 分支，但这并不保证两个分支都没有重大缺陷。参见：FreeBSD Release Engineering[EB/OL]. [2026-03-26]. <https://docs.freebsd.org/en/articles/freebsd-releng/>.
 
@@ -98,21 +98,21 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，同样也都是
 
 FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
-- 大型技术企业对 FreeBSD 支持不足，如长久以来未提供 GitHub Actions 支持，NVIDIA CUDA 的忽视，在 AI 与 LLM 时代的全面落后；
-- FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入；
-- 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（即“集体行动困境”）。分管 FreeBSD 子项目的核心成员对项目本身亦缺乏应有的了解和关注，面对若干问题亦难以有效决策和承担责任；
-- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并非具有前瞻性，引入后亦往往缺乏后续关注与维护开发；
+- 大型技术企业对 FreeBSD 支持不足，如长久以来未提供 GitHub Actions 支持，NVIDIA CUDA 的忽视，在 AI 与 LLM 时代的全面落后。
+- FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入。
+- 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（即“集体行动困境”）。分管 FreeBSD 子项目的核心成员对项目本身亦缺乏应有的了解和关注，面对若干问题亦难以有效决策和承担责任。
+- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并非具有前瞻性，引入后亦往往缺乏后续关注与维护开发。
 - FreeBSD 系统在部分方面尚欠现代化，缺乏某些现代操作系统应有的特性。尤其是在嵌入式方面表现较差。
-- FreeBSD 未在基本系统中提供预配置的桌面环境；
-- FreeBSD 的硬件驱动支持相对有限；
-- 关于 FreeBSD 的学习资料相对较少；
-- FreeBSD 的开发者数量较少，且对外部贡献者的反馈往往不及时；
-- FreeBSD 基金会、期刊、Bug 报告系统等对外部贡献者的反馈也常有不及时的情况；
+- FreeBSD 未在基本系统中提供预配置的桌面环境。
+- FreeBSD 的硬件驱动支持相对有限。
+- 关于 FreeBSD 的学习资料相对较少。
+- FreeBSD 的开发者数量较少，且对外部贡献者的反馈往往不及时。
+- FreeBSD 基金会、期刊、Bug 报告系统等对外部贡献者的反馈也常有不及时的情况。
 - FreeBSD 文档项目曾停滞多年，个人贡献者除季度报告外的提交事实上很难被接纳；src 和 Ports 项目也同样难以接纳新的个人贡献者。
-- 尚未完全支持安全启动（Secure Boot）；
-- 对 TPM 的支持有限；
-- 由于存在“Linuxism”（对 Linux 特有特性的依赖），导致许多软件（如 NetworkManager）无法直接移植，桌面环境组件也因此难以完善；
-- 由于 FreeBSD 项目的基本目标和设计理念，其基本系统不包含某些在 Linux 发行版中常见的软件和命令；
+- 尚未完全支持安全启动（Secure Boot）。
+- 对 TPM 的支持有限。
+- 由于存在“Linuxism”（对 Linux 特有特性的依赖），导致许多软件（如 NetworkManager）无法直接移植，桌面环境组件也因此难以完善。
+- 由于 FreeBSD 项目的基本目标和设计理念，其基本系统不包含某些在 Linux 发行版中常见的软件和命令。
 - FreeBSD 的两款原生文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小。
 - FreeBSD 在面向最终用户的上层应用生态方面有所欠缺，即使拥有类似 Docker 的底层技术 Jail，也未能形成成熟的生态；其虚拟化技术 bhyve 也有待改进。
 
