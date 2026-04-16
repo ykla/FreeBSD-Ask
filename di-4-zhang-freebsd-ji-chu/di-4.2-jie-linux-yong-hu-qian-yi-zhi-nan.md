@@ -112,7 +112,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 | `lscpu` | `sysutils/lscpu` | 显示处理器信息 | / |
 | glibc | FreeBSD libc | C 库 | / |
 | GCC | LLVM + Clang | 编译器、编译链工具 | 非要用也可以安装 `devel/gcc` |
-| `vim` | `editors/vim/` | 文本编辑器 | FreeBSD 的 `vi` 不是软链接到 `vim`，而是早期的 `nvi` |
+| `vim` | `editors/vim` | 文本编辑器 | FreeBSD 的 `vi` 不是软链接到 `vim`，而是早期的 `nvi` |
 | `wget` | `ftp/wget` | 下载器 | 系统默认的下载工具是 `fetch` |
 | bash | `shells/bash` | shell | 系统默认的 shell 是 `sh`（非软链接）。可以自行修改。 |
 | NetworkManager | `net-mgmt/networkmgr` | 网络连接工具 | NetworkManager 依赖 `systemd` 无法直接移植 |
