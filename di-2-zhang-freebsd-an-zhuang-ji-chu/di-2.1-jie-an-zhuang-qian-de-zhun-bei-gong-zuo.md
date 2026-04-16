@@ -120,10 +120,10 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验和 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso | 网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz | 压缩的网络安装镜像，安装时需要联网 |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso | CD 镜像 |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz | 压缩的 CD 镜像 |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso | DVD 镜像，相比 CD 镜像包含了更多软件包（pkg） |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso | 标准安装镜像 |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz | 压缩的标准安装镜像 |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso | DVD 镜像，相比标准安装镜像包含了更多软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz | 压缩的 DVD 镜像，相比标准安装镜像包含了更多软件包（pkg） |
 | FreeBSD-14.2-RELEASE-amd64-memstick.img | U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘） |
 | FreeBSD-14.2-RELEASE-amd64-memstick.img.xz | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘） |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img | U 盘用的网络安装镜像，安装时需要联网 |
