@@ -647,7 +647,7 @@ $ anydesk
 
 ### FreeBSD 通过 AnyDesk 远程访问 Windows
 
-![Windows 通过 AnyDesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
+![FreeBSD 通过 AnyDesk 远程 Windows](../.gitbook/assets/anydesk4.png)
 
 ### 故障排除与未竟事宜
 
