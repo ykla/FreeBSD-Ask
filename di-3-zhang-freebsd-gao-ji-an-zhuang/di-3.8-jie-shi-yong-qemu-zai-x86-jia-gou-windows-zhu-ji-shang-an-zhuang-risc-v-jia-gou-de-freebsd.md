@@ -48,7 +48,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 
 ### 安装 OpenSBI
 
-使用 pkg 安装
+使用 pkg 安装：
 
 ```sh
 # pkg install opensbi
@@ -77,7 +77,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 
 ### 安装 U-Boot
 
-使用 pkg 安装
+使用 pkg 安装：
 
 ```sh
 # pkg install u-boot-qemu-riscv64
@@ -95,7 +95,6 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 ```sh
 # /etc/periodic/weekly/310.locate # 刷新数据库
 # locate u-boot.bin
-root@ykla:/home/ykla # locate u-boot.bin
 /usr/local/share/u-boot/u-boot-qemu-riscv64/u-boot.bin
 ```
 
