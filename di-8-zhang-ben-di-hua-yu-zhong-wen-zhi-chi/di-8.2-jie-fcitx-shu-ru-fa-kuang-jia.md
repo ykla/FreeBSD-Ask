@@ -133,7 +133,7 @@ setenv XMODIFIERS @im=fcitx
 >
 >`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，RIME 输入法只会显示乱码。
 
-如果 rime 未被自动添加到输入法，请手动添加完成初始化。
+如果 rime 未自动添加到输入法，请手动添加完成初始化。
 
 对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置，同时确保该用户已加入 wheel 组。
 

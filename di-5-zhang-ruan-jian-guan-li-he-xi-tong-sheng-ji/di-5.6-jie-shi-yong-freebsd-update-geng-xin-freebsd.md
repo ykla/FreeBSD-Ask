@@ -277,7 +277,7 @@ The following files will be removed as part of updating to
 /boot/kernel/geom_bde.ko
 /boot/kernel/geom_vinum.ko
 
-…………中间省略，这些是将被删除的文件………………
+…………中间省略，这些是将删除的文件………………
 
 /usr/share/examples/sound/sndstat_nv.c
 : # 这里输入 q，确认变动，直至没有新内容出现
