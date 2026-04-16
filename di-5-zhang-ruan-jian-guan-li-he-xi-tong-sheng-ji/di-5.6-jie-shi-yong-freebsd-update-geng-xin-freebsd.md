@@ -80,7 +80,7 @@ usr/include/c++/v1/tr1/vector usr/include/c++/v1/tr1/version usr/include/c++/v1/
 usr/include/c++/v1/unwind-itanium.h usr/include/c++/v1/unwind.h
 usr/include/crypto/cryptodev.h usr/include/crypto/cbcmac.h usr/include/crypto/deflate.h usr/include/crypto/gfmult.h usr/include/crypto/gmac.h
 usr/include/crypto/rijndael.h usr/include/crypto/rmd160.h usr/include/crypto/xform.h
-usr/lib/clang/11.0.1/include
+usr/lib/clang/18.1.8/include
 : q # 这里输入 q 再按回车键
 ```
 
