@@ -29,7 +29,7 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 
 > **技巧**
 >
-> 经测试验证，Audacious 仅原生支持 `.flac` 格式，目前默认构建不支持 `.m4a` 和 `.av3a` 等编码格式，需安装相应插件或另行配置。
+> 经测试验证，在上述格式中 Audacious 默认构建仅支持 `.flac` 格式，目前不支持 `.m4a` 和 `.av3a` 等编码格式，需安装相应插件或另行配置。
 
 ![Audacious](../.gitbook/assets/audacious.png)
 
