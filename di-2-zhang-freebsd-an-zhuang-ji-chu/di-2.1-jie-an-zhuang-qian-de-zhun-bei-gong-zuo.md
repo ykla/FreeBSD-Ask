@@ -37,7 +37,7 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 > **注意**
 >
-> FreeBSD 不支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>. 该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
+> FreeBSD 尚未完全支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>. 该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
 >
 > Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动程序支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
 >
