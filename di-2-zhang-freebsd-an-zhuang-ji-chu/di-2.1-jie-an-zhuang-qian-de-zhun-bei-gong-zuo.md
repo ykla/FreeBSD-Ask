@@ -27,7 +27,7 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 | 硬件类别 | 系列 | 实测型号 | 备注 |
 | -------- | ---- | -------- | ---- |
-| CPU | Intel 混合架构（异构大小核） | i7-1260P、N100 | 可正常启动运行，但调度机制尚不完善，睿频功能受限 |
+| CPU | Intel Alder Lake（含混合架构与纯 E-core 架构） | i7-1260P、N100 | 可正常启动运行，但调度机制尚不完善，睿频功能受限。i7-1260P 为混合架构（P-core + E-core），N100 为纯 E-core 架构（4 个 Gracemont 核心） |
 | NVMe 固态硬盘 | M.2 接口 | 英睿达 P310、Intel 600P、梵想 S530Q、S500Pro、S542PRO | 正常工作 |
 | 无线网卡 | Intel AX 系列 | AX200 | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得） |
 | 有线网卡 | Realtek 2.5 G | RTL8125B | 需要额外安装驱动程序，参见本书附录 |
