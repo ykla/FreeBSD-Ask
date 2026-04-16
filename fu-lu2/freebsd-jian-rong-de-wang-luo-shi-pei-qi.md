@@ -40,7 +40,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
   - RTL8411 / RTL8411B
 - 10/100 M 网卡
   - RTL8101E / RTL8102E / RTL8103E / RTL8105E / RTL8106E / RTL8107E
-  - rtl8401 / rtl8402
+  - RTL8401 / RTL8402
 
 #### Realtek 以太网卡驱动安装方法
 
