@@ -193,7 +193,7 @@
 | authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 Shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
 | Kyua | / | FreeBSD 的自动化测试框架 |
-| 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的 技术，数据存储在内存中，断电后丢失 |
+| 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失 |
 | GRUB | / | Grand Unified Bootloader，一种通用的多操作系统引导加载程序 |
 | init | / | UNIX 系统中进程号为 1 的初始化进程，负责系统启动后的初始化工作 |
 | 调试器 | / | Debugger，用于检测和定位程序错误的工具 |
