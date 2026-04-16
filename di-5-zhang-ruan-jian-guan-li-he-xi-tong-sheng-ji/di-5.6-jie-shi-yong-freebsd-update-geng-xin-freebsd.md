@@ -12,10 +12,11 @@
 
 ## 历史
 
-FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包括升级到新的大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中获得了正式支持，这标志着 FreeBSD 系统更新机制进入了标准化发展阶段。
+FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包括升级到新的大版本。`freebsd-update` 最早在 FreeBSD 6.2-RELEASE 中被纳入基本系统，用于安全更新和勘误补丁；在 FreeBSD 7.0-RELEASE 中新增了跨大版本升级功能，标志着 FreeBSD 系统更新机制进入了标准化发展阶段。
 
 ### 参考文献
 
+- FreeBSD Project. FreeBSD 6.2-RELEASE Release Notes[EB/OL]. [2026-04-16]. <https://www.freebsd.org/releases/6.2R/relnotes.html>. 发行说明，“The freebsd-update(8) utility is now included in the FreeBSD base system.”
 - FreeBSD Project. FreeBSD 7.0-RELEASE Announcement[EB/OL]. [2026-03-25]. <https://www.freebsd.org/releases/7.0R/announce/>. 官方公告明确 freebsd-update 为支持的二进制更新工具，适用于版本升级、安全修复及勘误补丁。
 
 ## 将默认文本编辑器替换为更简单的编辑器
