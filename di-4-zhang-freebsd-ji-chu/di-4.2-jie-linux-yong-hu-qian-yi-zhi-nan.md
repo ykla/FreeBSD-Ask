@@ -99,7 +99,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 | RHEL | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) | GNU | gcc | bash | GNOME |
 | FreeBSD | [约 2/4 年](https://www.freebsd.org/security/)（FreeBSD 14 及以前为 5 年，自 FreeBSD 15 起缩短为 4 年，参见 FreeBSD Foundation. Navigating FreeBSD's New Quarterly and Biennial Release Schedule[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/navigating-freebsds-new-quarterly-and-biennial-release-schedule/>。该博文说明 FreeBSD 发布周期变更） | pkg/Ports | BSD | clang | csh/sh | 可选 |
 | Windows | [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) | 可选 | 专有 | 可选 | PowerShell | Windows 桌面 |
-| macOS | 1 年/约 5 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | zsh | Aqua |
+| macOS | 1 年/约 3 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | zsh | Aqua |
 
 由于 Linux 广泛使用 GNU 工具，因此理论上只要不依赖特定的 Linux 函数库，这些工具都可以在 FreeBSD 上运行。
 
