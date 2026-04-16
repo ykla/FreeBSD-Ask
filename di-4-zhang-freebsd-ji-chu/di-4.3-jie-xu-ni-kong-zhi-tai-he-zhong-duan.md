@@ -70,7 +70,7 @@ To change this login announcement, see motd(5).
 ```sh
 login: root
 Password:
-Login: incorrect # 表示登录信息不正确
+Login incorrect # 表示登录信息不正确
 login:
 ```
 
@@ -79,7 +79,7 @@ login:
 ```sh
 login: test # 当前系统中不存在该用户
 Password:
-Login: incorrect
+Login incorrect
 login:
 ```
 
