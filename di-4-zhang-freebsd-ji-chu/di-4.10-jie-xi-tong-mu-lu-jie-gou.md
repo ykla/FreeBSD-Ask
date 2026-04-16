@@ -135,7 +135,7 @@
 │   ├── bin 用户实用程序
 │   ├── tests FreeBSD 测试套件，参见 tests(7)
 │   ├── libdata 杂项实用数据文件
-│   ├── src FreeBSD 源代码，参见 ports(7)
+│   ├── src FreeBSD 源代码，参见 src(7)
 │   ├── ports FreeBSD Ports
 │   │    └── distfiles 下载的源代码包存放的地方
 │   ├── lib 用户库文件
