@@ -673,7 +673,7 @@ Username: ykla # 此处输入用户名。只能使用小写字母（不支持非
 Full name: # 此处输入用户全名，①可留空。不能使用英文冒号 : 字符。
 Uid (Leave empty for default):  # 用户 UID，留空将使用默认值。手动设置时必须小于 32000。
 Login group [ykla]: # 用户主组
-Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入"wheel video"（两个单词之间有一个空格），邀请用户"ykla"加入附加组"wheel"和"video"
+Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词之间有一个空格），邀请用户“ykla”加入附加组“wheel”和“video”
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
 Home directory [/home/ykla]: # 用户主（家）目录，普通用户默认在 /home 下面
