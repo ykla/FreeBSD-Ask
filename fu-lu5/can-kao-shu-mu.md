@@ -56,7 +56,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 978-7-111-10201-0 <br><br> 机械工业出版社 | FreeBSD 技术书籍，出版于 2002 年，系统讲解 FreeBSD 系统架构与核心组件。部分内容如系统架构概述仍具参考价值，适合了解 FreeBSD 的发展脉络 |
+| ![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 978-7-111-10201-4 <br><br> 机械工业出版社 | FreeBSD 技术书籍，出版于 2002 年，系统讲解 FreeBSD 系统架构与核心组件。部分内容如系统架构概述仍具参考价值，适合了解 FreeBSD 的发展脉络 |
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 978-7-111-41157-4 <br><br> 机械工业出版社 | FreeBSD 驱动开发技术书籍，详细讲解内核模块编程、设备驱动架构和驱动程序开发技术 |
 
 以下是 FreeBSD 内核设计的权威著作，内容深入且专业，为高级研究者提供核心技术参考。
