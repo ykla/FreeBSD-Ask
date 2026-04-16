@@ -26,6 +26,8 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 
 ## 相关文件结构
 
+安装完成后，相关文件分布在以下目录结构中。
+
 ```sh
 /usr/
 └── local/
