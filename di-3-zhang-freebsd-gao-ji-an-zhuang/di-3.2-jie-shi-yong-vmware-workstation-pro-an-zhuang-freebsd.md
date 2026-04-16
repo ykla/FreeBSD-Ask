@@ -117,9 +117,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 或者使用 Ports 系统编译安装：
 
 ```sh
-# cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
+# cd /usr/ports/x11-drivers/xf86-video-vmware/ && make install clean
 # cd /usr/ports/emulators/open-vm-tools/ && make install clean
-# cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
+# cd /usr/ports/x11-drivers/xf86-input-vmmouse/ && make install clean
 ```
 
 > **注意**
