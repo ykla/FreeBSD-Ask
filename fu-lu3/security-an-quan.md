@@ -95,7 +95,7 @@ Disabled（禁用）
 
 说明：
 
-对于非 Windows 操作系统（如 Linux、FreeBSD 等），通常需要关闭此项才能被引导。
+对于部分非 Windows 操作系统（如 FreeBSD 等），通常需要关闭此项才能被引导。不过，许多主流 Linux 发行版（如 Ubuntu、Fedora、Debian 等）已通过 Microsoft UEFI CA 签名的 shim 引导器支持安全启动，无需关闭即可正常引导。参见：Ubuntu 文档. UEFI Secure Boot[EB/OL]. [2026-04-17]. <https://documentation.ubuntu.com/security/docs/security-features/platform-protections/secure-boot/>。
 
 当启用此选项、平台密钥（Platform Key，PK）已注册且系统处于用户模式时，安全启动功能将处于激活状态。更改模式需要重启。平台密钥（Platform Key，PK）用于在平台所有者与平台固件之间建立信任关系，平台所有者会将密钥的一部分注册到平台固件中。
 
