@@ -113,6 +113,10 @@ include themes/Matrix-rEFInd/theme.conf
 >
 > 如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
 
+## 参考文献
+
+- Smith R W. rEFInd Boot Manager[EB/OL]. [2026-04-17]. <https://www.rodsbooks.com/refind/>. rEFInd 官方网站，该引导管理器派生自 rEFIt 项目，用于管理 UEFI 环境下的多系统启动。
+
 ## 课后习题
 
 1. 研究 rEFInd 的自动操作系统检测机制，分析它如何扫描 EFI 系统分区并识别不同的操作系统，尝试手动添加一个自定义启动项并验证。
