@@ -148,10 +148,9 @@ root 用户可以修改所有用户的密码。
 uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```
 
-- 创建 `wheel` 组，只添加 `root` 用户：
+- 将用户 `root` 添加到 `wheel` 组（`wheel` 组为系统默认组，无需创建）：
 
 ```sh
-# pw groupadd wheel
 # pw groupmod wheel -m root
 ```
 
