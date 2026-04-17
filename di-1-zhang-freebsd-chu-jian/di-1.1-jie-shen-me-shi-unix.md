@@ -65,7 +65,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 >
 >> Those who do not understand UNIX are condemned to reinvent it, poorly.（那些不懂 UNIX 的人注定要再造一个四不像式 UNIX。）
 >>
->> NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
+>> SPENCER H. space news from Sept 28 AW&ST[EB/OL]. sci.space.shuttle, Google Groups, (1987-11-15)[2026-04-17]. <https://groups.google.com/g/sci.space.shuttle/c/L8-Upf8gZoY/m/NN6ngTI0K0QJ>.
 >
 > 亨利·斯宾塞（Henry Spencer）并未明确批评某一操作系统，试问，当前该论断更适用于何种主流操作系统？原因何在？
 
