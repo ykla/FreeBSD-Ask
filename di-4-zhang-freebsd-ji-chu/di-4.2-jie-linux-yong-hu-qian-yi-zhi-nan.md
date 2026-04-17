@@ -20,7 +20,7 @@
 - FreeBSD Foundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>.
 - Red Hat. 什么是 Linux 容器？[EB/OL]. [2026-04-04]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container>.
 - Open Source Initiative. The Open Source Definition[EB/OL]. [2026-04-17]. <https://opensource.org/osd>. 虽然“开源”（Open Source）一词直到 1998 年才由 Christine Peterson 正式提出，但 BSD 许可证自 20 世纪 80 年代起便以源代码自由分发的方式实践了这一理念
-- 克罗齐. 历史学的理论和历史[M]. 田时纲,译. 北京:中国社会科学出版社,2018
+- 克罗齐. 历史学的理论和历史[M]. 田时纲,译. 北京:中国社会科学出版社,2018.
 
 ## FreeBSD 与 Linux 的不同之处
 
