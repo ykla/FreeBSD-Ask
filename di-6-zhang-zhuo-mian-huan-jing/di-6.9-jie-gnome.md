@@ -15,7 +15,7 @@ GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的
 - 使用 pkg 安装：
 
 ```sh
-# pkg install xorg gnome noto-sc
+# pkg install xorg gnome noto-sans-sc
 ```
 
 - 或使用 Ports 安装：
@@ -23,7 +23,7 @@ GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/gnome/ && make install clean
-# cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
+# cd /usr/ports/x11-fonts/noto-sans-sc/ && make install clean
 ```
 
 ### 软件包说明
@@ -32,7 +32,7 @@ GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的
 | ---- | ---- |
 | xorg | X11 |
 | gnome | GNOME 主程序 |
-| noto-sc | 思源黑体（简体中文） |
+| noto-sans-sc | 思源黑体（简体中文） |
 
 ## 配置
 
