@@ -19,7 +19,7 @@
 | GNU | / | GNU's Not Unix，自由软件基金会发起的操作系统项目 |
 | GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证 |
 | BSD 许可证 | / | 一种宽松的开源许可证，允许商业使用和闭源衍生 |
-| BSD | 伯克利软件发行版 | Berkeley Software Distribution，加利福尼亚大学伯克利分校计算机系统研究小组（CSRG）对 UNIX v7 进行改进和修改的成果命名，是 UNIX 技术演化史上的重要分支 |
+| BSD | 伯克利软件发行版 | Berkeley Software Distribution，加利福尼亚大学伯克利分校基于 AT&T UNIX 进行改进和扩展的操作系统发行版，后由计算机系统研究小组（CSRG）持续发展，是 UNIX 技术演化史上的重要分支 |
 | 类 UNIX | / | Unix-like，行为类似 UNIX 但不一定通过 SUS 认证的操作系统 |
 | 发行版 | / | Distribution，基于内核及配套软件集合打包发布的完整操作系统 |
 | 内核模块 | / | 可在运行时动态加载到内核中或从中卸载的代码段，无需重新编译内核即可扩展内核功能 |
