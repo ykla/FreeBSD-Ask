@@ -76,6 +76,8 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 - The Open Group. The Open Group Standards Process[EB/OL]. [2026-03-25]. <https://www.opengroup.org/standardsprocess/certification.html>. 规范 UNIX 认证流程与技术标准框架。
 - National Academy of Engineering. Dr. Fernando J. Corbato[EB/OL]. [2026-04-16]. <https://www.nae.edu/29551/Dr-Fernando-J-Corbato>. Corbato 主持开发了 CTSS，据该文记载，CTSS 于 1961 年 11 月首次演示于 IBM 709。
 - Ritchie D M. The Development of the C Language[EB/OL]. [2026-04-16]. <https://www.bell-labs.com/usr/dmr/www/chist.html>. Ritchie 回忆 C 语言与早期 UNIX 开发历程，提及 PDP-7 内存为 8K 18-bit words。
+- Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html> 记载 Multics 项目历史，贝尔实验室与通用电气于 1965 年加入。
+- Computer History Museum. Chilton Atlas installation[EB/OL]. [2026-04-17]. <https://www.computerhistory.org/timeline/1962/>. 记载 Atlas 计算机于 1962 年首次投入运行，引入虚拟内存概念。
 
 ## UNIX 的一段历史
 
@@ -85,7 +87,7 @@ UNIX 的诞生具有特定的历史背景，需追溯至其前身 Multics。
 
 Multics 是一个对 UNIX 产生直接影响的重要项目。1961 年，麻省理工学院（Massachusetts Institute of Technology，MIT）演示了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。在此基础上，研究人员于 1964 年决定设计更为先进的版本——**多路复用** 信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
 
-Multics 旨在创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件。为此，麻省理工学院邀请了贝尔实验室与美国通用电气公司（General Electric，GE）共同开发 Multics。其中，美国通用电气公司负责设计及生产具备全新硬件特性、以更好地支撑分时及多用户体系的计算机；贝尔实验室在计算机发展早期就开发了自己的操作系统，具备相关经验。
+Multics 旨在创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件。1965 年，通用电气公司（General Electric，GE）与贝尔实验室加入该项目，形成三方合作。其中，美国通用电气公司负责设计及生产具备全新硬件特性、以更好地支撑分时及多用户体系的计算机；贝尔实验室在计算机发展早期就开发了自己的操作系统，具备相关经验。
 
 最终 Multics 的开发陷入困境，该系统设计了大量程序及功能，且频繁引入相互矛盾的组件，导致系统过于复杂。1969 年，贝尔实验室认为，作为信息处理工具，Multics 已无法实现为实验室提供计算服务的目标，且设计成本过高。同年 4 月，贝尔实验室退出 Multics 项目，仅麻省理工学院和美国通用电气公司继续开发。
 
