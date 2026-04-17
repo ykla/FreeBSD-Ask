@@ -723,6 +723,11 @@ mkfs.fat 4.2 (2021-01-31)
 /dev/vda2: UUID="35FB-D455" TYPE="vfat" PARTUUID="a4ab187d-a07f-4f62-ac3e-c4e35548fcba"
 ```
 
+## 参考文献
+
+- Ventoy. Ventoy — A New Bootable USB Solution[EB/OL]. [2026-04-17]. <https://www.ventoy.net>. Ventoy 项目主页，新一代多系统启动 U 盘解决方案，支持直接从 ISO 镜像启动。
+- FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes[EB/OL]. [2026-04-17]. <https://www.freebsd.org/releases/15.0R/relnotes/>. FreeBSD 15.0 发行说明，包含 VirtIO 驱动改进与内核可调参数变更。
+
 ## 课后习题
 
 1. 研究 `kern.maxphys` 参数在内核中的作用，分析为什么调整这个参数可以解决阿里云 VirtIO-BLK 驱动的兼容性问题，尝试不同数值并验证系统行为。最后将解决方案回溯到 FreeBSD 项目中。
