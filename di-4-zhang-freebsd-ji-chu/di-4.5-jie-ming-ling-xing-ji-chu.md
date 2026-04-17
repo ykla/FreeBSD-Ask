@@ -789,6 +789,12 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 >
 > 在 FreeBSD 下，关机与重启操作都需要 root 权限才能执行。
 
+## 参考文献
+
+- FreeBSD Project. make -- maintain program groups[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=make&sektion=1>. BSD make 手册页，描述构建工具语法与用法
+- FreeBSD Project. grep -- file pattern searcher[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=grep&sektion=1>. 文本搜索工具手册页
+- FreeBSD Project. sed -- stream editor[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1>. 流编辑器手册页
+
 ## 课后习题
 
 1. 尝试进行对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
