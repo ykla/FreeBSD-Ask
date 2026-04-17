@@ -136,7 +136,7 @@
 
 ## 初版前言：好望角与塔式起重机
 
-FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被广泛应用于 Apple 产品、Netflix 内容分发基础设施等，QNX 等实时操作系统也在网络子系统和用户空间组件中复用了 FreeBSD 的代码。
+FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被广泛应用于 Apple 产品（XNU 内核的 BSD 子系统派生自 FreeBSD）、Netflix 内容分发基础设施（Open Connect CDN 节点运行 FreeBSD）等，QNX 等实时操作系统也在部分用户空间组件（如 ppp 工具）中复用了 FreeBSD 的代码，其网络子系统（io-pkt）则主要派生自 NetBSD。
 
 自 2004 年 9 月后，中文世界就再也没有一本 FreeBSD 的入门和基础教程了（此前最后一本为冯宝坤, 陈子鸿. FreeBSD 完全攻略[M]. 北京: 中国物资出版社/北京希望电子出版社, 2004-09. ISBN: 978-7-5047-2160-3；此前尚有麦库斯克. 4.4BSD 操作系统设计与实现（中文版）[M]. 中国电力出版社, 2003-7）。知网上的硕博论文（需要说明的是，许多大学如清华大学、复旦大学等，并不会将其硕博论文上传到知网，但仍能说明一种趋势），有关 FreeBSD 的论文仅有 10 篇，均为硕士论文；而 Linux 则有 2 万余篇，其中百余篇为博士论文。在国内招聘网站上几乎找不到任何与 FreeBSD 相关的工作岗位，学校也不会开设相关课程。看起来市场完全不需要了，是这样吗？
 
@@ -192,9 +192,11 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被
 
 - Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM, 1972, 15(7): 671-677. <https://doi.org/10.1145/361454.361528>. 冯·诺伊曼名言“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is”出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 在本文中引述。
 - CIA. The World Factbook: Area Rankings[EB/OL]. [2026-04-17]. <https://www.cia.gov/the-world-factbook/field/area-rankings/>. 俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
-- 龙七（词），黄自（曲）. 玫瑰三愿[Z]. 1932. 歌词全文为"玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花 /玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华"。
-- Husserl E. Logische Untersuchungen: Zweiter Band[M]. 1901. 原文为"zu den Sachen selbst"（面向事情本身），"Zurück zu den Sachen selbst"（回到事物本身）为后世现象学运动口号化表述。
+- Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM, 1972, 15(7): 671-677. <https://doi.org/10.1145/361454.361514>. 冯·诺伊曼名言"If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is"出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 引述，后见于 Knuth 此文第 671 页脚注。
+- CIA. The World Factbook: Area[EB/OL]. [2026-04-17]. <https://theworldfactbook.org/rankings/area-total.html>. 俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²（Britannica 数据为 30,365,000 km²，ISS Africa 数据为 30.37 million km²）。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
+- 龙七（龙榆生）（词），黄自（曲）. 玫瑰三愿[Z]. 1932. 歌词全文为"玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华"。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
+- Husserl E. Logische Untersuchungen: Zweiter Band[M]. Halle: Niemeyer, 1901. 原文为"zu den Sachen selbst"（面向事情本身），"Zurück zu den Sachen selbst"（回到事物本身）为后世现象学运动口号化表述。见中国社会科学网 <https://www.cssn.cn/zx/wgzx/202210/t20221027_5555580.shtml>。
 - Pascal B. Pensées[M]. Paris: Brunschvicg éd., 1897: frag. 347. “L’homme n’est qu’un roseau, le plus faible de la nature; mais c’est un roseau pensant.”[人不过是一根会思想的芦苇。]
 - Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档明确指出：“The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
-- 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗：梁漱溟晚年口述[M]. 艾恺（Guy S. Alitto）采访. 东方出版中心, 2006. 1918 年梁济问其子梁漱溟“这个世界会变好吗”，后世多称“梁漱溟之问”，实则发问者为梁济。
+- 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗：梁漱溟晚年口述[M]. 艾恺（Guy S. Alitto）采访. 北京：东方出版中心, 2006. 1918 年 11 月 7 日梁济问其子梁漱溟"这个世界会好吗"，三天后投净业湖自尽，后世多称"梁漱溟之问"，实则发问者为梁济。详见光明网 <https://www.gmw.cn/01ds/2010-06/02/content_1141495.htm>。
 - FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
