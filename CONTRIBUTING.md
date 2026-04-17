@@ -146,7 +146,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 	email = yklaxds@gmail.com
 	signingkey = 11B44C23A0A0B986
 [commit]
-  gpgsign = true 
+  gpgsign = true
 [core]
 	autocrlf = true
 	longpaths = true
@@ -228,7 +228,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
 │          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
 │          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
-│          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB 
+│          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB
 │          file-name-check.yml # 检查 SUMMARY.md 目录中的文件引用是否正确，不正确会生成 issue
 │          links.yml # 链接检查，检查文中调用的 URL 是否能正常访问
 │          markdown-lint2.yml # markdown 格式检查
