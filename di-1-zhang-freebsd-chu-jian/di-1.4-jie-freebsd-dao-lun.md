@@ -249,7 +249,7 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 #### 安全原因
 
 - Leidinger 博客：Leidinger, J. FreeBSD Security Hardening with Compiler Options[EB/OL]. (2025-05-24)[2026-03-26]. <https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/>. FreeBSD 项目对部分 Port 进行了加固。另见 Bug 284270：FreeBSD Project. Bug 284270 - Security: FreeBSD Security Hardening[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270>.
-- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间与内核）的 CVE 漏洞数量约为 Linux 内核的二十分之一（根据 CVEdetails.com. CVE security vulnerability database. Security vulnerabilities, exploits, references and more[EB/OL]. [2026-03-26]. <https://www.cvedetails.com/>. 统计），而 Linux 内核的 CVE 数量与 Windows 大致持平。同期，OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
+- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间与内核）的 CVE 漏洞数量约为 Linux 内核的二十分之一（根据 CVEdetails.com. CVE security vulnerability database. Security vulnerabilities, exploits, references and more[EB/OL]. [2026-03-26]. <https://www.cvedetails.com/>. 统计），而 Linux 内核的 CVE 数量远超 Windows（二者并非同一维度：Linux 内核仅为内核，而 Windows 通常指全部组件）。同期，OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
 - 可以避免在产品和架构中出现共同故障点。
 - 安全事件审计。
 - Robert Watson, Stacey Son. TrustedBSD - FreeBSD Wiki[EB/OL]. (2022-09-15)[2026-03-26]. <https://wiki.freebsd.org/TrustedBSD/>. FreeBSD 集成了标准 UNIX DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展）
