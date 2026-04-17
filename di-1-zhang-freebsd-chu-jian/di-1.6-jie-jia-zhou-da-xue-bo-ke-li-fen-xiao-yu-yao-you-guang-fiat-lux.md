@@ -10,7 +10,7 @@
 >
 > Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
 >
-> BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, 1752.
+> BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, and S. Draper, 1752.
 
 本文聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”亦可意译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 
@@ -34,7 +34,7 @@ Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux
 
 叔本华认为，许多人将圆滑世故视为成熟，而这实际上只是另一种不成熟。“Fiat Lux”号召学生永葆赤子之心，追求自由与理想。它鼓励学生不仅止于言说，更重于实践。
 
-作为公立大学，Fiat Lux 意味着鼓励学生们投身于加州地区乃至于美国的建设，提高美国人民的受教育水平，伯克利分校的助学政策对近一半的本科生免除了学费，旨在保障所有人接受高等教育的权利，使其不因经济拮据而放弃学业，从而实现大学的教育使命。加州大学伯克利分校在 2025 年的 QS 世界排名为第 12 名。加州大学伯克利分校已诞生 63 位 [诺贝尔奖](https://inspire.berkeley.edu/get-inspired/nobels/)得主，切实履行了大学的学术责任。
+作为公立大学，Fiat Lux 意味着鼓励学生们投身于加州地区乃至于美国的建设，提高美国人民的受教育水平，伯克利分校的助学政策使约 38% 的本科生无需自付学费（加州大学系统整体则有 54% 的加州籍本科生免学费），旨在保障所有人接受高等教育的权利，使其不因经济拮据而放弃学业，从而实现大学的教育使命。加州大学伯克利分校在 2025 年的 QS 世界排名为第 12 名。加州大学伯克利分校已诞生 63 位 [诺贝尔奖](https://inspire.berkeley.edu/get-inspired/nobels/)得主，切实履行了大学的学术责任。
 
 《说文解字》载：“光，明也”。Fiat Lux 意味着追求光明与正义。加州大学伯克利分校学子亦始终通过反对越南战争、言论自由运动等一系列运动践行校训。作为中国教育史上的丰碑，国立西南联合大学，其纪念碑碑文载“河山既复，日月重光，联合大学之战时使命既成，奉命于三十五年五月四日结束。”在艰苦卓绝的环境下仍旧保留着学术的火种，散发着大学的光芒。国立西南联大存续时间虽短，却令人久久难忘。学生们或投笔从戎，或勤奋苦学以立志报国。“Fiat Lux”同时也是数十所其他高校的校训。国立西南联合大学的校训是“刚毅坚卓”，虽然没有光，但学生教授们都化作了光，推动着中国现代化的进程。而今再也找不到西南联大了。
 
