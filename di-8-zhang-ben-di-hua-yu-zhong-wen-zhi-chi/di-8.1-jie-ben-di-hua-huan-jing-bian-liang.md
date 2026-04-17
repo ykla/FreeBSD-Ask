@@ -19,7 +19,7 @@
 
 ## 本地化相关的环境变量
 
-`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization，i18n）与本地化（Localization，l10n）的核心环境变量，由 POSIX 标准及 ISO/IEC 14652 标准规范定义，部分变量为 glibc 等实现的扩展。这些变量控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。
+`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization，i18n）与本地化（Localization，l10n）的核心环境变量，由 POSIX 标准及 ISO/IEC 30112 标准规范定义，部分变量为 glibc 等实现的扩展。这些变量控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。
 
 - `LC_COLLATE`：定义字符串排序的规则
 - `LC_CTYPE`：定义字符集和字符类型判断规则，例如字母、数字、标点符号等
