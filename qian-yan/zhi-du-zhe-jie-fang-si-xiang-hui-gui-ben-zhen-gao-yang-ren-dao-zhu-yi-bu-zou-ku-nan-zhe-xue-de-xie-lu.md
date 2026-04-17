@@ -178,7 +178,7 @@
 
 - Fédération Internationale de l’Automobile. Formula 1 technical regulations 2020[EB/OL]. 2020[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
 
-- Fédération Internationale de l’Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. 2024[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
+- Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. 2024[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
 
 
 ## 简要评价《提问的智慧》《如何提问》《XX 提问》之类的文档
