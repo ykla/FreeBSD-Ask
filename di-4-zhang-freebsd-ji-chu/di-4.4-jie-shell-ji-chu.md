@@ -12,7 +12,7 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 
 > **注意**
 >
-> Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
+> Linux 中也存在 sh，但通常被软链接到其他 Shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 >
 >- Ubuntu 24.04 LTS 默认的 Shell：
 >
