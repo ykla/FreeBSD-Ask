@@ -36,7 +36,7 @@
 >>
 >>体育精神不是一种形而上的东西，它本质上是使人发展的物质力量。而现在的专业化、职业化、国家化的运动员才是真实违背了体育精神的存在。使体育转向以场外为核心才是真正的全民体育，才是发扬奥运精神。现在的问题是场外人成为了观众而非参与者，也没有自由时间成为参与者，观看比赛不过是不拿工资的被异化的非参赛运动员罢了，甚至观众被讥讽“旁观者的姓名永远爬不到比赛的计分板上”。他们意识不到，如果没有观众，他们的比赛本身就是不成立的。他们没有意识到，如果没有观众，连计分板也不会存在，比赛本身也会被取消。他们更没有意识到，无论观众在形式上在不在场，观众本身即是比赛不可或缺的一部分，比赛可以没有运动员，可以没有裁判，但是观众是必然的。持有这种认为观众是旁观者而非参与者的观点，是不可理解的。
 >>
->>如果你真的认为用户友好是次要的，你所谓的专业性 = 复杂性 = 困难性 = 学习曲线陡峭，那么理应支持“增强运动会”。因为无论怎么看，“更快、更高、更强——更团结”带来的无疑是这种“增强运动会”。在 1990 年之前奥运会在反对职业运动员（纯业余原则）的时候，顾拜旦究竟在反对什么呢？应该取消职业运动员。这违背了真正的奥林匹克精神，本来就是为了让普通人拥有健康的身心，通过体育促进世界团结“更团结”，现在变成了一小撮人的狂欢，反过来异化大众，侮辱大众。说探索人类极限也是伪命题，那是生物学的事情。而且本身大部分比赛都禁止人类增强技术。它和体育的精神完全相悖。体育本身是鼓励所有人运动、参与，而不是围观别人。而且现实是通过围观别人促使自己也有想法的例子微乎其微。让一些人花很长时间投入到体育项目本身，取得更好的成绩，而不是去发展这个项目本身，就是一种异化。甚至连规则都不研究，等自己吃亏又奋起，而且发展了这么久话语权寥寥。除了沦为表演赛和政治工具，究竟还有什么用处？
+>>如果你真的认为用户友好是次要的，你所谓的专业性 = 复杂性 = 困难性 = 学习曲线陡峭，那么理应支持“增强运动会”。因为无论怎么看，“更快、更高、更强——更团结”带来的无疑是这种“增强运动会”。在 1988 年之前奥运会在反对职业运动员（纯业余原则）的时候，顾拜旦究竟在反对什么呢？应该取消职业运动员。这违背了真正的奥林匹克精神，本来就是为了让普通人拥有健康的身心，通过体育促进世界团结“更团结”，现在变成了一小撮人的狂欢，反过来异化大众，侮辱大众。说探索人类极限也是伪命题，那是生物学的事情。而且本身大部分比赛都禁止人类增强技术。它和体育的精神完全相悖。体育本身是鼓励所有人运动、参与，而不是围观别人。而且现实是通过围观别人促使自己也有想法的例子微乎其微。让一些人花很长时间投入到体育项目本身，取得更好的成绩，而不是去发展这个项目本身，就是一种异化。甚至连规则都不研究，等自己吃亏又奋起，而且发展了这么久话语权寥寥。除了沦为表演赛和政治工具，究竟还有什么用处？
 >>
 >>这和电子竞技一样荒谬。一排五个人的网吧还收费，去现场看投影仪？一群人看他们怎么露天打游戏？真赛假赛尚不可知。它每次找公证处公证都是真打吗？所有人都想当第一，这是可能的吗？而只要不是第一，就绝对等于失去一切。不明白体育竞技的意义是什么。而且看人打和看一个同等水平 AI 打的本质区别是什么？从最早的足球、乒乓外交、女子排球，甚至也搞过全民棒球。在一些体育商业属性有待发掘的国家，历史上体育运动的发展几乎完全不取决于体育事业本身的发展，其发展方向和资源分配过去完全由政治目标决定，商业和群众体育的价值被边缘化，最终导致了体育异化和资源浪费。而我们注意到，体育商业化不仅无法扭转这种异化，反而会加重。因此，取消体育是必然的、合理的，是符合历史与现实的。
 >
@@ -161,24 +161,19 @@
 ### 参考文献
 
 - 李征. 何积丰：以“积”累迎来“丰”收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
-
 - SKINNER B F. New Methods and New Aims in Teaching[J]. New Scientist, 1964, 22(392): 483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf> “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
-
 - 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学, 2022(1): 105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
-
 - 卡斯 J P. 有限与无限的游戏: 一个哲学家眼中的竞技世界[M]. 马小悟, 余倩, 译. 北京: 电子工业出版社, 2019. ISBN 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。（无修改）
-
-- 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京:商务印书馆, 2015: 146. ISBN: 978-7-100-11749-4. "与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视"出自第 146 节（§146），原文为"He who fights with monsters should look to it that he himself does not become a monster. And when you gaze long into an abyss the abyss also gazes into you."
-
+- 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京:商务印书馆, 2015: 146. ISBN: 978-7-100-11749-4. “与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”出自第 146 节（§146）”
 - Sudo Project. Legacy Releases of sudo[EB/OL]. (n.d.)[2026-04-17]. <https://www.sudo.ws/releases/legacy/>. 记载 sudo 1.7.1 于 2009 年 4 月 19 日发布，首次引入 pwfeedback 选项。
-
 - Ferrari S.p.A. Great Ferrari Innovations: The F1 semi-automatic gearbox[EB/OL]. 2022-02-04[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱（由 John Barnard 设计），终结了 F1 手动换挡时代。
-
 - Fédération Internationale de l’Automobile. Formula One technical regulations 1995[EB/OL]. 1995[2026-04-17]. <https://historicdb.fia.com/sites/default/files/regulations/1728484024/formula_one_techical_regulations_1995.pdf>. 技术规范。
-
 - Fédération Internationale de l’Automobile. Formula 1 technical regulations 2020[EB/OL]. 2020[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
-
 - Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. 2024[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
+- 金寿福 译注. 古埃及《亡灵书》[M]. 北京: 商务印书馆, 2020. 古埃及人来世信仰中，亡者在 Duat 与奥西里斯合而为一，并追随太阳神拉夜行冥界以期重生。
+- 中国奥林匹克委员会. 职业选手何时进入奥运会？[EB/OL]. (2004-08-05)[2026-04-18]. <https://www.olympic.cn/olympic/know/2004/0805/25385.html>.
+- International Olympic Committee. “Faster, Higher, Stronger – Together”: IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系 108 年来首次修改格言。
+- IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry, 1988, 60(3): 431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。
 
 
 ## 简要评价《提问的智慧》《如何提问》《XX 提问》之类的文档
