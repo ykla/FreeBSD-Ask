@@ -258,11 +258,11 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 - 默认启用了内核和用户空间的 PIE 和 ASLR。ASLR 最初由 D27666 代码审查提出（2020-12-18），PIE 默认启用由 D28328 实现，二者合并至 HEAD 后，自 FreeBSD 13.2-RELEASE（2023 年 4 月 11 日）起 ASLR 对 64 位可执行文件默认启用。参见 D27666 代码审查：mw. Enable ASLR by default for 64-bit executables[EB/OL]. (2020-12-18)[2026-04-17]. <https://reviews.freebsd.org/D27666>；D28328 代码审查：mw. Enable PIE by default on 64-bit architectures[EB/OL]. [2026-04-17]. <https://reviews.freebsd.org/D28328>；FreeBSD 13.2-RELEASE 公告：FreeBSD Project. FreeBSD 13.2-RELEASE Announcement[EB/OL]. (2023-04-11)[2026-04-17]. <https://www.freebsd.org/releases/13.2R/announce/>。
 - FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 FreeBSD 基金会 SSDF 认证新闻：FreeBSD Foundation. FreeBSD Foundation Announces SSDF Attestation[EB/OL]. (2023-11-03)[2026-03-26]. <https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/>.
 - 实现了 FreeBSD 14 CIS 基准。参见 FreeBSD 基金会 CIS 基准博客：FreeBSD Foundation. New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices[EB/OL]. (2024-08-19)[2026-03-26]. <https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/>.
-- 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助
-- 基于 GEOM 框架的全盘加密（含 ZFS、Swap）方案
-- 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助
+- 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助。
+- 基于 GEOM 框架的全盘加密（含 ZFS、Swap）方案。
+- 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助。
 - Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 Capsicum Wiki：FreeBSD Project. Capsicum - FreeBSD Wiki[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Capsicum>.
-- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段
+- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段。
 
 #### 参考文献
 
