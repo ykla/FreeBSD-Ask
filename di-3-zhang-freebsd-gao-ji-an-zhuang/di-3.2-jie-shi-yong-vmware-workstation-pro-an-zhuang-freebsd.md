@@ -384,9 +384,9 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > ![我的下载](../.gitbook/assets/downbcm0.png)
 >
-> - 往下翻，点击“VMware Workstation Pro“
+> - 往下翻，点击“VMware Workstation Pro”
 >
-> ![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
+> ![点击“VMware Workstation Pro”](../.gitbook/assets/downbcm2.png)
 >
 > - 点击“Release”（发行版），选择最顶部的版本，实际显示可能有所不同。
 >
