@@ -187,7 +187,7 @@
 | mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块 |
 | devd | / | Device Daemon，FreeBSD 的设备状态守护进程，响应硬件事件 |
 | powerd | / | Power Daemon，FreeBSD 的电源管理守护进程 |
-| cron | / | Command Run On，Unix 系统的定时任务执行守护进程 |
+| cron | / | 名称来源存在争议。Unix 系统的定时任务执行守护进程 |
 | DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 14.0 起基本系统内置的本地邮件传输代理（非功能完整的 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
 | authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 Shell |
