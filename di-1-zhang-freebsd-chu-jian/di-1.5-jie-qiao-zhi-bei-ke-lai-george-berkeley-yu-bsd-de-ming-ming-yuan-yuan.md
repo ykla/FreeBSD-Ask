@@ -128,7 +128,7 @@ BSD（Berkeley Software Distribution，伯克利软件发行版）的命名源�
 The Muse, disgusted at an age and clime
 Barred of every glorious theme,
 In distant lands now waits a better time,
-Producing subjects worthy fame. 
+Producing subjects worthy fame.
 
 In happy climes, where from the genial sun
 And virgin earth such scenes ensue,
@@ -137,22 +137,22 @@ And fancied beauties by the true;
 
 In happy climes, the seat of innocence,  
 Where nature guides and virtue rules,
-Where men shall not impose for truth and sense        
+Where men shall not impose for truth and sense
 The pedantry of courts and schools:
 
-There shall be sung another golden age,	
+There shall be sung another golden age,
 The rise of empire and of arts,
-The good and great inspiring epic rage,	
+The good and great inspiring epic rage,
 The wisest heads and noblest hearts.
 
-Not such as Europe breeds in her decay;	
+Not such as Europe breeds in her decay;
 Such as she bred when fresh and young,
-When heavenly flame did animate her clay,	
+When heavenly flame did animate her clay,
 By future poets shall be sung.
 Westward the course of empire takes its way;
-	
+
 The four first Acts already past,
-A fifth shall close the Drama with the day;	
+A fifth shall close the Drama with the day;
 Time’s noblest offspring is the last.
 
 BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//A miscellany, containing several tracts on various subjects. London: Printed for J. and R. Tonson, and S. Draper, 1752.
