@@ -2607,7 +2607,7 @@ PuTTY 是 Windows 上常用的终端模拟器。
 
 #### Console Redirection Settings (EMS)（Windows 紧急管理控制台重定向设置）
 
-##### Out-of-Band Mgmt Port ()
+##### Out-of-Band Mgmt Port（带外管理端口）
 
 选项：
 
