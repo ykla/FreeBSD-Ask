@@ -101,7 +101,7 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 - 大型技术企业对 FreeBSD 支持不足，如长久以来未提供 GitHub Actions 支持，NVIDIA CUDA 的忽视，在 AI 与 LLM 时代的全面落后。
 - FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入。
 - 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（即“集体行动困境”）。分管 FreeBSD 子项目的核心成员对项目本身亦缺乏应有的了解和关注，面对若干问题亦难以有效决策和承担责任。
-- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并非具有前瞻性，引入后亦往往缺乏后续关注与维护开发。
+- FreeBSD 项目整体风格偏于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；引入后亦往往缺乏后续关注与维护开发。
 - FreeBSD 系统在部分方面尚欠现代化，缺乏某些现代操作系统应有的特性。尤其是在嵌入式方面表现较差。
 - FreeBSD 未在基本系统中提供预配置的桌面环境。
 - FreeBSD 的硬件驱动支持相对有限。
@@ -275,11 +275,11 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 
 ### 选择 FreeBSD 的社会意义
 
-#### 红帽公司控制下的 Linux 歧视
+#### 红帽公司影响下的 Linux 生态偏向
 
-GNOME、Xorg（X11）、DBus、Systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）施加的控制和影响，而且它们大多难以完全适配其他类 UNIX 操作系统。
+GNOME、Xorg（X11）、DBus、Systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）的显著影响，而且它们大多难以完全适配其他类 UNIX 操作系统。
 
-目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，例如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 歧视）。
+目前 FreeBSD 上的桌面部件的缺失很大程度上是因为它们对 Linux 特有函数库存在较强依赖，例如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，比如 `NetworkManager`。而 Samba 开发者则说"We use Linux, we develop for Linux, all others please submit patches"（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为"Linuxism"（Linux 主义/Linux 偏向）。
 
 这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）预计将来所有可运行在 Linux 上的程序也将失去任何可移植性。
 
