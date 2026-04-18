@@ -1,16 +1,6 @@
 # 1.6 加州大学伯克利分校与“要有光”（Fiat Lux）
 
-加州大学伯克利分校的校训蕴含着深刻的文化与哲学意义，这一校训不仅是学术精神的象征，更承载着技术创新与人文关怀的双重使命。下文从贝克莱的一首诗开始了解这一校训。
-
-> Westward the course of empire takes its way; 帝国一路向西；
->
-> The four first acts already past. 前四幕已经过去。
->
-> A Fifth shall close the drama with the day; 第五幕将在日落时分结束；
->
-> Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
->
-> BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, and S. Draper, 1752.
+加州大学伯克利分校的校训蕴含着深刻的文化与哲学意义，这一校训不仅是学术精神的象征，更承载着技术创新与人文关怀的双重使命。
 
 本文聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”亦可意译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 
@@ -70,6 +60,13 @@ Fiat Lux!
 - 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014.
 - ABRAHAO R A, MORIN H P N, PAGÉ J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
 - University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
+- University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
+- University of California. Tuition & financial aid[EB/OL]. [2026-04-18]. <https://admission.universityofcalifornia.edu/tuition-financial-aid/>. 加州大学系统官方学费与资助信息，54% 加州籍本科生免学费。
+- University of California, Berkeley. Cost[EB/OL]. [2026-04-18]. <https://admissions.berkeley.edu/cost/>. 伯克利分校官方招生页面，38% 本科生无需自付学费。
+- Patterson D A, Gibson G, Katz R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
+- Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
+- 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
+
 
 ## 课后习题
 
