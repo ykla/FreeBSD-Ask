@@ -222,7 +222,7 @@ DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 
 ### Fedora Linux
 
-Fedora 在部分社区中存在较为戏谑的称呼“地沟油”。
+Fedora 在部分社区中存在非正式的称呼“地沟油”。
 
 Fedora 是 Red Hat Enterprise Linux（RHEL）的上游发行版，其定位侧重于技术验证和前沿特性测试，根本目的是为 RHEL 系统的新设计和新架构提供试验平台（该社区由 Red Hat 红帽公司完全主导）。当特性稳定后，会引入到 RHEL 中。
 
