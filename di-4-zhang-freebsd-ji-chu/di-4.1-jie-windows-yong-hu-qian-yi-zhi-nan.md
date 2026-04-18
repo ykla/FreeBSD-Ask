@@ -20,7 +20,25 @@
 
 行道树则不然，每棵普通的行道树都是独立生长的。无论它们靠得多么紧密，它们仍然是独立的。行道树与 Windows 目录类似，都是独立的——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘都是独立的，互不干扰。格式化 `D` 盘，并不会影响 `E` 盘存储的文件。即使在 PE 中格式化了 `C` 盘（可能不会显示为 `C` 盘），也不会影响 `E` 盘中的文件。
 
-事实上，Windows 的“盘符”并非固定存在，有经验的装机人员会发现，在 PE 环境中，`C` 盘可能会变成诸如 `X` 等其他盘符。正在使用中的 Windows，其盘符也可以随意分配。Windows 下真正判断一个分区是否为 `C` 盘，是依靠 GPT 分区类型的 UUID（如 `C` 盘分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`）以及唯一 ID（相关配置写入 EFI 文件），而不是依靠盘符。盘符是抽象出来的，实际上没有意义。这也就是为什么在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在真正启动系统时，Windows 才会知道到底谁是 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
+事实上，Windows 的“盘符”并非固定存在，有经验的装机人员会发现，在 PE 环境中，`C` 盘可能会变成诸如 `X` 等其他盘符。正在使用中的 Windows，其盘符也可以随意分配。
+
+Windows 下判断一个分区属于哪个盘符，依赖的是 GPT 分区类型的 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而不是依靠盘符。
+
+查看盘符和卷的映射关系：
+
+```powershell
+PS C:\WINDOWS\system32> Get-ItemProperty -Path "HKLM:\SYSTEM\MountedDevices"
+
+
+\DosDevices\C:                          : {68, 77, 73, 79...}   # C: 盘符映射项，对应某个磁盘卷的二进制标识（Volume GUID/卷结构数据）
+#{6dc6b5e1-fff0-11f0-bf73-b0416f0b5119} : {68, 77, 73, 79...}   # 卷 GUID（唯一卷标识符），表示某个物理分区；右侧为该卷的内部二进制数据
+\DosDevices\D:                          : {68, 77, 73, 79...}   # D: 盘符映射项，对应另一个磁盘卷的标识数据
+PSPath 
+                                 : 
+……省略其他输出……
+```
+
+盘符是抽象出来的，实际上没有意义。这也就是为什么在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在真正启动系统时，Windows 才会知道到底谁是 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
 
 > **思考题**
 >
@@ -43,6 +61,13 @@
 将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间，就会得到一株新的幼苗。
 
 实际上，这与“卸载”的原理有异曲同工之妙：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上“掰”下来（卸载）。
+
+#### 参考文献
+
+- 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
+- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 `HKLM\SYSTEM\MountedDevices`。
+- GBIF. Bambusoideae Luerss.[EB/OL]. [2026-04-18]. <https://www.gbif.org/species/113642445>. 竹亚科许多物种具有群体开花（gregarious flowering）特性，开花后常因资源耗竭而死亡；竹子通过地下根茎系统进行克隆生长（clonal growth），同一克隆的个体共享资源。
+- Aristotle. Metaphysics[M]. Translated by W. D. Ross. Oxford: Clarendon Press, 1908. Book IX (Theta), Chapter 7, 1049b. 亚里士多德论潜能与现实：种子之所以能长成大树，是因为种子暗含着一种潜能。
 
 ## 文件名规范的差异
 
@@ -68,7 +93,7 @@
 
 ### 大小写敏感
 
-FreeBSD 的 ZFS 和 UFS 都是 **区分大小写（大小写敏感）** 的文件系统。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32、NTFS 文件系统都是 **不区分大小写（大小写不敏感）** 的。
+FreeBSD 的 ZFS 和 UFS 都是 **区分大小写（大小写敏感）** 的文件系统。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32 文件系统都是 **不区分大小写（大小写不敏感）** 的。NTFS 本身是大小写保留的文件系统，但 Windows 的 Win32 子系统默认以大小写不敏感方式处理文件名（Windows 10 1803 以后可通过 `fsutil.exe file queryCaseSensitiveInfo <路径>` 按目录启用大小写敏感，主要用于 WSL 兼容）。
 
 - Windows 下 **大小写不敏感**
 
@@ -93,7 +118,9 @@ abc    ABC
 
 #### 参考文献
 
-- 微软. 调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
+- 微软. 调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
+- 微软. FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写
+- Apple. File system formats available in Disk Utility[EB/OL]. [2026-04-18]. <https://support.apple.com/guide/disk-utility/file-system-formats-dsku19ed921c/mac>. APFS 和 HFS+ 默认均不区分大小写，但可在格式化时选择区分大小写变体
 
 ## 换行符/回车之差异
 
@@ -125,6 +152,12 @@ a.txt: Unicode text, UTF-8 text
 $ file b.txt  # 查看文件类型
 b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line terminators
 ```
+
+#### 参考文献
+
+- IETF. RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types[EB/OL]. [2026-04-18]. <https://datatracker.ietf.org/doc/html/rfc2046>. 规定文本类型的规范行结束符为 CRLF（0x0D 0x0A）。
+- IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
+- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。
 
 ## 字符编码的差异
 
@@ -158,7 +191,11 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 ### 参考文献
 
-- 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码
+- 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
+- IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A。
+- Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF
+- 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
+- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
 
 ## 时间与时区的差异
 
@@ -170,7 +207,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local Time（地方时，当地太阳运行的时间）；UNIX 则会将 RTC 的数据视为 UTC 时间：于是会发现双系统的时间相差了 8 个小时。
 
-例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 UNIX 下，时间会变为“2025 年 6 月 6 日早上 4:00”（即 UTC+8-8）。因为 UNIX 使用 UTC+8 时间，所以二者会相差 8 小时。
+例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 UNIX 下，时间会变为“2025 年 6 月 6 日晚上 20:00”（即把 RTC 中的 12:00 视为 UTC 后再加上 UTC+8 的偏移量，12+8=20）。因为 UNIX 将 RTC 视为 UTC 而非本地时间，所以显示的时间会比 Windows 快 8 小时。
 
 对于现代计算机网络来说，时间至关重要。可以做个小实验：将时间调慢 5 分钟，打开浏览器，会发现绝大部分网站都打不开了（HTTPS）。
 
@@ -198,9 +235,15 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 ### 参考文献
 
-- 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率
-- IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化
+- 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
+- BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz
+- IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化。
+- IANA. tzdata release 2025b NEWS[EB/OL]. [2026-04-18]. <https://data.iana.org/time-zones/tzdb-2025b/NEWS>. 时区数据库 2025b 版本变更说明，Asia/Urumqi 的 1980 年向 UTC+8 的转换已被移除，现为 UTC+6；Asia/Kashgar 为 Asia/Urumqi 的向后兼容链接。
+- 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
 - 中国科学院紫金山天文台. 历书基本术语简介[EB/OL]. [2026-03-26]. <http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4>. 本节所涉术语，可参考此处的精确解释。
+- 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <http://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
+- IETF. RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5246>. TLS 协议规定证书包含 notBefore 与 notAfter 有效期字段，客户端验证时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
+- IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库自 20 世纪 70 年代末由 Arthur David Olson 开发，2011 年起由 IANA 维护。
 
 ## 深入阅读
 
@@ -222,7 +265,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 > **思考题**
 >
-> > 对于描述世界，我们有太多种方法。正如马克思所述，“哲学家们只是用不同的方式解释世界……”（《关于费尔巴哈的提纲》第十一段：马克思主义哲学的使命）
+> > 对于描述世界，我们有太多种方法。正如马克思所述，“哲学家们只是用不同的方式解释世界……”（《关于费尔巴哈的提纲》第十一条：马克思主义哲学的使命）
 >
 > 你认为通过数学和物理学解释世界的优点是什么？如果排除实用主义、实证主义和经验主义，那么还能剩下什么？
 >
