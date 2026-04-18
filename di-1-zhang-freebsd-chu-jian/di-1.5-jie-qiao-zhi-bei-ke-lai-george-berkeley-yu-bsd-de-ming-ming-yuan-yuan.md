@@ -135,7 +135,7 @@ And virgin earth such scenes ensue,
 The force of art by nature seems outdone,
 And fancied beauties by the true;
 
-In happy climes, the seat of innocence,  
+In happy climes, the seat of innocence,
 Where nature guides and virtue rules,
 Where men shall not impose for truth and sense
 The pedantry of courts and schools:

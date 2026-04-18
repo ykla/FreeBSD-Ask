@@ -33,8 +33,8 @@ PS C:\WINDOWS\system32> Get-ItemProperty -Path "HKLM:\SYSTEM\MountedDevices"
 \DosDevices\C:                          : {68, 77, 73, 79...}   # C: 盘符映射项，对应某个磁盘卷的二进制标识（Volume GUID/卷结构数据）
 #{6dc6b5e1-fff0-11f0-bf73-b0416f0b5119} : {68, 77, 73, 79...}   # 卷 GUID（唯一卷标识符），表示某个物理分区；右侧为该卷的内部二进制数据
 \DosDevices\D:                          : {68, 77, 73, 79...}   # D: 盘符映射项，对应另一个磁盘卷的标识数据
-PSPath 
-                                 : 
+PSPath
+                                 :
 ……省略其他输出……
 ```
 
