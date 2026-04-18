@@ -219,7 +219,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 则均为 `UTC+6`（东六区时间）。
 
-在 FreeBSD 中，北京时间同样为 `Asia/Shanghai`（东八区）。有些所谓国产操作系统会无中生有一个 `Asia/Beijing`，这不仅是不尊重国际标准与规范的行为，并且会造成严重后果，如造成时间退回到 UTC。
+在 FreeBSD 中，北京时间同样为 `Asia/Shanghai`（东八区）。部分国产操作系统自行定义了 `Asia/Beijing` 时区，这一做法不符合国际标准与规范，且可能造成严重后果，如造成时间退回到 UTC。
 
 > **注意**
 >
