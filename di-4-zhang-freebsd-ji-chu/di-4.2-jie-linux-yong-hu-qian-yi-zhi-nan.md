@@ -11,7 +11,7 @@
 
 > **思考题**
 >
->>“一切真历史都是当代史”
+>>“一切真历史都是当代史”。
 >
 > 读者如何理解这句话？如何定义“真”与“非真”？
 
@@ -33,7 +33,7 @@ FreeBSD 是一个完整的操作系统，包含基本系统（用户空间 + 内
 
 #### 独立自存的基本系统
 
-freebsd-src = 基本系统存储库 = 用户空间 + 内核
+freebsd-src = 基本系统存储库 = 用户空间 + 内核。
 
 FreeBSD 版本分支分为三个主要系列：
 
@@ -54,7 +54,7 @@ pkgbase 直接由 freebsd-src 构建：
 
 #### 安装第三方软件的 Ports 框架与 pkg 包管理器
 
-freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库
+freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库。
 
 Port 是若干文件的集合，由源代码包校验和、说明文件、补丁等构成，其中 Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们是由 Ports 框架衍生出的技术。
 
