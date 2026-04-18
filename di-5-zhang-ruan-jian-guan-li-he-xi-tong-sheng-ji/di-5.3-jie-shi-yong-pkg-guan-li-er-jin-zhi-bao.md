@@ -191,7 +191,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 # pkg upgrade
 ```
 
-错误：`You must upgrade the ports-mgmt/pkg port first`（必须先更新 pkg 本体）
+出现错误：`You must upgrade the ports-mgmt/pkg port first`（必须先更新 pkg 本体）。
 
 解决：
 
