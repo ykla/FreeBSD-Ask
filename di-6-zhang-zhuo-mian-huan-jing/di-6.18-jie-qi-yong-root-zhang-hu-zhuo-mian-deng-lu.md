@@ -40,8 +40,6 @@ LightDM，即 Light Display Manager，轻量级显示管理器。
 # service lightdm restart
 ```
 
-
-
 ## SDDM
 
 SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。

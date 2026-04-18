@@ -42,7 +42,6 @@ Linux 是一款开源软件，其名称来源于其最初的作者 Linus Torvald
 
 Linux 的开发受 Minix 启发，后者是一款专门用于教学的微内核操作系统，是在 UNIX 版权限制背景下产生的。当时 21 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的在读大学生（当时芬兰高等教育体系无本科/硕士之分，学生直接攻读硕士学位，但 1991 年时 Torvalds 尚处于学业早期阶段）。更多有关芬兰学制发展参见杨天平,金如意.博洛尼亚进程述论[J].华东师范大学学报(教育科学版),2009,27(01):9-22.DOI:10.16382/j.cnki.1000-5560.2009.01.007.
 
-
 Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（27 岁）获得理学硕士学位。其之所以能够长期保留学籍，原因在于芬兰实行典型的学分制。根据芬兰赫尔辛基大学官网的说明，该校并无最长学习期限限制，仅规定课程成绩的有效期为十年。官网明确指出：“课程到期不会影响在大学继续学习的权利。”（University of Helsinki. Expiry of Studies[EB/OL]. (2026-02-16)[2026-04-04]. <https://studies.helsinki.fi/instructions/article/expiry-studies>.）
 
 > 我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
