@@ -67,7 +67,6 @@ Fiat Lux!
 - Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
 - 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
 
-
 ## 课后习题
 
 1. 观看纪录片了解加州大学伯克利分校（如怀斯曼 F, 导演. 在伯克利[V]. 美国: Zipporah Films, 2013.）

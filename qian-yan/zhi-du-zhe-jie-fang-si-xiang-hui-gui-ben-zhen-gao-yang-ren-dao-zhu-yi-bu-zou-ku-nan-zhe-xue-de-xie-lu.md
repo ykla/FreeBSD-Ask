@@ -175,7 +175,6 @@
 - International Olympic Committee. “Faster, Higher, Stronger – Together”: IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系 108 年来首次修改格言。
 - IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry, 1988, 60(3): 431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。
 
-
 ## 简要评价《提问的智慧》《如何提问》《XX 提问》之类的文档
 
 在一款开源红白机游戏模拟器的项目中，存在以下场景：
