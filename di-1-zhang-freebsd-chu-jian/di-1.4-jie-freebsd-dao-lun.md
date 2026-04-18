@@ -178,7 +178,7 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 
 ![谁在使用 FreeBSD](../.gitbook/assets/whousingbsd.png)
 
-图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)
+图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)。
 
 - 华纳兄弟. 黑客帝国[EB/OL]. [2026-03-26]. <https://movie.douban.com/subject/1291843/>. 黑客帝国的特效就是在一组 FreeBSD 集群上制作的。另见 Michael Urban, Brian Tiemann. FreeBSD 技术内幕[M]. 北京:机械工业出版社, 2002:2. ISBN: 978-7-111-10201-4、FreeBSD Project. FreeBSD Press Release: April 22, 1999[EB/OL]. (1999-04-22)[2026-03-26]. <https://www.freebsd.org/press/press-rel-1/>.
 - The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 堪称 macOS 的开源基石。
