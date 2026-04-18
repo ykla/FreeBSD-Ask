@@ -25,7 +25,7 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 
 ### 使用 Audacious
 
-对 `.m4a`（MPEG-4 音频容器格式）、`.flac`（无损音频压缩编码）、`.av3a`（AVS3 音频编码）等音乐格式进行兼容性测试。`.m4a` 为容器格式，可包含多种编码（如 AAC、ALAC 等）。
+对 `.m4a`（MPEG-4 音频容器格式）、`.flac`（无损音频压缩编码）、`.av3a`（AVS3 音频裸码流格式）等音乐格式进行兼容性测试。`.m4a` 为容器格式，可包含多种编码（如 AAC、ALAC 等）；`.av3a` 为裸码流，实际应用中 AVS3 音频也常封装在 MP4 容器中以 `.m4a` 扩展名存储。
 
 > **技巧**
 >
@@ -35,7 +35,7 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 
 ## VLC
 
-VLC（VideoLAN Client，视频局域网客户端）播放器的安装等方法可参见其他相关章节。需要说明的是，FreeBSD 中的 `ffmpeg`（快速多媒体，Fast Forward MPEG）多媒体框架默认构建配置未启用对 libuavs3d（该库提供 AVS2/AVS3 解码支持）的编译支持，本节不再展开相关的重新编译配置方法。
+VLC（VideoLAN Client，视频局域网客户端）播放器的安装等方法可参见其他相关章节。需要说明的是，FreeBSD 中的 `ffmpeg` 多媒体框架（名称中的“FF”无官方缩写含义，“mpeg”指 MPEG 标准，参见 FFmpeg 项目. FFmpeg FAQ[EB/OL]. [2026-04-18]. <https://ffmpeg.org/faq.html>）默认构建配置未启用对 libuavs3d（该库提供 AVS3 解码支持）和 libdavs2（该库提供 AVS2 解码支持）的编译支持，本节不再展开相关的重新编译配置方法。
 
 经过实际测试，VLC 播放器可以正常播放 AC-4 编码的 m4a 格式音频：
 
@@ -203,7 +203,7 @@ PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
 ## 课后习题
 
-1. 查找并安装 ffmpeg 的 Ports，修改其编译选项以启用 libuavs3d 支持，构建并验证其能否解码 AVS2/AVS3 编码文件。
+1. 查找并安装 ffmpeg 的 Ports，修改其编译选项以启用 libuavs3d（AVS3 解码）和 libdavs2（AVS2 解码）支持，构建并验证其能否解码 AVS2/AVS3 编码文件。
 
 2. 选取 MPD 的 OSS 输出配置机制，重构其最小实现。
 
