@@ -170,7 +170,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> Ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在依赖上的问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> Ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源即可。分支不一致会导致依赖问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 > **警告**
 >
@@ -335,12 +335,7 @@ fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': 
 Fri May 31 12:09:26 UTC 2024
 ```
 
-时间错误。使用 `pool.ntp.org` 服务器同步系统时间：
-
-```sh
-# ntpdate -u pool.ntp.org
- 5 Oct 08:39:16 ntpdate[3276]: step time server 202.112.29.82 offset +10960053.088901 sec
-```
+时间错误。使用 `ntpd -q -g -p pool.ntp.org` 命令同步系统时间：
 
 检查时间：
 
