@@ -29,12 +29,12 @@
 | RELEASE | 稳定版 | 适用于生产环境的正式发布版本 |
 | STABLE | / | FreeBSD 的固定开发分支，提供 ABI 稳定性保证，但仍处于开发阶段 |
 | CURRENT | / | FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定 |
-| MFC | 合并自 Head | Merge From CURRENT，FreeBSD 开发流程中将 CURRENT 分支的更改合并到稳定分支的过程 |
+| MFC | 合并自 CURRENT | Merge From CURRENT，FreeBSD 开发流程中将 CURRENT 分支的更改合并到稳定分支的过程 |
 | Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一 |
-| ZFS | / | Zettabyte File System，一种集成了文件系统和逻辑卷管理器的先进存储系统，采用写时复制事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构 |
+| ZFS | / | 最初为 Zettabyte File System 的缩写，后官方不再赋予其全称。一种集成了文件系统和逻辑卷管理器的先进存储系统，采用写时复制事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构 |
 | OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发 |
-| bhyve | / | FreeBSD 内置的虚拟机管理程序（hypervisor） |
-| DTrace | / | Dynamic Tracing，动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题 |
+| bhyve | / | BSD Hypervisor，FreeBSD 内置的虚拟机管理程序（hypervisor） |
+| DTrace | / | Dynamic Tracing，最初由 Sun Microsystems 为 Solaris 10 开发的动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题 |
 | Capsicum | / | 轻量级的操作系统能力和沙盒框架，用于应用程序沙盒化 |
 | PF | 包过滤器 | Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能 |
 | Netgraph | / | FreeBSD 的网络图框架，提供内核级网络节点的图状抽象与可编程互联 |
@@ -44,7 +44,7 @@
 | Ports | / | FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件 |
 | Ports Collection | / | Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制 |
 | pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng |
-| PkgBase | / | FreeBSD 项目方案，尝试使用 pkg 包管理器来实现用户空间和内核的更新 |
+| PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供完整安装选项 |
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
 | Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
@@ -52,7 +52,7 @@
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力 |
 | Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
-| CDDL | 通用开发及发行许可 | Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改 |
+| CDDL | 通用开发及发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
 | TCP/IP | 传输控制协议/网际协议 | Transmission Control Protocol/Internet Protocol，互联网的基础协议族 |
 | 校验和 | / | Checksum，通过对数据序列进行特定算法运算得到的固定长度值，用于检测数据在传输或存储过程中是否发生错误 |
 | 散列函数 | / | Hash Function，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
@@ -95,9 +95,9 @@
 | devfs | / | Device File System，设备文件系统，自动管理 /dev 目录下的设备节点 |
 | fdescfs | / | File Descriptor File System，文件描述符文件系统，提供对进程文件描述符的文件系统访问 |
 | 伪终端 | / | Pseudo-Terminal，在软件中模拟的终端设备，用于远程登录和窗口系统中的终端模拟 |
-| PAM | 可插拔认证模块 | Pluggable Authentication Modules，一种灵活的系统认证框架 |
+| PAM | 可插拔认证模块 | Pluggable Authentication Modules，最初由 Sun Microsystems 于 1995 年开发的灵活系统认证框架 |
 | Kerberos | / | 一种网络认证协议，使用密钥分发中心（KDC）和票据机制实现安全的身份验证 |
-| NIS | 网络信息服务 | Network Information Service，一种集中管理网络中用户和主机信息的系统 |
+| NIS | 网络信息服务 | Network Information Service，由 Sun Microsystems 开发的集中管理网络中用户和主机信息的系统，原名 Yellow Pages（YP） |
 | NTP | 网络时间协议 | Network Time Protocol，用于在计算机网络中同步各节点时钟的协议 |
 | syslog | / | 系统日志协议和工具，用于记录系统消息和事件 |
 | OpenBSM | / | Open Basic Security Module，FreeBSD 的安全审计系统 |
@@ -105,7 +105,7 @@
 | inetd | 互联网超级服务器 | Internet Super Server，统一管理多个网络服务的守护进程 |
 | IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则 |
 | IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中曾作为可选防火墙组件 |
-| ALTQ | 交错队列 | Alternate Queuing，PF 防火墙的流量整形和队列管理功能 |
+| ALTQ | 替代队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
 | 二进制包 | / | Binary Package，预编译的软件包，可直接安装而无需从源代码构建 |
 | 镜像站 | / | Mirror Site，同步复制官方软件仓库或发行版文件的服务器，提供更快的本地下载速度 |
 | 源代码 | / | Source Code，程序员编写的计算机程序原始文本，需经编译或解释后方可执行 |
@@ -122,8 +122,8 @@
 | releng | / | Release Engineering，FreeBSD 的发布工程分支 |
 | Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性 |
 | Linuxulator | / | FreeBSD 内核中的 Linux 系统调用转换层，实现 Linux 二进制兼容性 |
-| RISC-V | / | 开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台 |
-| kqueue | / | FreeBSD 的事件通知接口，取代了 select/poll |
+| RISC-V | / | 基于 RISC 原则的开源指令集架构，由加州大学伯克利分校于 2010 年发起，FreeBSD 支持 RISC-V 架构的硬件平台 |
+| kqueue | / | FreeBSD 的事件通知接口，提供了比 select/poll 更高效和可扩展的事件通知机制 |
 | TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案 |
 | W^X | 写异或执行 | Write XOR Execute，一种安全策略，内存页不可同时具有写入和执行权限 |
 | PIE | 位置无关可执行程序 | Position Independent Executable，一种安全缓解技术，可执行文件可加载到任意地址 |
@@ -149,9 +149,9 @@
 | CDE | 通用桌面环境 | Common Desktop Environment，一款经典的 UNIX 桌面环境 |
 | 驱动程序 | / | Driver，操作系统与硬件设备之间的接口软件，负责将操作系统的请求转换为硬件可执行的操作 |
 | 人工智能 | / | Artificial Intelligence，研究如何使计算机模拟人类智能行为的学科与技术领域 |
-| OpenBSD | / | 一款注重安全的 BSD 操作系统 |
-| NetBSD | / | 一款注重可移植性的 BSD 操作系统 |
-| DragonFly BSD | / | 一款从 FreeBSD 分叉出来的 BSD 操作系统 |
+| OpenBSD | / | 由 Theo de Raadt 于 1995 年从 NetBSD 分叉创立的注重安全的 BSD 操作系统 |
+| NetBSD | / | 于 1993 年创立的注重可移植性的 BSD 操作系统 |
+| DragonFly BSD | / | 由 Matthew Dillon 于 2003 年从 FreeBSD 4.8 分叉出来的 BSD 操作系统 |
 | LLVM | / | 指一组模块化和可重用的编译器和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
 | 编译器 | / | Compiler，将高级编程语言源代码翻译为机器码或中间代码的程序 |
 | Clang | / | LLVM 项目的 C/C++ 语言前端和工具基础设施 |
