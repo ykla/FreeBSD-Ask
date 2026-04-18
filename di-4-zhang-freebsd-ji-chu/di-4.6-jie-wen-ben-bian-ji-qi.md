@@ -216,7 +216,7 @@ Emacs 的用户配置文件通常为 `~/.emacs.d/init.el`。
 
 Emacs 图形用户界面：
 
-![Emacs GUI](../.gitbook/assets/di-4.6-jie-emcs-1.png)
+![Emacs GUI](../.gitbook/assets/di-4.6-jie-emacs-1.png)
 
 Emacs CLI:
 
