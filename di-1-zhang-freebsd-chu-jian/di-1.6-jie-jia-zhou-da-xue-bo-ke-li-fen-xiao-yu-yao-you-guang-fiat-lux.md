@@ -57,7 +57,7 @@ Fiat Lux!
 - 松原信吾，村石宏实，川崎乡太，等，导演. 迪迦奥特曼[V]. 日本：圆谷株式会社，1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
 - 清华大学. 国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京:社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
-- 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014.
+- 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
 - ABRAHAO R A, MORIN H P N, PAGÉ J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
 - University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
 - University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
