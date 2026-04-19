@@ -422,7 +422,7 @@ waybar 的配置文件目录位于 `~/.config/waybar`，其中包含 `config.jso
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"urgent": "",
+			"urgent": "⚠️",
 			"active": "🔴",
 			"default": "🔵"
 		},
