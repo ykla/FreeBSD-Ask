@@ -178,7 +178,7 @@ augroup END
 ```
 
 - 第一条 Glaive 语句用于设置 clang-format 执行文件路径。
-- 第二条 Glaive 语句设置格式化的风格样式。也可以设为 `"file"` 或 `"file:<format_file_path>"`。参考 ClangFormatStyleOptions[EB/OL]. [2026-03-25]. <https://clang.llvm.org/docs/ClangFormatStyleOptions.html>.
+- 第二条 Glaive 语句设置格式化的风格样式。也可以设为 `"file"` 或 `"file:<format_file_path>"`。参考 ClangFormatStyleOptions[EB/OL]. [2026-03-25]. <https://clang.llvm.org/docs/ClangFormatStyleOptions.html>. 列举 clang-format 所有可配置的格式化选项及其取值说明。
 - 第一条 autocmd 设置在文件类型为 c/cpp 时启用 vim-codefmt 的 AutoFormatBuffer clang-format。
 - 第二条 autocmd 设置在文件后缀为 `.h`、`.hpp`、`.c`、`.cpp` 时，退出插入模式后执行 `:FormatCode` 命令。
 
