@@ -817,7 +817,7 @@ Local storage:
 
 关于 ccache 的更多详细信息和使用方法，可以参考以下资料。
 
-- FreeBSD Project. ccache-howto-freebsd.txt.in[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>.
+- FreeBSD Project. ccache-howto-freebsd.txt.in[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>. FreeBSD Ports 中 ccache 的配置指南，说明如何在编译时启用缓存加速。
 - FreeBSD Project. ccache - a fast C/C++ compiler cache[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1>.
 
 ## 多线程下载
